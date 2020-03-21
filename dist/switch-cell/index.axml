@@ -1,0 +1,6 @@
+<view class='switch-cell-index {{className}}' onChildRef='saveChildRef0'>
+  <van-cell center=" " title='{{ title }}' border='{{ border }}' custom-class='van-switch-cell' _parent_ref="{{isMounted}}" onChildRef='saveChildRef1'>
+    <van-switch size='{{ size }}' checked='{{ checked }}' loading='{{ loading }}' disabled='{{ disabled }}' active-color='{{ activeColor }}' inactive-color='{{ inactiveColor }}' active-value='{{ activeValue }}' inactive-value='{{ inactiveValue }}' custom-class='van-switch-cell__switch' _parent_ref="{{isMounted}}" onChange='onChange' onChildRef='saveChildRef2'>
+    </van-switch>
+  </van-cell>
+</view>

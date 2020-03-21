@@ -1,0 +1,26 @@
+/* miniprogram/pages/placeoutComplete/placeoutComplete.wxss */
+.sharebutton:hover {
+    background-color: white;
+}
+
+.sub_info_window {
+    width: 631rpx;
+    height: 924rpx;
+    background-color: transparent !important;
+}
+.sub_info_window_top {
+    width: 631rpx;
+    height: 834rpx;
+}
+.sub_info_window_button {
+    width: 456rpx;
+    height: 80rpx;
+    padding: 0 !important;
+}
+.sub_info_window_button:hover {
+    background-color: transparent;
+}
+.sub_info_window_button image {
+    width: 456rpx;
+    height: 80rpx;
+}

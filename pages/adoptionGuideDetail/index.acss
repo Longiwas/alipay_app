@@ -1,0 +1,142 @@
+/* miniprogram/pages/adoptionGuideDetail/index.wxss */
+page {
+    color: #070707;
+}
+.title {
+    font-size: 32rpx;
+    margin-left: 41rpx;
+    font-weight: 400;
+    top: 166rpx;
+    position: absolute;
+}
+.step {
+    color: #303030;
+    padding: 12rpx 20rpx;
+    background-color: white;
+    border: 1px dashed #c7c7c7;
+    border-radius: 30rpx;
+    font-size: 20rpx;
+    position: absolute;
+    z-index: 5;
+}
+.step1 {
+    left: 67rpx;
+    top: 221rpx;
+}
+.step2 {
+    right: 67rpx;
+    top: 221rpx;
+}
+.step3 {
+    right: 67rpx;
+    top: 308rpx;
+}
+.step4 {
+    left: 67rpx;
+    top: 308rpx;
+}
+.step5 {
+    left: 67rpx;
+    top: 397rpx;
+}
+.step6 {
+    right: 192rpx;
+    top: 397rpx;
+    border: 1px dashed #9257fd !important;
+}
+.stepline {
+    z-index: 4;
+}
+.stepline12 {
+    top: 249rpx;
+    right: 43rpx;
+    width: 370rpx;
+    height: 86rpx;
+    border-top-right-radius: 43rpx;
+    border-bottom-right-radius: 43rpx;
+    position: absolute;
+    border-bottom: 1px dashed #c7c7c7;
+    border-right: 1px dashed #c7c7c7;
+    border-top: 1px dashed #c7c7c7;
+}
+.stepline34 {
+    top: 342rpx;
+    left: 42rpx;
+    height: 78rpx;
+    width: 260rpx;
+    border-top: 1px dashed #c7c7c7;
+    border-bottom: 1px dashed #c7c7c7;
+    border-left: 1px dashed #c7c7c7;
+    border-top-left-radius: 39rpx;
+    border-bottom-left-radius: 39rpx;
+    position: absolute;
+}
+.title2 {
+    color: black;
+    font-size: 32rpx;
+    position: absolute;
+    top: 492rpx;
+    left: 39rpx;
+}
+.backimg {
+    position: absolute;
+    left: 39rpx;
+    top: 543rpx;
+    width: 672rpx;
+    height: 469rpx;
+}
+.subtitle1 {
+    position: absolute;
+    top: 606rpx;
+    left: 128rpx;
+    font-size: 24rpx;
+    font-weight: 400;
+}
+.content1 {
+    color: #303030;
+    position: absolute;
+    top: 642rpx;
+    left: 169rpx;
+    font-size: 20rpx;
+}
+.subtitle2 {
+    position: absolute;
+    top: 753rpx;
+    left: 128rpx;
+    font-size: 24rpx;
+    font-weight: 400;
+}
+.content2 {
+    color: #303030;
+    position: absolute;
+    top: 793rpx;
+    left: 169rpx;
+    font-size: 20rpx;
+    width: 475rpx;
+    height: 140rpx;
+}
+.information {
+    color: #303030;
+    font-size: 18rpx;
+    position: absolute;
+    height: 82rpx;
+    top: 1026rpx;
+    left: 165rpx;
+}
+.grape {
+    color: #9257fd;
+}
+.start {
+    position: absolute;
+    top: 1138rpx;
+    left: 127rpx;
+    width: 496rpx;
+    height: 84rpx;
+}
+.bottom {
+    position: absolute;
+    width: 100%;
+    top: 1256rpx;
+    color: #808080;
+    font-size: 18rpx;
+}

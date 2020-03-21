@@ -1,0 +1,6 @@
+<view class='modal-modal {{className}}' onChildRef='saveChildRef0'>
+  <view hidden='{{show}}'>
+    <slot>
+    </slot>
+  </view>
+</view>

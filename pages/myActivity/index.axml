@@ -1,0 +1,9 @@
+<view class='page-container-classname'>
+                <titlebar title='官方通知' onChildRef='saveChildRef1' _parent_ref="{{isMounted}}">
+</titlebar><view class='flex flex-column vcenter' style='margin-top:{{customHeadHeight}}px;'>
+  <block a:for='{{myActivityList}}' ref-numbers='{{myActivityList}}'>
+    <image class='activity_view' src='{{item.image}}' data-url='{{item.url}}' onTap='onActivityTap'>
+    </image>
+  </block>
+</view>
+            </view>

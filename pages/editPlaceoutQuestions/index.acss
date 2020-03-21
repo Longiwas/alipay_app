@@ -1,0 +1,54 @@
+/* miniprogram/pages/placeoutQuestions/placeoutQuestions.wxss */
+.main_view {
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 14px;
+}
+.question {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    display: flex;
+    flex-direction: row;
+}
+
+.checked {
+    color: #4a4a4a !important;
+}
+
+.unchecked {
+    color: #9b9b9b !important;
+}
+.confirm {
+    color: white;
+    background-color: #9057ff;
+    margin-top: 16px;
+    width: 100%;
+    border-radius: 50px;
+}
+.addBtn {
+    font-size: 14px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 72px;
+    height: 36px;
+}
+.custom-title {
+    height: 32px;
+}
+.custom-question {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid #9b9b9b;
+    border-radius: 4px;
+    height: 36px;
+}
+.custom-input {
+    margin-left: 8px;
+    height: 36px;
+}
+.hide_checkbox {
+    display: none;
+}

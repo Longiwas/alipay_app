@@ -1,0 +1,24 @@
+<view class='page-container-classname'>
+                <view style='margin-top:{{customHeadHeight}}px; margin-left:32px; margin-right:32px; display:flex; flex-direction:column; align-items:center; justify-content:center;' onChildRef='saveChildRef0'>
+  <view style='display:flex; flex-direction:column; align-items:center; justify-content:center;'>
+    <image src='/images/success.svg' style='height:66px; width:66px; padding-bottom:15px;'>
+    </image>
+    <button class='sharebutton' onTap='onShowSubscribe'>
+      <image src='https://res.511cwpt.com/placeout_complete_image.png' style='height:490rpx; width:694rpx;'>
+      </image>
+    </button>
+    <button style='background-color:#EEE; color:#BBB; border-radius:50rpx; border:1px solid #BBB; width: 50%; margin-top: 35rpx;' onTap='onIndexTap'>
+      返回首页
+    </button>
+  </view>
+</view><van-popup custom-class='sub_info_window' show='{{subscribeInfoShow}}' _parent_ref="{{isMounted}}" onChildRef='saveChildRef1'>
+  <image class='sub_info_window_top' src='https://res.511cwpt.com/subscribe_background.png'>
+  </image>
+  <button class='flex center sub_info_window_button' open-type='contact'>
+    <image src='https://res.511cwpt.com/subscribe_button.png'>
+    </image>
+  </button>
+  <view style='position:absolute; top:0rpx; right:0rpx; width:60rpx; height:60rpx;' onTap='onSubscribeTap'>
+  </view>
+</van-popup>
+            </view>

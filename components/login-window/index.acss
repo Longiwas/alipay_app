@@ -1,0 +1,32 @@
+.flex {
+    display: flex;
+}
+.flex-column {
+    flex-direction: column;
+}
+.login_popup {
+    width: 677rpx;
+    height: 734rpx;
+    background-image: url("https://res.511cwpt.com/login_background.png");
+    background-size: 100% 100%;
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+.login_popup_login {
+    padding: 0rpx !important;
+    margin: 530rpx 48rpx 0 48rpx !important;
+    height: 74rpx;
+    width: 581rpx;
+}
+.login_popup_login image {
+    height: 74rpx;
+    width: 581rpx;
+}
+.login_popup_cancel {
+    margin: 10rpx 48rpx 0 48rpx;
+    height: 74rpx;
+    width: 581rpx;
+}
+.login_popup_cancel image {
+    height: 74rpx;
+    width: 581rpx;
+}

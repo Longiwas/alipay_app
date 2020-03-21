@@ -1,0 +1,36 @@
+<view class='page-container-classname'>
+                <titlebar title='意见反馈' onChildRef='saveChildRef1' _parent_ref="{{isMounted}}">
+</titlebar><view style='padding-top:{{customHeadHeight}}px; padding-left:32px; padding-right:32px;'>
+  <view>
+    雷猴啊,我们是益只.
+  </view>
+  <view>
+    我们因为同一个目标而聚集在一块.
+  </view>
+  <view>
+    为了那些流离失所,无家可归的宠物们寻找一个家.
+  </view>
+  <view>
+    为了那些救助宠物而随时随地可能倒下的避难所.
+  </view>
+  <view>
+    为了那些东奔西走,最后能让一个小生命安全下来的志愿者们.
+  </view>
+  <view>
+    为了......
+  </view>
+  <view>
+    我们希望能听到你的声音,一点点也好,再微弱也好,我们都愿意去听
+  </view>
+  <view style='height:16px;'>
+  </view>
+  <textarea style='width:100%; height:300rpx; border: 1px solid #DDD;' placeholder='写在这吧' onInput='onFeedbackChange'>
+  </textarea>
+  <view style='height:16px;'>
+  </view>
+  <button class='btn' onTap='onConfirmTap'>
+    提交
+  </button>
+</view><template-window show='{{template_show}}' templateIds='{{templateIds}}' _parent_ref="{{isMounted}}" onAuthorizeComplete='commit' onChildRef='saveChildRef2'>
+</template-window>
+            </view>

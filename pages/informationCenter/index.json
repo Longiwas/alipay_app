@@ -1,0 +1,9 @@
+{
+	"usingComponents": {
+		"van-icon": "../../dist/icon/index",
+		"login-window": "../../components/login-window/index",
+		"template-window": "../../components/template-window/index"
+	},
+	"backgroundTextStyle": "dark",
+	"pullRefresh": true
+}

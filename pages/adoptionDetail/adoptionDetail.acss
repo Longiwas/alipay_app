@@ -1,0 +1,482 @@
+/* miniprogram/pages/adoptionDetail/adoptionDetail.wxss */
+
+.page-swiper {
+    margin: 0 38rpx;
+    height: 500rpx;
+}
+.page-swiper swiper-item {
+    border-radius: 10px;
+}
+.page-swiper swiper-item image {
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.page-swiper swiper-item view video {
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.petinfo {
+    margin-top: 46rpx;
+}
+.round {
+    position: absolute;
+    width: 88rpx;
+    height: 88rpx;
+    top: 396rpx;
+    right: 54rpx;
+    z-index: 10;
+}
+.viewnum {
+    position: absolute;
+    width: fit-content;
+    right: 36rpx;
+    font-size: 28rpx;
+    color: #9b9b9b;
+}
+
+.petinfo_left {
+    width: 450rpx;
+    padding-left: 40rpx;
+}
+.petinfo_name {
+    font-size: 36rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 260rpx;
+}
+.petinfo_age {
+    font-size: 30rpx;
+    color: #303030;
+    margin-left: 20rpx;
+    width: 170rpx;
+}
+.petinfo_gender {
+    width: 20rpx;
+    height: 36rpx;
+    margin: 0 20rpx;
+}
+.petinfo_right {
+    width: 275rpx;
+}
+.petinfo_eye {
+    width: 24rpx;
+    height: 20rpx;
+}
+.petinfo_viewnum {
+    font-size: 24rpx;
+    color: #b8b8b8;
+}
+.petinfo_warning {
+    font-size: 24rpx;
+    color: #e13162;
+    margin-left: 12rpx;
+}
+.petinfo_tags {
+    font-size: 24rpx;
+    margin: 16rpx 40rpx 0 40rpx;
+}
+.petinfo_need {
+    margin: 40rpx 0;
+    padding: 30rpx 70rpx;
+    background: rgba(250, 250, 250, 1);
+    box-shadow: -1px 7px 4px 0px rgba(0, 0, 0, 0.06);
+    border-radius: 20px;
+    color: #717171;
+}
+.petinfo_need_title {
+    font-size: 30rpx;
+}
+.tags {
+    color: white;
+    background-color: #ab8ef5;
+    padding: 8rpx 18rpx 6rpx 18rpx;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30rpx;
+}
+.petinfo_location {
+    margin: 0 40rpx;
+    word-break: break-all;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    line-clamp: 1;
+}
+.petinfo_location_icon {
+    height: 28rpx;
+    width: 20rpx;
+}
+.petinfo_location_name {
+    margin-left: 5rpx;
+    font-size: 28rpx;
+    color: #808080;
+}
+.select_tab {
+    margin-top: 40rpx;
+}
+.selected {
+    font-size: 30rpx;
+    color: #ff78ab;
+    border-bottom: 4rpx solid #ff78ab;
+}
+.comment_selected {
+    font-size: 30rpx;
+    color: #ab8ef5;
+    border-bottom: 4rpx solid #ab8ef5;
+}
+.deselected {
+    font-size: 30rpx;
+    color: #c2c2c2;
+    border-bottom: 4rpx solid white;
+}
+.tab_view_margin {
+    margin-left: 40rpx;
+    margin-right: 40rpx;
+    margin-top: 20rpx;
+}
+.remark_view {
+    font-size: 30rpx;
+    color: #808080;
+    word-break: break-all;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+.petcomments_view {
+    height: 92rpx;
+    border: 1px solid #c2c2c2;
+    border-radius: 10rpx;
+}
+.petcomments_icon1 {
+    height: 44rpx;
+    width: 42rpx;
+    margin-left: 15rpx;
+}
+.petcomments_text1 {
+    font-size: 30rpx;
+    color: #ff78ab;
+    font-weight: 400;
+    margin-left: 7rpx;
+}
+.petcomments_text2 {
+    font-size: 28rpx;
+    color: #c2c2c2;
+    margin-left: 9rpx;
+}
+.petcomments_icon2 {
+    height: 16rpx;
+    width: 14rpx;
+}
+.petlike_leftbar {
+    height: 5rpx;
+    width: 89rpx;
+    background: #fb609a linear-gradient(to right, white, #fb609a);
+}
+.petlike_center {
+    font-size: 36rpx;
+    color: #fb609a;
+    font-weight: bold;
+    line-height: 30rpx;
+    margin: 0 25rpx;
+}
+.petlike_rightbar {
+    height: 5rpx;
+    width: 89rpx;
+    background: #fb609a linear-gradient(to right, #fb609a, white);
+}
+.comments_view {
+    border-top: 2rpx solid #e1e1e1;
+}
+.comments_item {
+    border-bottom: 2rpx solid #e1e1e1;
+}
+.comments_item_image {
+    height: 50rpx;
+    width: 50rpx;
+    border-radius: 25rpx;
+    margin: 25rpx 20rpx 25rpx 0;
+}
+.comments_content_view {
+    width: 590rpx;
+}
+.comments_content_top {
+    font-size: 26rpx;
+}
+.comments_content_top_name {
+    width: 462rpx;
+}
+.comments_content_top_name_response {
+    font-weight: bold;
+}
+.comments_content_top_datetime {
+    font-size: 20rpx;
+    width: 128rpx;
+    justify-content: right;
+    color: #c2c2c2;
+}
+.comments_content_bottom {
+    font-size: 24rpx;
+    color: #808080;
+}
+.comments_content_bottom_content {
+    width: 570rpx;
+}
+.comment_content_bottom_like {
+    width: 30rpx;
+    height: 31rpx;
+}
+.comment_content_bottom_liked {
+    width: 30rpx;
+    height: 36rpx;
+}
+.button_view {
+    position: fixed;
+    height: 100rpx;
+    bottom: 0rpx;
+    width: 750rpx;
+    justify-content: space-around;
+    border-top: 2rpx solid #c5c5c5;
+    z-index: 5;
+    background-color: white;
+}
+.bottom_icon {
+    height: 36rpx;
+    width: 36rpx;
+}
+.bottom_icon2 {
+    height: 30rpx;
+    width: 30rpx;
+    margin: 4rpx 0;
+}
+.liked_text {
+    font-size: 30rpx;
+    color: #fb609a;
+}
+.like_text {
+    font-size: 30rpx;
+    color: #c5c5c5;
+}
+.like_view {
+    color: white;
+    background-color: red;
+    font-size: 18rpx;
+    position: absolute;
+    z-index: 10;
+    padding: 1rpx 10rpx;
+    border-radius: 15rpx;
+    top: -10rpx;
+    left: 45rpx;
+}
+.cancelPopup {
+    width: 100%;
+    font-size: 16px;
+}
+.cancelPopupTitle {
+    padding: 16px 0 16px 16px;
+}
+.cancelPopupInfo {
+    height: 33%;
+    padding: 16px 16px 16px 16px;
+}
+.cancelPopupConfirm {
+    width: 100%;
+    background-color: #9057ff;
+    font-size: 20px;
+    border-radius: 30px;
+    color: white;
+}
+.cancelPopupCancel {
+    width: 100%;
+    background-color: white;
+    font-size: 20px;
+    border-radius: 30px;
+    color: #9b9b9b;
+    border: 1px solid #9b9b9b;
+}
+.report-textarea {
+    width: 100%;
+    border: 1px solid #9b9b9b;
+    justify-content: left;
+}
+.petName {
+    width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.submitted_btn {
+    background-color: #fff;
+    color: #ddd;
+    width: 360rpx;
+    height: 60rpx;
+    border-radius: 60rpx;
+    border: 1px solid #ddd;
+    font-size: 28rpx;
+    margin: 0 !important;
+}
+.created_btn {
+    background-color: #9057ff;
+    color: #fff;
+    width: 360rpx;
+    height: 60rpx;
+    border-radius: 60rpx;
+    font-size: 28rpx;
+    margin: 0 !important;
+}
+.submit_btn {
+    width: 360rpx;
+    height: 60rpx;
+    justify-content: center;
+    align-items: center;
+}
+.adoption_help {
+    position: absolute;
+    left: 615rpx;
+    top: 492rpx;
+    height: 120rpx;
+    width: 85rpx;
+}
+.adoption_generate {
+    display: none;
+    position: absolute;
+    left: 615rpx;
+    top: 723rpx;
+    height: 120rpx;
+    width: 85rpx;
+}
+.adoption_help_detail {
+    height: 402rpx;
+    width: 455rpx;
+}
+.help_popup {
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+.share_wechatfriends {
+    position: absolute;
+    padding: 0rpx !important;
+    width: 100rpx;
+    height: 110rpx;
+    top: 250rpx;
+    left: 100rpx;
+}
+.share_wechatfriends image {
+    width: 101rpx;
+    height: 110rpx;
+}
+.share_wechatcircle {
+    position: absolute;
+    padding: 0rpx !important;
+    width: 100rpx;
+    height: 110rpx;
+    top: 250rpx;
+    left: 250rpx;
+}
+.share_wechatcircle image {
+    width: 75rpx;
+    height: 110rpx;
+}
+.comment_content_input {
+    width: 636rpx;
+}
+.comment_post_button {
+    height: 60rpx;
+    width: 60rpx;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.comment_post_image {
+    height: 53rpx;
+    width: 53rpx;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.login_popup {
+    width: 677rpx;
+    height: 734rpx;
+    background-image: url("https://res.511cwpt.com/login_background.png");
+    background-size: 100% 100%;
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+.login_popup_login {
+    padding: 0rpx !important;
+    margin: 530rpx 48rpx 0 48rpx !important;
+    height: 74rpx;
+    width: 581rpx;
+}
+.login_popup_login image {
+    height: 74rpx;
+    width: 581rpx;
+}
+.login_popup_cancel {
+    margin: 10rpx 48rpx 0 48rpx;
+    height: 74rpx;
+    width: 581rpx;
+}
+.login_popup_cancel image {
+    height: 74rpx;
+    width: 581rpx;
+}
+/*card*/
+
+.card_main {
+    height: 410rpx;
+    width: 326rpx;
+    background: rgba(250, 250, 250, 1);
+    box-shadow: 0px 2rpx 5rpx 0px rgba(77, 73, 60, 0.17);
+    margin-top: 40rpx;
+    border-radius: 12rpx;
+}
+.petimg {
+    width: 326rpx;
+    height: 302rpx;
+    border-top-left-radius: 12rpx;
+    border-top-right-radius: 12rpx;
+}
+.petinfo_card {
+    padding: 0 14rpx;
+    border-radius: 0px 0px 12rpx 12rpx;
+}
+.petnamegender {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30rpx;
+}
+.petnamegender image {
+    height: 24rpx;
+    width: 14rpx;
+}
+.petagelocation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22rpx;
+}
+.petage_string {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 30%;
+}
+.petlocation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 70%;
+}
+.petlocation_image {
+    height: 18rpx;
+    width: 14rpx;
+}
+.petlocation_string {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

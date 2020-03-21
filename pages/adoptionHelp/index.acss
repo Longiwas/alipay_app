@@ -1,0 +1,13 @@
+/* miniprogram/pages/adoptionHelp/index.wxss */
+
+.adoption_help {
+    width: 750rpx;
+    height: 1334rpx;
+}
+.adoption_help_download {
+    width: 86rpx;
+    height: 86rpx;
+    position: fixed;
+    top: 684rpx;
+    right: 30rpx;
+}

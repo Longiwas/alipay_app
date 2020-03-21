@@ -1,0 +1,49 @@
+.customHead {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    background-color: #fff;
+}
+.lp16 {
+    padding-left: 16px;
+}
+.flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+}
+.tapped {
+    animation: buttontapping 1s;
+    background-color: #ccc;
+}
+@keyframes buttontapping {
+    from {
+        background: #ddd;
+    }
+    to {
+        background: #ddc;
+    }
+}
+.small_part {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.big_part {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    font-size: 30rpx;
+    justify-content: center;
+    align-items: center;
+}
+.arrow-left {
+    padding-top: 8rpx;
+    padding-left: 36rpx;
+    height: 36rpx;
+    width: 24rpx;
+}

@@ -1,0 +1,10 @@
+/* miniprogram/pages/messageCenter/index.wxss */
+.top_items {
+    width: 750rpx;
+    padding: 16rpx 32rpx;
+    border-bottom: 1px solid #dddcdf;
+}
+.icon_class {
+    width: 64rpx;
+    height: 64rpx;
+}

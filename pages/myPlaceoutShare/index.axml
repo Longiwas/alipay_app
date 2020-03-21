@@ -1,0 +1,105 @@
+<view class='page-container-classname'>
+                <titlebar title='详情' onChildRef='saveChildRef1' _parent_ref="{{isMounted}}">
+</titlebar><view class='lp16 rp16' style='padding-top:{{customHeadHeight}}px;'>
+  <swiper class='page-swiper' indicator-dots='{true}'>
+    <block a:for='{{petBanner}}' a:key='{{index}}' ref-numbers='{{petBanner}}'>
+      <swiper-item>
+        <view>
+          <block a:if='{{item.isImage}}'>
+            <image src='{{item.file}}?imageMogr2/thumbnail/500x' mode='aspectFill' data-index='{{index}}' onTap='onImageTap'>
+            </image>
+          </block>
+          <block a:else >
+            <view style='position: relative; height: 100%; width: 100%;'>
+              <video src='{{item.file}}' id='pet_video'>
+              </video>
+              <block a:if='{{!is_like}}'>
+                <view class='flex flex-column center' style='float: left;  height: 100%; width: 100%; position: absolute; left: 0; top: 0; z-index: 1; background-color: rgba(0, 0, 0, 0.5); color: white; font-size: 36rpx; '>
+                  <view>
+                    左下角点赞👍后
+                  </view>
+                  <view>
+                    才可以播放哦~
+                  </view>
+                </view>
+              </block>
+            </view>
+          </block>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='flex' style='padding-top:32rpx; flex-direction:row; height:64rpx; justify-content: space-between;'>
+    <view class='flex' style='flex-direction:row; height:100%; line-height:64rpx; font-size:40rpx; '>
+      {{petName}}      <view style='height:32rpx; font-size:32rpx; margin:0 0 0 8px; color:#5B5B5B; line-height:64rpx;'>
+        {{year}}年{{month}}月
+      </view>
+      <image src='{{genderUrl}}' style='height:32rpx; width:22rpx; padding-top:8px; padding-left:10px;'>
+      </image>
+    </view>
+  </view>
+  <view class='flex' style='padding-top:16rpx; flex-direction:row; height:64rpx; justify-content: space-between;'>
+    <view class='flex' style='flex-direction:row; height:100%; line-height:64rpx; font-size:28rpx;'>
+      <block a:for='{{options}}' a:key='name' ref-numbers='{{options}}'>
+        <block a:if='{{item.value==1}}'>
+          <view class='flex center tags'>
+            已{{item.desc}}
+          </view>
+          <view style='width:20rpx; '>
+          </view>
+        </block>
+        <block a:elif='{{item.value==2}}'>
+          <view class='flex center tags'>
+            未{{item.desc}}
+          </view>
+          <view style='width:20rpx; '>
+          </view>
+        </block>
+      </block>
+    </view>
+    <view style='padding-top:8px; font-size:{{app.globalData.imgsize-4}}px; color:#E9122C' onTap='onWarningTap'>
+      举报
+    </view>
+  </view>
+  <view class='flex flex-row' style='padding-top:16px; font-size:28rpx; color:#5B5B5B; width:670rpx; align-items:center; '>
+    <image style='height:36rpx; width:30rpx; margin-right:8rpx;' src='/images/location-o.svg'>
+    </image>
+    {{locationStr}}
+  </view>
+  <view class='flex' style='padding-top:16rpx; font-size:28rpx; color:#9B9B9B; padding-bottom:150rpx; word-break:break-all; width:670rpx;'>
+    {{petRemark}}
+  </view>
+</view><view class='round' style='top:{{customHeadHeight+486}}rpx; right:30rpx; display:flex; flex-direction:column; justify-content:center; align-items:center; color:white; font-size:20rpx; ' onTap='onHeartTap'>
+  <van-icon name='{{heartName}}' color='white' size='64rpx' _parent_ref="{{isMounted}}" onChildRef='saveChildRef2'>
+  </van-icon>
+  {{favText}}
+</view><view class='flex hcenter viewnum' style='top:{{customHeadHeight+486+128}}rpx;'>
+  <van-icon name='eye-o' _parent_ref="{{isMounted}}" onChildRef='saveChildRef3'>
+  </van-icon>
+  {{viewNum}}
+</view><view style='position:fixed; padding-bottom:72rpx; bottom:0px; width:100%; display:flex; justify-content:center; align-items:start; background-color:#FFF; padding-top:8px;'>
+  <button class='flex submit_btn' data-recordid='{{petId}}' open-type='share'>
+    立即分享
+  </button>
+</view><van-popup show='{{ reportShow }}' position='bottom' custom-class='cancelPopup' _parent_ref="{{isMounted}}" onClose='onReportCloseTap' onChildRef='saveChildRef4'>
+  <view class='cancelPopupTitle'>
+    请输入举报内容
+  </view>
+  <view class='cancelPopupInfo'>
+    <textarea class='report-textarea' placeholder-style='color:#C2C2C2; ' placeholder="{{reportShow?'请输入举报原因和举报内容等……':''}}" onInput='onReportInput'>
+    </textarea>
+  </view>
+  <view class='cancelPopupInfo'>
+    <button class='cancelPopupConfirm' onTap='onReportConfirmTap'>
+      举报
+    </button>
+  </view>
+  <view class='cancelPopupInfo'>
+    <button class='cancelPopupCancel' onTap='onReportCloseTap'>
+      取消
+    </button>
+  </view>
+  <view style='height:16px;'>
+  </view>
+</van-popup>
+            </view>

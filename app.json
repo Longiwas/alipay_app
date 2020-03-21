@@ -1,0 +1,101 @@
+{
+	"pages": [
+		"pages/home/index",
+		"pages/adoption/adoption",
+		"pages/user/index",
+		"pages/adoptionAnswers/adoptionAnswers",
+		"pages/placeout/placeout",
+		"pages/myPlaceoutAnswer/myPlaceoutAnswer",
+		"pages/locationSelect/locationSelect",
+		"pages/myPlaceoutShare/index",
+		"pages/adoptionAgre/adoptionAgre",
+		"pages/placeoutQuestions/placeoutQuestions",
+		"pages/adoptionGuild/adoptionGuild",
+		"pages/placeoutGuide/placeoutGuide",
+		"pages/petFilter/petFilter",
+		"pages/petComplete/index",
+		"pages/adoptionDetail/adoptionDetail",
+		"pages/adoptionAnswerQuestion/adoptionAnswerQuestion",
+		"pages/adoptionComplete/adoptionComplete",
+		"pages/adoptionSupport/adoptionSupport",
+		"pages/myAdoption/myAdoption",
+		"pages/myRequest/myRequest",
+		"pages/placeoutComplete/placeoutComplete",
+		"pages/editPlaceout/index",
+		"pages/editPlaceoutQuestions/index",
+		"pages/myFavorites/index",
+		"pages/myPlaceoutCheckAnswer/index",
+		"pages/feedback/index",
+		"pages/adoptionSupportNew/index",
+		"pages/setting/index",
+		"pages/article/article",
+		"pages/userHomepage/index",
+		"pages/nickNameSetting/index",
+		"pages/messageCenter/index",
+		"pages/adoptionGuideDetail/index",
+		"pages/placeoutGuideDetail/index",
+		"pages/placeoutRemoved/index",
+		"pages/adoptionHelp/index",
+		"pages/informationCenter/index",
+		"pages/myLikeComments/index",
+		"pages/myLike/index",
+		"pages/myComments/index",
+		"pages/mySystemMessage/index",
+		"pages/myActivity/index",
+		"pages/adoptionComments/index",
+		"pages/findPetIndex/index"
+	],
+	"tabBar": {
+		"selectedColor": "#9259ff",
+		"textColor": "#9B9B9B",
+		"items": [
+			{
+				"pagePath": "pages/home/index",
+				"name": "首页",
+				"icon": "./images/index_disable.png",
+				"activeIcon": "./images/index_enable.png"
+			},
+			{
+				"pagePath": "pages/adoption/adoption",
+				"name": "宠物",
+				"icon": "./images/pet_disable.png",
+				"activeIcon": "./images/pet_enable.png"
+			},
+			{
+				"pagePath": "pages/informationCenter/index",
+				"name": "消息中心",
+				"icon": "./images/info_disable.png",
+				"activeIcon": "./images/info_enable.png"
+			},
+			{
+				"pagePath": "pages/user/index",
+				"name": "我的",
+				"icon": "./images/me_disable.png",
+				"activeIcon": "./images/me_enable.png"
+			}
+		]
+	},
+	"window": {
+		"backgroundColor": "#FFFFFF",
+		"backgroundTextStyle": "light",
+		"navigationBarTextStyle": "black",
+		"navigationStyle": "custom",
+		"titleBarColor": "#FFFFFF",
+		"defaultTitle": "益只"
+	},
+	"usingComponents": {
+		"van-icon": "/dist/icon/index",
+		"van-popup": "/dist/popup/index",
+		"van-checkbox-group": "/dist/checkbox-group/index",
+		"van-checkbox": "/dist/checkbox/index",
+		"van-notify": "/dist/notify/index",
+		"van-toast": "/dist/toast/index",
+		"card": "/components/card/card",
+		"navbar": "/components/navbar/navbar",
+		"titlebar": "/components/titlebar/titlebar",
+		"login-window": "/components/login-window/index",
+		"template-window": "/components/template-window/index"
+	},
+	"sitemapLocation": "sitemap.json",
+	"permission": { "scope.userLocation": { "desc": "更精准地向您推荐宠物" } }
+}

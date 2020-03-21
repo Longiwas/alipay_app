@@ -1,0 +1,221 @@
+<view class='page-container-classname'>
+                <titlebar title='领养协议' onChildRef='saveChildRef1' _parent_ref="{{isMounted}}">
+</titlebar><view style='margin: {{customHeadHeight}}px 40rpx 0; font-size: 26rpx;'>
+  <text class='title'>
+    本着为一个生命负责的态度，甲已双方经友好协商，就宠物之领养事宜达成以下协议：
+  </text>
+  <view style='display: flex; box-shadow:0px 0px 4px 0px rgba(0,0,0,0.2);border-radius:2px;margin:40rpx 0;'>
+    <image src='{{petCover}}?imageMogr2/thumbnail/200x' class='petImg'>
+    </image>
+    <view class='petRightInfo'>
+      <view>
+        <text style='font-size:16px; font-weight: 400; margin-right: 12px'>
+          {{petName}}
+        </text>
+        <text style='color: #5b5b5b; margin-right: 12px'>
+          {{year}}岁{{month}}月
+        </text>
+        <image src='{{genderUrl}}' style='padding-top:8px; width: 10px; height: 14px'>
+        </image>
+      </view>
+      <view style='display:flex; justify-content: space-between; font-size: 12px; margin: 10px 0'>
+        <block a:for='{{options}}' a:key='id' ref-numbers='{{options}}'>
+          <block a:if='{{item.value==1}}'>
+            <label class='tags'>
+              已{{item.desc}}
+            </label>
+          </block>
+          <block a:elif='{{item.value==2}}'>
+            <label class='tags'>
+              未{{item.desc}}
+            </label>
+          </block>
+        </block>
+      </view>
+      <view>
+        {{petLocation}}
+      </view>
+    </view>
+  </view>
+  <view style='line-height:44rpx;'>
+    <view class='agreTitle'>
+      一．甲方(送养人)的权力及义务
+    </view>
+    <view class='agreContent'>
+      甲方保证发布信息完全属实。
+    </view>
+    <view class='agreContent'>
+      甲方将委托领养宠物交由乙方领养，不收任何费用。且在乙方履行义务的前提下不得无故将宠物收回。
+    </view>
+    <view class='agreContent'>
+      甲方有权了解被领养宠物现有状况。
+    </view>
+    <view class='agreContent'>
+      在乙方履行义务的前提下甲方不得对乙方有任何骚扰行为。
+    </view>
+    <view style='height:32rpx;'>
+    </view>
+    <view class='agreTitle'>
+      二．乙方（领养人）的责任及义务
+    </view>
+    <view class='agreContent'>
+      乙方保证申请信息完全属实。
+    </view>
+    <view class='agreContent'>
+      乙方与家人做好必要的沟通以及商议，不得因家人反对、婚姻、生育、搬家、工作变动或其他个人感情变化等原因抛弃所领养的宠物；
+    </view>
+    <view class='agreContent'>
+      乙方不得将领养宠物转送或出售。如因客观条件导致无法继续喂养宠物的，须通知甲方(送养人)，并有责任为宠物另寻合适的主人。
+    </view>
+    <view class='agreContent'>
+      乙方需为领养宠物提供生活必需条件，并给予照料及关爱。带领养宠物出门必须做好安全措施，如栓好牵引绳等。
+    </view>
+    <view class='agreContent'>
+      乙方在宠物患病时需及时提供必要的医疗措施。
+    </view>
+    <view class='agreContent'>
+      乙方必须按当地规定为领养宠物其办理准养证，依法养宠物。
+    </view>
+    <view class='agreContent'>
+      乙方接受领养后，协助甲方对喂养情况进行了解和回访。
+    </view>
+    <view style='height:32rpx;'>
+    </view>
+    <view class='agreTitle'>
+      三．附
+    </view>
+    <view class='agreContent'>
+      1.交接领养宠物时请携带本人身份证并确认对方为签定协议本人。
+    </view>
+    <view class='agreContent'>
+      2.如发生纠纷请及时沟通并文明解决。
+    </view>
+    <view class='agreContent'>
+      3.如发生恶意送养/领养事件可通过“益只宠物领养救助平台”黑名单功能提交相关证据，一经核实，本平台将永久封禁。
+    </view>
+    <view style='height:32rpx;'>
+    </view>
+  </view>
+  <view style='color: #5b5b5b; line-height: 36px'>
+    <view style='display: flex'>
+      <view>
+        甲方（送养人）
+      </view>
+      <view style='flex: 1'>
+        <view style='display: flex;'>
+          <text>
+            姓名签字：
+          </text>
+          <view style='border-bottom: 1px solid; flex: 1'>
+            {{placeoutName}}
+          </view>
+          <text>
+            ，
+          </text>
+        </view>
+        <view style='display: flex; width: 100%'>
+          <text>
+            联系电话：
+          </text>
+          <view style='border-bottom: 1px solid; flex: 1'>
+            {{placeoutPhone}}
+          </view>
+          <text>
+            ，
+          </text>
+        </view>
+      </view>
+    </view>
+    <view style='display: flex'>
+      <view>
+        乙方（领养人）
+      </view>
+      <view style='flex: 1'>
+        <view style='display: flex;'>
+          <text>
+            姓名签字：
+          </text>
+          <view style='border-bottom: 1px solid; flex: 1'>
+            {{adoptionName}}
+          </view>
+          <text>
+            ，
+          </text>
+        </view>
+        <view style='display: flex; width: 100%'>
+          <text>
+            联系电话：
+          </text>
+          <view style='border-bottom: 1px solid; flex: 1'>
+            {{adoptionPhone}}
+          </view>
+          <text>
+            ，
+          </text>
+        </view>
+      </view>
+    </view>
+    <view style='display: flex; justify-content: flex-end; margin: 36px 0;'>
+      <view class='flex center' style='border-bottom: 1px solid; width: 80px;'>
+        {{signYear}}年
+      </view>
+      <view class='flex center' style='border-bottom: 1px solid; width: 60px;'>
+        {{signMonth}}月
+      </view>
+      <view class='flex center' style='border-bottom: 1px solid; width: 60px;'>
+        {{signDate}}日
+      </view>
+    </view>
+    <view>
+      注：该协议不展示，仅双方可见
+    </view>
+    <block a:if='{{signedStatus == false}}'>
+      <block a:if='{{signed}}'>
+        <view style='display:flex; flex-direction:row;'>
+          <view style='width:50%'>
+            <button class='edit' onTap='onSignTap'>
+              修改签名
+            </button>
+          </view>
+          <view style='width:50%'>
+            <form report-submit='{{true}}' onSubmit='onConfirmTap'>
+              <button class='confirm' form-type='submit'>
+                确认签署
+              </button>
+            </form>
+          </view>
+        </view>
+      </block>
+      <block a:else >
+        <button class='sign' onTap='onSignTap'>
+          签字
+        </button>
+      </block>
+    </block>
+    <block a:else >
+      <button class='{{signButtonClass}}' onTap='onSignedTap'>
+        提醒对方签署协议
+      </button>
+    </block>
+  </view>
+</view><van-popup show='{{failedReasonShow}}' position='bottom' custom-class='failed-popup' _parent_ref="{{isMounted}}" onClose='onFailedClose' onChildRef='saveChildRef2'>
+  <view class='failed-popup-title'>
+    签名
+  </view>
+  <view class='failed-popup-content'>
+    <input placeholder='真实姓名' class='sign_input' onInput='onNickNameInput'>
+    </input>
+    <input placeholder='手机号' class='sign_input' onInput='onPhoneInput'>
+    </input>
+  </view>
+  <view class='failed-popup-button-view'>
+    <button class='failed-popup-other-button' onTap='onSignConfirmTap'>
+      确认
+    </button>
+    <button class='failed-popup-button' onTap='onFailedClose'>
+      关闭
+    </button>
+  </view>
+</van-popup><template-window show='{{template_show}}' templateIds='{{templateIds}}' _parent_ref="{{isMounted}}" onAuthorizeComplete='commit' onChildRef='saveChildRef3'>
+</template-window>
+            </view>

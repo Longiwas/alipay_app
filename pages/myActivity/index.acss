@@ -1,0 +1,5 @@
+.activity_view {
+    height: 250rpx;
+    width: 680rpx;
+    margin-top: 20rpx;
+}

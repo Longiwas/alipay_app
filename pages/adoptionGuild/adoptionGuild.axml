@@ -1,0 +1,19 @@
+<view class='page-container-classname'>
+                <titlebar id='adoption_guild_index_title' title='领养' onChildRef='saveChildRef1' _parent_ref="{{isMounted}}">
+</titlebar><view class='flex flex-column hcenter' style='padding-top:{{customHeadHeight}}px;'>
+  <image class='guide_image ' src='http://res.511cwpt.com/adoption_guide_new.jpg' onTap='onAdoptionGuildTap'>
+  </image>
+  <image class='guide_button' src='http://res.511cwpt.com/adoption_guide_button.png' onTap='onStartTap'>
+  </image>
+  <view class='flex flex-column hcenter guide_num_text'>
+    <view>
+      本地区共有{{waiting}}宠物等待领养
+    </view>
+    <view>
+      已成功领养{{done}}只宠物
+    </view>
+  </view>
+  <image class='guide_bottom' src='http://res.511cwpt.com/adoption_guide_bottom.png'>
+  </image>
+</view>
+            </view>

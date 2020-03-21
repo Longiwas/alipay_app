@@ -1,0 +1,99 @@
+<view class='page-container-classname'>
+<view class='flex flex-column main'>
+  <view class='page-swiper'>
+    <swiper indicator-dots='{true}' autoplay='{true}' class='fullheight'>
+      <block a:for='{{bannerArray}}' a:key='id' ref-numbers='{{bannerArray}}'>
+        <swiper-item>
+          <view>
+            <image src="{{item.cover+'?imageMogr2/thumbnail/500x'}}" data-url='{{item.url}}' data-type='{{item.type}}' onTap='onBannerTap'>
+            </image>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='flex flex-row buttons'>
+    <image class='index_adoption_btn' src='https://res.511cwpt.com/index_adoption.png?imageMogr2/thumbnail/500x' mode='aspectFit' onTap='onAdoptionTap'>
+    </image>
+    <image class='index_btn_view' src='https://res.511cwpt.com/index_placeout.png?imageMogr2/thumbnail/500x' mode='aspectFit' onTap='onPlaceoutTap'>
+    </image>
+  </view>
+  <view class='titlecenter'>
+    <image src='https://res.511cwpt.com/recommend.png'>
+    </image>
+  </view>
+  <view class='fullwidth flex'>
+    <view style='margin-left: 40rpx;flex-direction:column;'>
+      <block a:for='{{petArrayLeft}}' a:key='id' ref-numbers='{{petArrayLeft}}'>
+        <view class='card_main' data-id='{{item.id}}' onTap='onLeftCardTap'>
+          <image mode='aspectFill' src="{{item.cover+'?imageMogr2/thumbnail/150x'}}" lazy-load='{{true}}' class='petimg'>
+          </image>
+          <view class='petinfo'>
+            <view class='petnamegender'>
+              <view>
+                {{item.name}}
+              </view>
+              <image src='{{item.genderUrl}}'>
+              </image>
+            </view>
+            <view class='petagelocation'>
+              <view class='petage_string'>
+                {{item.year}}岁{{item.month}}月
+              </view>
+              <view class='petlocation'>
+                <image class='petlocation_image' src='/images/location.png'>
+                </image>
+                <view class='petlocation_string'>
+                  {{item.locationStr}}
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view style='margin-left: 24rpx; flex-direction:column;'>
+      <block a:for='{{petArrayRight}}' a:key='id' ref-numbers='{{petArrayRight}}'>
+        <view class='card_main' data-id='{{item.id}}' onTap='onRightCardTap'>
+          <image mode='aspectFill' src="{{item.cover+'?imageMogr2/thumbnail/150x'}}" lazy-load='{{true}}' class='petimg'>
+          </image>
+          <view class='petinfo'>
+            <view class='petnamegender'>
+              <view>
+                {{item.name}}
+              </view>
+              <image src='{{item.genderUrl}}'>
+              </image>
+            </view>
+            <view class='petagelocation'>
+              <view class='petage_string'>
+                {{item.year}}岁{{item.month}}月
+              </view>
+              <view class='petlocation'>
+                <image class='petlocation_image' src='/images/location.png'>
+                </image>
+                <view class='petlocation_string'>
+                  {{item.locationStr}}
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <button a:if='{{showSubBtn}}' class='home_subscribe_button' onTap='onShowSubscribe'>
+    <image src='/images/index.gif'>
+    </image>
+  </button>
+</view><van-popup custom-class='sub_info_window' show='{{subscribeInfoShow}}' _parent_ref="{{isMounted}}" onChildRef='saveChildRef2'>
+  <image class='sub_info_window_top' src='https://res.511cwpt.com/subscribe_background.png?imageMogr2/thumbnail/500x'>
+  </image>
+  <button class='flex center sub_info_window_button' open-type='contact'>
+    <image src='https://res.511cwpt.com/subscribe_button.png?imageMogr2/thumbnail/500x'>
+    </image>
+  </button>
+  <view style='position:absolute; top:0rpx; right:0rpx; width:60rpx; height:60rpx;' onTap='onSubscribeTap'>
+  </view>
+</van-popup>
+            </view>

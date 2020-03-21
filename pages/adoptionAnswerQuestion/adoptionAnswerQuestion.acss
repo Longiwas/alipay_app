@@ -1,0 +1,113 @@
+.answer_popup_info {
+    background-color: #9057ff;
+    height: 200rpx;
+    display: flex;
+    align-items: center;
+}
+.answer_popup_avatar {
+    height: 100rpx;
+    width: 100rpx;
+    margin: 0 32px 0 32px;
+    border-radius: 50rpx;
+}
+.answer_popup_detail {
+    height: 100rpx;
+    font-size: 16px;
+    margin-right: 16px;
+    color: white;
+}
+.answer_popup_detail view {
+    height: 50%;
+}
+.answer_popup_list {
+    margin: 16px;
+    display: flex;
+    flex-direction: column;
+}
+.answer_popup_list_question {
+    display: flex;
+    flex-direction: row;
+    font-size: 15px;
+    color: #4a4a4a;
+    margin-bottom: 16px;
+}
+.answer_popup_list_question_num {
+    width: 50rpx;
+}
+.answer_popup_list_question_answer {
+    color: #9b9b9b;
+}
+
+.title_view {
+    font-size: 26rpx;
+    font-weight: bold;
+    border-bottom: 14rpx solid #ab8ef5;
+}
+.failed-popup {
+    width: 100%;
+}
+.failed-popup-title {
+    width: 100%;
+    margin: 16px 0 16px 0;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    color: #5b5b5b;
+}
+.failed-popup-content {
+    font-size: 14px;
+    color: #9b9b9b;
+}
+.failed-popup-button-view {
+    margin: 16px 0 16px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.failed-popup-button {
+    height: 50px;
+    width: 90%;
+    margin: 8px 0 8px 0;
+    border-radius: 50px;
+    border: 1px solid #9057ff;
+    color: #9057ff;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.failed-popup-other-form {
+    height: 100rpx;
+    width: 600rpx;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.failed-popup-other-button {
+    height: 100rpx;
+    width: 600rpx;
+    border-radius: 50rpx;
+    background-color: #9057ff;
+    color: white;
+    display: flex;
+    font-size: 48rpx;
+    font-weight: 400;
+    justify-content: center;
+    text-align: center;
+}
+.failed-popup-other-button:disabled {
+    background-color: #eee;
+    color: #bbb;
+    border: 1px solid #999;
+}
+.sign_input {
+    width: 552rpx;
+    height: 80rpx;
+    margin: 24rpx 0;
+    padding: 0 24rpx;
+    border: 1px solid #9b9b9b;
+    border-radius: 50px;
+}

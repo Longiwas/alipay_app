@@ -1,0 +1,262 @@
+<view class='page-container-classname'>
+                <titlebar title='宠物详情' onChildRef='saveChildRef1' _parent_ref="{{isMounted}}">
+</titlebar><view class='flex flex-column' style='margin-top:{{customHeadHeight}}px; position:relative;'>
+  <swiper class='page-swiper' indicator-dots='{true}'>
+    <block a:for='{{petBanner}}' a:key='index' ref-numbers='{{petBanner}}'>
+      <swiper-item>
+        <view>
+          <block a:if='{{item.isImage}}'>
+            <image src='{{item.file}}?imageMogr2/thumbnail/500x' mode='aspectFill' data-index='{{index}}' onTap='onImageTap'>
+            </image>
+          </block>
+          <block a:else >
+            <view style='position: relative; height: 100%; width: 100%;'>
+              <video src='{{item.file}}' id='pet_video'>
+              </video>
+              <block a:if='{{!is_like}}'>
+                <view class='flex flex-column center' style='float: left;  height: 100%; width: 100%; position: absolute; left: 0; top: 0; z-index: 1; background-color: rgba(0, 0, 0, 0.5); color: white; font-size: 36rpx; '>
+                  <view>
+                    左下角点赞👍后
+                  </view>
+                  <view>
+                    才可以播放哦~
+                  </view>
+                </view>
+              </block>
+            </view>
+          </block>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <image src='/images/adoption_detail_warning.png' style='position: absolute; right: 60rpx; top: 20rpx; width: 50rpx; height: 50rpx;' onTap='onWarningTap'>
+  </image>
+  <view class='flex petinfo'>
+    <view class='flex flex-row hcenter petinfo_left'>
+      <view class='petinfo_name'>
+        {{petName}}
+      </view>
+      <view class='petinfo_age'>
+        {{year}}岁{{month}}月
+      </view>
+      <image class='petinfo_gender' src='{{genderUrl}}'>
+      </image>
+    </view>
+    <view class='flex flex-row hcenter petinfo_right'>
+      <image class='petinfo_eye' src='/images/eye.png'>
+      </image>
+      <view class='petinfo_viewnum'>
+        {{viewNum}}
+      </view>
+    </view>
+  </view>
+  <view class='flex flex-row petinfo_location'>
+    <view class='petinfo_location_icon'>
+      <image class='petinfo_location_icon' src='/images/location-o.svg'>
+      </image>
+    </view>
+    <view class='hcenter petinfo_location_name'>
+      {{locationStr}}
+    </view>
+  </view>
+  <view class='flex flex-row petinfo_tags spacebetween' style='width: 60%; '>
+    <block a:for='{{options}}' a:key='name' ref-numbers='{{options}}'>
+      <block a:if='{{item.value==1}}'>
+        <view class='flex tags'>
+          已{{item.desc}}
+        </view>
+      </block>
+      <block a:elif='{{item.value==2}}'>
+        <view class='flex tags'>
+          未{{item.desc}}
+        </view>
+      </block>
+    </block>
+  </view>
+  <view class='flex flex-column tab_view_margin'>
+    <view class='remark_view'>
+      {{petRemark}}
+    </view>
+    <view class='petinfo_need'>
+      <view class='flex flex-row center petinfo_need_title'>
+        领养要求
+      </view>
+      <block a:if='{{conditions_left.length<=0 && conditions_right.length<=0}}'>
+        <view class='flex flex-row center petinfo_need_title'>
+          无特别要求, 欢迎前来沟通
+        </view>
+      </block>
+      <block a:else >
+        <view class='flex flex-row'>
+          <view class='flex flex-column' style='width: 50%;'>
+            <block a:for='{{conditions_left}}' ref-numbers='{{conditions_left}}'>
+              <view class='flex flex-row hcenter'>
+                <view style='font-size: 28rpx; color: #F9689F; '>
+                  ✓
+                </view>
+                <view style='margin-left: 17rpx; color: #717171; font-size: 24rpx;'>
+                  {{item}}
+                </view>
+              </view>
+            </block>
+          </view>
+          <view class='flex flex-column' style='width: 50%;'>
+            <block a:for='{{conditions_right}}' ref-numbers='{{conditions_right}}'>
+              <view class='flex flex-row hcenter'>
+                <view style='font-size: 28rpx; color: #F9689F; '>
+                  ✓
+                </view>
+                <view style='margin-left: 17rpx; color: #717171; font-size: 24rpx;'>
+                  {{item}}
+                </view>
+              </view>
+            </block>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class='flex flex-row hcenter petcomments_view' onTap='onCommentsJumpTap'>
+      <view class='flex flex-row hcenter' style='width: 637rpx;'>
+        <image class='petcomments_icon1' src='/images/adoption_detail_comment_input.png'>
+        </image>
+        <view class='petcomments_text1'>
+          评论/留言
+        </view>
+        <view class='petcomments_text2'>
+          ({{total_count}})
+        </view>
+      </view>
+      <image class='petcomments_icon2' src='/images/right.png'>
+      </image>
+    </view>
+    <view class='flex flex-row center' style='margin-top: 38rpx;'>
+      <view class='petlike_leftbar'>
+      </view>
+      <view class='petlike_center'>
+        猜你喜欢
+      </view>
+      <view class='petlike_rightbar'>
+      </view>
+    </view>
+    <view class='flex flex-row center spacebetween'>
+      <block a:for='{{random}}' a:key='id' ref-numbers='{{random}}'>
+        <view class='card_main' data-id='{{index}}' onTap='onRandomTap'>
+          <image mode='aspectFill' src='{{item.cover}}?imageMogr2/thumbnail/150x' class='petimg'>
+          </image>
+          <view class='petinfo_card'>
+            <view class='petnamegender'>
+              <view>
+                {{item.name}}
+              </view>
+              <image src='{{item.genderUrl}}'>
+              </image>
+            </view>
+            <view class='petagelocation'>
+              <view class='petage_string'>
+                {{item.year}}岁{{item.month}}月
+              </view>
+              <view class='petlocation'>
+                <image class='petlocation_image' src='/images/location.png'>
+                </image>
+                <view class='petlocation_string'>
+                  {{item.locationStr}}
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view style='height: 50rpx;'>
+    </view>
+  </view>
+  <view id='comments_view' style='height:100rpx;'>
+  </view>
+  <view class='flex hcenter flex-row button_view' a:if='{{selected_view}}'>
+    <view class="flex flex-column center {{is_like?'liked_text':'like_text'}}" style='position: relative;' onTap='onLikeTap'>
+      <block a:if='{{is_like}}'>
+        <image src='/images/liked.png' class='bottom_icon'>
+        </image>
+      </block>
+      <block a:else >
+        <image src='/images/like.png' class='bottom_icon'>
+        </image>
+      </block>
+      点赞      <block a:if='{{like>0}}'>
+        <view class='like_view'>
+          {{like_str}}
+        </view>
+      </block>
+    </view>
+    <view class="flex flex-column center {{favStatus?'liked_text':'like_text'}}" onTap='onHeartTap'>
+      <block a:if='{{favStatus}}'>
+        <image src='/images/faved.png' class='bottom_icon2'>
+        </image>
+      </block>
+      <block a:else >
+        <image src='/images/fav.png' class='bottom_icon2'>
+        </image>
+      </block>
+      收藏
+    </view>
+    <block a:if='{{owner}}'>
+      <button class='flex center created_btn' open-type='share'>
+        立即分享
+      </button>
+    </block>
+    <block a:else >
+      <block a:if='{{apply}}'>
+        <button class='flex center submitted_btn'>
+          已提交领养请求
+        </button>
+      </block>
+      <block a:else >
+        <image class='flex submit_btn' data-recordid='{{petId}}' src='/images/adoption_detail_button.png' onTap='onAnswerQuestionTap'>
+        </image>
+      </block>
+    </block>
+  </view>
+  <view class='flex hcenter flex-row button_view' a:if='{{!selected_view}}'>
+    <input class='comment_content_input' placeholder='{{placeholder}}' focus='{{comment_focus}}' value='{{comment}}' onInput='onContentInput'>
+    </input>
+    <image class='comment_post_image' src='/images/post.png' style="visibility : {{show_post?'visible':'hidden'}}" onTap='onCommentPostTap'>
+    </image>
+  </view>
+  <image class='adoption_help' src='/images/adoption_help.png' onTap='onHelpTap'>
+  </image>
+  <image class='adoption_generate' src='/images/adoption_generate.png' onTap='onGenerateTap'>
+  </image>
+</view><van-popup show='{{ reportShow }}' position='bottom' custom-class='cancelPopup' _parent_ref="{{isMounted}}" onClose='onReportCloseTap' onChildRef='saveChildRef2'>
+  <view class='cancelPopupTitle'>
+    请输入举报内容
+  </view>
+  <view class='cancelPopupInfo'>
+    <textarea class='report-textarea' placeholder-style='color:#C2C2C2; ' placeholder="{{reportShow?'请输入举报原因和举报内容等……':''}}" onInput='onReportInput'>
+    </textarea>
+  </view>
+  <view class='cancelPopupInfo'>
+    <button class='cancelPopupConfirm' onTap='onReportConfirmTap'>
+      举报
+    </button>
+  </view>
+  <view class='cancelPopupInfo'>
+    <button class='cancelPopupCancel' onTap='onReportCloseTap'>
+      取消
+    </button>
+  </view>
+  <view style='height:16px;'>
+  </view>
+</van-popup><van-popup show='{{helpShow}}' custom-class='help_popup' _parent_ref="{{isMounted}}" onClose='onHelpPopupClose' onChildRef='saveChildRef3'>
+  <image src='https://res.511cwpt.com/adoption_help_detail.png?imageMogr2/thumbnail/500x' class='adoption_help_detail'>
+  </image>
+  <button class='share_wechatfriends' open-type='share'>
+    <image src='/images/wechat_friends.png'>
+    </image>
+  </button>
+  <button class='share_wechatcircle' onTap='onCircleTap'>
+    <image src='/images/wechat_circle.png'>
+    </image>
+  </button>
+</van-popup><login-window show='{{loginShow}}' _parent_ref="{{isMounted}}" onComplete='onAuthorizeComplete' onChildRef='saveChildRef4'>
+</login-window>
+            </view>

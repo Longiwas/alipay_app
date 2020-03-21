@@ -1,0 +1,78 @@
+<view class='page-container-classname'>
+                <view class='flex center' style='height:{{customHeadHeight}}px; padding-top:{{customHeadTopPadding}}px;' onChildRef='saveChildRef0'>
+  消息中心
+</view><view class='action_image_view'>
+  <image src="{{cover+'?thumbnail/500x'}}" onTap='onImageTap'>
+  </image>
+</view><view a:if='{{false}}' class='flex action_more_view flex-row hcenter spacebetween'>
+  <view>
+    查看更多好玩的活动
+  </view>
+  <view>
+    <van-icon name='arrow' custom-class='right_image' _parent_ref="{{isMounted}}" onChildRef='saveChildRef1'>
+    </van-icon>
+  </view>
+</view><view class='flex flex-row hcenter spacebetween system_like_view'>
+  <view class='system_message_view flex flex-column center' onTap='onSystemMessageTap'>
+    <view style='font-size:30rpx;'>
+      系统消息
+    </view>
+    <view style='font-size:20rpx; color:#808080;' a:if='{{unread_system_msgs}}'>
+      你参与的宠物领养有新动态了
+    </view>
+    <image class='system_message_redot' src='/images/reddot.png' a:if='{{unread_system_msgs}}'>
+    </image>
+  </view>
+  <view class='system_message_view flex center' style='font-size:30rpx;' onTap='onMyLikeCommentsTap'>
+    我的点赞/评论
+  </view>
+</view><view class='message_view flex flex-column center'>
+  <block a:if='{{mix_data.length==0}}'>
+    <image class='nomessage_image' src='https://res.511cwpt.com/information_center_nomessage.png?imageMogr2/thumbnail/500x'>
+    </image>
+  </block>
+  <block a:else >
+    <block a:for='{{mix_data}}' a:key='id' ref-numbers='{{mix_data}}'>
+      <block a:if="{{item.type=='reply'}}">
+        <view class='flex flex-row hcenter item_view' data-id='{{item.id}}' data-petid='{{item.pet.id}}' onTap='onReplyTap'>
+          <image src="{{item.author.avatar+'?imageMogr2/thumbnail/100x'}}" class="avatar_image {{item.is_read?'read_avatar':''}}">
+          </image>
+          <view class="content_view hcenter {{item.is_read?'read':''}}">
+            <view>
+              {{item.author.name}}              <block a:if='{{item.ref == null}}'>
+                评论 {{item.pet.name}}
+              </block>
+              <block a:else >
+                回复 {{item.ref.author.name}}
+              </block>
+            </view>
+            <view class='comment_view'>
+              "{{item.content}}"
+            </view>
+          </view>
+          <image src="{{item.pet.cover+'?imageMogr2/thumbnail/100x'}}" class="cover_image {{item.is_read?'read':''}}">
+          </image>
+        </view>
+      </block>
+      <block a:elif="{{item.type=='like'}}">
+        <view class='flex flex-row hcenter item_view' data-id='{{item.id}}' data-petid='{{item.pet.id}}' onTap='onLikeTap'>
+          <image src="{{item.author.avatar+'?imageMogr2/thumbnail/100x'}}" class="avatar_image {{item.is_read?'read_avatar':''}}">
+          </image>
+          <view class="content_view hcenter {{item.is_read?'read':''}}">
+            {{item.author.name}} ❤️ 赞了            <block a:if="{{item['like-type']=='message'}}">
+              {{item.data.author.name}}的评论
+            </block>
+            <block a:if="{{item['like-type']=='pet'}}">
+              {{item.pet.name}}
+            </block>
+          </view>
+          <image src="{{item.pet.cover+'?imageMogr2/thumbnail/100x'}}" class="cover_image {{item.is_read?'read':''}}">
+          </image>
+        </view>
+      </block>
+    </block>
+  </block>
+</view><login-window show='{{loginShow}}' _parent_ref="{{isMounted}}" onComplete='onAuthorizeComplete' onChildRef='saveChildRef2'>
+</login-window><template-window show='{{template_show}}' templateIds='{{templateIds}}' _parent_ref="{{isMounted}}" onAuthorizeComplete='onAuthorizeComplete' onChildRef='saveChildRef3'>
+</template-window>
+            </view>

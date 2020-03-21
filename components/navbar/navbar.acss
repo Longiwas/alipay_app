@@ -1,0 +1,64 @@
+.customHead {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-color: #fff;
+}
+.lp16 {
+    padding-left: 16px;
+}
+.flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+}
+.tapped {
+    animation: buttontapping 1s;
+    background-color: #ccc;
+}
+@keyframes buttontapping {
+    from {
+        background: #ddd;
+    }
+    to {
+        background: #ddc;
+    }
+}
+.small_part {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 28rpx;
+}
+.big_part {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    font-size: 30rpx;
+    justify-content: center;
+    align-items: center;
+}
+.left {
+    width: 100%;
+    padding-left: 30rpx;
+    display: flex;
+    align-items: center;
+
+    line-height: 30rpx;
+}
+.location_icon {
+    height: 30rpx;
+    width: 20rpx;
+}
+.location_text {
+    overflow: hidden;
+    line-clamp: 1;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    word-wrap: break-word;
+}

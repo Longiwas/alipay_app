@@ -1,0 +1,6 @@
+<view class='template-window-index {{className}}' onChildRef='saveChildRef0'>
+  <van-popup show='{{show}}' position='center' custom-class='template-window' _parent_ref="{{isMounted}}" onClose='onWindowClose' onChildRef='saveChildRef1'>
+    <image src='https://res.511cwpt.com/template_window.png' class='template-image' onTap='onConfirmTap'>
+    </image>
+  </van-popup>
+</view>

@@ -1,0 +1,99 @@
+<view class='page-container-classname'>
+                <navbar id='adoption_title' title='领养列表' location='{{location}}' onChildRef='saveChildRef1' _parent_ref="{{isMounted}}">
+</navbar><view style='padding-top:{{customHeadHeight}}px;'>
+  <view class='flex' style='width: 100%; flex-direction:row; display: flex; font-size:32rpx; position:fixed; z-index:5; background-color:#FFF; justify-content: space-around; padding-bottom: 3px; border-bottom: 1px solid #DDDCDF;'>
+    <block a:for='{{categories}}' a:key='id' ref-numbers='{{categories}}'>
+      <view class='{{selected[index]}}' style='text-align:center;' data-index='{{index}}' data-id='{{item.id}}' onTap='onTabTap'>
+        {{item.desc}}
+      </view>
+    </block>
+    <view style='text-align:center;' onTap='onFilterTap'>
+      筛选      <van-icon name='arrow-down' _parent_ref="{{isMounted}}" onChildRef='saveChildRef2'>
+      </van-icon>
+    </view>
+  </view>
+  <block a:if='{{!subscribed}}'>
+    <view class='subscribe_city' style='top:{{customHeadHeight+30}}px; '>
+      <view style='display: flex; flex-direction: row; justify-content: center; align-items: center;'>
+        当前{{city}}有新宠物时提醒我        <button class='subscribe_btn' onTap='onLocationSubscribeTap'>
+          好的
+        </button>
+        <button class='subscribe_cancel_btn' onTap='onSubscribeCancelTap'>
+          不用
+        </button>
+      </view>
+    </view>
+  </block>
+  <view class='tabpage' style='padding-top:{{subscribed?36:68}}px;'>
+    <view>
+      <block a:if='{{petArray.length === 0}}'>
+        <image src='https://res.511cwpt.com/adoption_no_pet_1.png' class='nopet_image' onTap='onNoPetTap'>
+        </image>
+      </block>
+      <block a:for='{{petArray}}' a:key='id' ref-numbers='{{petArray}}'>
+        <view class='petItem flex' style='height:239rpx;' data-id='{{item.id}}' onTap='onPetTap'>
+          <image src='{{item.cover}}?imageMogr2/thumbnail/500x' mode='aspectFill' class='petImg'>
+          </image>
+          <view class='petInfo'>
+            <view class='flex flex-row petInfoItem petInfoSpaceBetween'>
+              <view class='petName'>
+                {{item.name}}
+              </view>
+              <view class='flex flex-row petLocation'>
+                <image class='petGender' src='{{item.genderUrl}}'>
+                </image>
+              </view>
+            </view>
+            <view class='flex flex-row petInfoItem petLocation hcenter petInfoSpaceBetween'>
+              <view class='petAge'>
+                {{item.year}}岁{{item.month}}月
+              </view>
+              <view>
+                <image class='locationImg' src='/images/location-o.svg'>
+                </image>
+                {{item.locationStr}}
+              </view>
+            </view>
+            <view class='flex flex-row petInfoItem hcenter petInfoSpaceBetween'>
+              <block a:for='{{item.options}}' a:for-item='option' a:key='id' ref-numbers='{{item.options}}'>
+                <block a:if='{{option.value==1}}'>
+                  <view class='flex center tags'>
+                    已{{option.desc}}
+                  </view>
+                </block>
+                <block a:elif='{{option.value==2}}'>
+                  <view class='flex center tags'>
+                    未{{option.desc}}
+                  </view>
+                </block>
+              </block>
+            </view>
+            <view class='flex petInfoItem hcenter petInfoSpaceBetween'>
+              <view style='width:50%'>
+              </view>
+              <view style='width:50%'>
+                <image src='http://res.511cwpt.com/adoption_button.png' style='width:211rpx; height:42rpx'>
+                </image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view><button a:if='{{showSubBtn}}' class='home_subscribe_button' onTap='onShowSubscribe'>
+  <image src='/images/index.gif'>
+  </image>
+</button><van-popup custom-class='sub_info_window' show='{{subscribeInfoShow}}' _parent_ref="{{isMounted}}" onChildRef='saveChildRef3'>
+  <image class='sub_info_window_top' src='https://res.511cwpt.com/subscribe_background.png'>
+  </image>
+  <button class='flex center sub_info_window_button' open-type='contact'>
+    <image src='https://res.511cwpt.com/subscribe_button.png'>
+    </image>
+  </button>
+  <view style='position:absolute; top:0rpx; right:0rpx; width:60rpx; height:60rpx;' onTap='onSubscribeTap'>
+  </view>
+</van-popup><login-window show='{{loginShow}}' _parent_ref="{{isMounted}}" onComplete='onAuthorizeComplete' onChildRef='saveChildRef4'>
+</login-window><template-window show='{{template_show}}' templateIds='{{templateIds}}' _parent_ref="{{isMounted}}" onAuthorizeComplete='commit' onChildRef='saveChildRef5'>
+</template-window>
+            </view>

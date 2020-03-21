@@ -1,0 +1,74 @@
+@import "/__antmove/static/app.acss";
+/**app.wxss**/
+@import "./weui.acss";
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+button {
+    background: initial;
+}
+.flex {
+    display: flex;
+}
+.flex-row {
+    flex-direction: row;
+}
+.flex-column {
+    flex-direction: column;
+}
+.center {
+    justify-content: center;
+    align-items: center;
+}
+.vcenter {
+    justify-content: center !important;
+}
+.hcenter {
+    align-items: center;
+}
+.spacebetween {
+    justify-content: space-between;
+}
+.fullheight {
+    height: 100%;
+}
+.fullwidth {
+    width: 100%;
+}
+.halfwidth {
+    width: 50%;
+}
+button:focus {
+    outline: 0;
+}
+
+button::after {
+    border: none;
+}
+
+.lp16 {
+    padding-left: 16px;
+}
+.rp16 {
+    padding-right: 16px;
+}
+.tp16 {
+    padding-top: 16px;
+}
+.bp16 {
+    padding-bottom: 16px;
+}
+.blank-background-color {
+    background-color: #f6f6f6;
+}
+.icon {
+    height: 16px;
+    width: 16px;
+}
+.b_white {
+    background-color: white;
+}

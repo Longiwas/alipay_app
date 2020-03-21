@@ -1,0 +1,65 @@
+<view class='page-container-classname'>
+                <titlebar title='宠物详情' onChildRef='saveChildRef1' _parent_ref="{{isMounted}}">
+</titlebar><view class='flex flex-column' style='padding-top:{{customHeadHeight}}px; align-items:center;'>
+  <view style='height:500rpx; width:670rpx; '>
+    <swiper class='page-swiper' style='height:500rpx; width::670rpx' indicator-dots='{true}'>
+      <block a:for='{{petBanner}}' a:key='{{index}}' ref-numbers='{{petBanner}}'>
+        <swiper-item>
+          <view>
+            <block a:if='{{item.isImage}}'>
+              <image src='{{item.file}}?imageMogr2/thumbnail/500x' mode='aspectFill' data-index='{{index}}' onTap='onImageTap'>
+              </image>
+            </block>
+            <block a:else >
+              <video src='{{item.file}}'>
+              </video>
+            </block>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='flex' style='padding-top:32rpx; flex-direction:row; height:64rpx; width:670rpx;'>
+    <view class='flex flex-row petName' style='flex-direction:row; height:100%; line-height:64rpx; font-size:40rpx; '>
+      {{petName}}      <view style='font-size:32rpx; margin:0 0 0 8px; color:#5B5B5B; line-height:64rpx; font-weight:300;'>
+        {{year}}岁{{month}}月
+      </view>
+      <image src='{{genderUrl}}' style='height:16px; width:16px; padding-top:8px; padding-left:10px;'>
+      </image>
+    </view>
+  </view>
+  <view class='flex' style='padding-top:16rpx; flex-direction:row; height:64rpx; justify-content: space-between; width:670rpx;'>
+    <view class='flex flex-row' style='height:100%; font-size:28rpx; align-items:start'>
+      <block a:for='{{options}}' a:key='name' ref-numbers='{{options}}'>
+        <block a:if='{{item.value==1}}'>
+          <view class='flex tags'>
+            已{{item.desc}}
+          </view>
+          <view style='width:20rpx; '>
+          </view>
+        </block>
+        <block a:elif='{{item.value==2}}'>
+          <view class='flex tags'>
+            未{{item.desc}}
+          </view>
+          <view style='width:20rpx; '>
+          </view>
+        </block>
+      </block>
+    </view>
+  </view>
+  <view class='flex flex-row' style='padding-top:16px; font-size:28rpx; color:#5B5B5B; width:670rpx; align-items:center; '>
+    <image style='height:36rpx; width:30rpx; margin-right:8rpx;' src='/images/location-o.svg'>
+    </image>
+    {{locationStr}}
+  </view>
+  <view class='flex' style='padding-top:16rpx; font-size:28rpx; color:#9B9B9B; padding-bottom:150rpx; word-break:break-all; width:670rpx;'>
+    {{petRemark}}
+  </view>
+</view><view class='flex hcenter viewnum' style='top:{{customHeadHeight+486+128}}rpx;'>
+  <van-icon name='eye-o' _parent_ref="{{isMounted}}" onChildRef='saveChildRef2'>
+  </van-icon>
+  {{viewNum}}
+</view><image src='/images/adopted.svg' style='position: absolute; bottom:50rpx; right:0rpx; width:480rpx; height:360rpx;'>
+</image>
+            </view>

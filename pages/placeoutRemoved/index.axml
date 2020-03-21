@@ -1,0 +1,9 @@
+<view class='page-container-classname'>
+                <titlebar title='走丢了...' onChildRef='saveChildRef1' _parent_ref="{{isMounted}}">
+</titlebar><view class='flex flex-column center'>
+  <image class='remove_image' src='http://res.511cwpt.com/adoption_deleted.png'>
+  </image>
+  <image class='check_image' src='http://res.511cwpt.com/adoption_checkother.png' onTap='onIndexTap'>
+  </image>
+</view>
+            </view>

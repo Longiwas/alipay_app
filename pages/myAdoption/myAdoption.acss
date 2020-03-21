@@ -1,0 +1,361 @@
+.selected {
+    color: #9259ff;
+    border-bottom: 2px solid #9259ff;
+}
+.tabpage {
+    margin-top: 32px;
+}
+.deactivate {
+    display: none;
+}
+.scroll-view {
+    height: calc(100% + 32px);
+    transform: translateY(-32px);
+}
+.pulldown {
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+    text-align: center;
+}
+.petItem {
+    width: 100%;
+    flex-direction: row;
+    border-bottom: 1px solid #c2c2c2;
+}
+.petImg {
+    border-radius: 10%;
+    margin: 30rpx;
+    height: 260rpx;
+    width: 260rpx;
+}
+.petInfo {
+    flex-direction: column;
+}
+.petInfoItem {
+    height: 25%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.petName {
+    font-weight: bold;
+    overflow: hidden;
+    line-height: 100%;
+}
+.petLocation {
+    color: #9b9b9b;
+}
+.petPowerAvatar {
+    height: 40rpx;
+    width: 40rpx;
+    border-radius: 18rpx;
+}
+.locationImg {
+    height: 30rpx;
+    width: 28rpx;
+    margin-right: 8rpx;
+}
+.tags {
+    color: #9259ff;
+    border: 1px solid rgba(146, 89, 255, 0.6);
+    padding: 4rpx 20rpx;
+    border-radius: 30rpx;
+    font-size: 24rpx;
+    text-align: center;
+}
+.btn_9057 {
+    width: 136rpx;
+    height: 48rpx;
+    background: rgba(144, 87, 255, 1);
+    border-radius: 24rpx;
+    font-size: 24rpx;
+    font-weight: 400;
+    color: white;
+    line-height: 24rpx;
+    margin: 0 6rpx;
+}
+.btn_FF5998 {
+    height: 48rpx;
+    background: rgba(255, 89, 152, 1);
+    border-radius: 24rpx;
+    font-size: 24rpx;
+    font-weight: 400;
+    color: white;
+    line-height: 24rpx;
+    margin: 0 6rpx;
+}
+.btn_21 {
+    background: rgba(255, 89, 152, 1);
+    border-radius: 24rpx;
+    font-size: 24rpx;
+    font-weight: 400;
+    color: white;
+    padding: 4rpx 18rpx;
+    margin-right: 12rpx;
+}
+.btn_22 {
+    background: rgba(144, 87, 255, 1);
+    border-radius: 24rpx;
+    font-size: 24rpx;
+    font-weight: 400;
+    color: white;
+    padding: 4rpx 20rpx;
+    margin-right: 12rpx;
+}
+.btn_23 {
+    background: rgba(144, 87, 255, 1);
+    border-radius: 24rpx;
+    font-size: 24rpx;
+    font-weight: 400;
+    color: white;
+    padding: 4rpx 18rpx;
+    margin-right: 12rpx;
+}
+.btn_31 {
+    background: rgba(144, 87, 255, 1);
+    border-radius: 24rpx;
+    font-size: 24rpx;
+    font-weight: 400;
+    color: white;
+    padding: 4rpx 20rpx;
+    margin-right: 12rpx;
+}
+.btn_32 {
+    background: rgba(255, 89, 152, 1);
+    border-radius: 24rpx;
+    font-size: 24rpx;
+    font-weight: 400;
+    color: white;
+    padding: 4rpx 20rpx;
+}
+.mask {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 99;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.phoneModal {
+    width: 300px;
+    height: 300px;
+    margin: 16px;
+    z-index: 100;
+    background-color: white;
+    border-radius: 4px;
+}
+.phoneModalTop {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9057ff;
+    position: relative;
+}
+.modalClose {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    color: white;
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.phoneModalBottom {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.phoneModalBottom view {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.phoneModalBottom .info {
+    height: 50px;
+    font-size: 14px;
+}
+.phoneModalBottom .number {
+    height: 40px;
+    font-size: 20px;
+}
+.callButton {
+    background-color: #9057ff;
+    color: white;
+    border-radius: 50px;
+    width: 100px;
+    font-size: 12px;
+}
+.phoneModalImage {
+    height: 100px;
+    width: 100px;
+}
+.cancelPopup {
+    width: 100%;
+    height: 250px;
+    font-size: 16px;
+}
+.cancelPopupInfo {
+    height: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.cancelPopupConfirm {
+    width: 600rpx;
+    background-color: #9057ff;
+    font-size: 20px;
+    border-radius: 50rpx;
+    color: white;
+}
+.cancelPopupCancel {
+    width: 600rpx;
+    height: 100rpx;
+    background-color: white;
+    font-size: 20px;
+    border-radius: 50rpx;
+    color: #9b9b9b;
+    border: 1px solid #9b9b9b;
+}
+.phonePopup {
+    height: 400px;
+    width: 100%;
+}
+.phonePopupTitle {
+    height: 120px;
+    width: 100%;
+    position: relative;
+    background-color: #9057ff;
+}
+.phonePopupClose {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+.phonePopupImageView {
+    width: 100%;
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.phonePopupImage {
+    width: 130px;
+    height: 130px;
+    border-radius: 130px;
+}
+.phonePopupContent {
+    width: 100%;
+    height: 280px;
+}
+.phonePopupContentBlank {
+    height: 20%;
+    width: 100%;
+}
+.phonePopupContentInfo {
+    height: 25%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.share_popup {
+    width: 618rpx;
+    height: 698rpx;
+    position: relative;
+    background-image: url("https://res.511cwpt.com/adoption_share_info.png");
+    background-size: 100% 100%;
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+.share_popup_title {
+    position: absolute;
+    left: 100rpx;
+    top: 123rpx;
+    font-size: 50rpx;
+}
+.share_popup_content {
+    position: absolute;
+    left: 81rpx;
+    top: 222rpx;
+    width: 445rpx;
+    text-align: center;
+}
+.share_popup_button {
+    position: absolute;
+    left: 111rpx;
+    top: 484rpx;
+    padding: 0;
+    width: 281rpx;
+    height: 102rpx;
+}
+.share_popup_button:hover {
+    background-color: rgba(0, 0, 0, 0);
+}
+.share_popup_button image {
+    width: 281rpx;
+    height: 102rpx;
+}
+.information_popup {
+    width: 731rpx;
+    height: 566rpx;
+    position: relative;
+    background-image: url("https://res.511cwpt.com/adoption_information_background.png");
+    background-size: 100% 100%;
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+.information_popup_content {
+    position: absolute;
+    left: 125rpx;
+    top: 210rpx;
+    display: flex;
+    flex-direction: row;
+}
+.information_popup_content_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30rpx;
+}
+.information_popup_content_left image {
+    height: 120rpx;
+    width: 120rpx;
+    border-radius: 50%;
+}
+.information_popup_content_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 30rpx;
+    margin-left: 32rpx;
+}
+.information_popup_content_right_title {
+    font-size: 38rpx;
+}
+.information_popup_content_right_desc {
+    font-size: 24rpx;
+    color: rgba(165, 165, 165, 1);
+}

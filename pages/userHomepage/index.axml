@@ -1,0 +1,61 @@
+<view class='page-container-classname'>
+                <titlebar title='个人中心' onChildRef='saveChildRef1' _parent_ref="{{isMounted}}">
+</titlebar><view class='flex flex-row ' style='margin-top:{{customHeadHeight}}px;'>
+  <view class='flex avatar_view'>
+    <image src='{{userInfo.avatarUrl}}'>
+    </image>
+  </view>
+  <view class='information_view'>
+    <view class='flex flex-row hcenter name_view'>
+      {{userInfo.nickName}}      <image class='gender_image' src='{{genderUrl}}'>
+      </image>
+    </view>
+    <view class='flex flex-row hcenter location_view'>
+      <image class='location_image' src='/images/location.png'>
+      </image>
+      {{locationStr}}
+    </view>
+  </view>
+</view><view class='grey_line_view'>
+</view><view class='help_view flex flex-row spacebetween hcenter'>
+  <view class='help_view_left'>
+    这些宝贝正在找家
+  </view>
+  <view class='help_view_right' onTap='onPosterTap'>
+    <image src='/images/homepage_generate.png'>
+    </image>
+  </view>
+</view><view class='grey_line_view'>
+</view><view>
+  <block a:for='{{petArray}}' a:key='id' ref-numbers='{{petArray}}'>
+    <view class='flex flex-row' data-id='{{item.id}}' onTap='onPetTap'>
+      <image class='cover_image' src="{{item.cover+'?imageMogr2/thumbnail/500x'}}" mode='aspectFill'>
+      </image>
+      <view class='flex flex-column info_view'>
+        <view class='flex hcenter info_view_item info_view_name'>
+          {{item.name}}
+        </view>
+        <view class='flex hcenter info_view_item info_view_ageandgender'>
+          {{item.year}}岁{{item.month}}个月          <image class='info_view_gender_image' src='{{item.genderUrl}}'>
+          </image>
+        </view>
+        <view class='flex hcenter flex-row spacebetween info_view_item'>
+          <block a:for='{{item.options}}' a:key='name' a:for-item='option' ref-numbers='{{item.options}}'>
+            <view class='flex center tag' a:if='{{option.value===1}}'>
+              已{{option.desc}}
+            </view>
+            <view class='flex center tag' a:if='{{option.value===2}}'>
+              未{{option.desc}}
+            </view>
+          </block>
+        </view>
+        <view class='flex hcenter info_view_item info_view_location'>
+          <image class='info_view_location_image' src='/images/location.png'>
+          </image>
+          {{item.locationStr}}
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+            </view>

@@ -1,0 +1,51 @@
+/* miniprogram/pages/myFavorites/index.wxss */
+
+.petItem {
+    width: 100%;
+    flex-direction: row;
+    border-bottom: 1px solid #c2c2c2;
+}
+.petImg {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    margin: 16px;
+    border-radius: 10%;
+}
+.petInfo {
+    width: 410rpx;
+    padding: 30rpx 0;
+    flex-direction: column;
+}
+.petInfoItem {
+    height: 25%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.petName {
+    font-weight: bold;
+    overflow: hidden;
+    line-height: 100%;
+}
+.petLocation {
+    color: #9b9b9b;
+}
+.tags {
+    color: #9259ff;
+    border: 1px solid #9259ff;
+    padding: 0 8px 0 8px;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+}
+.favEmpty {
+    margin: 32px 32px 32px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.favEmptyImg {
+    width: 80%;
+}

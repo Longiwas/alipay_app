@@ -1,0 +1,13 @@
+<view class='titlebar-titlebar {{className}}' onChildRef='saveChildRef0'>
+  <view class='customHead flex' style='height:{{customHeadHeight}}px; justify-content: center; align-items:center; font-size:40rpx; padding-top:{{customHeadTopPadding}}px;'>
+    <view class='small_part' onTap='onBackTap'>
+      <image class='arrow-left' src='/images/back.svg'>
+      </image>
+    </view>
+    <view class='big_part' onTap='onTitleTap'>
+      {{title}}
+    </view>
+    <view class='small_part'>
+    </view>
+  </view>
+</view>

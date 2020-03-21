@@ -1,0 +1,10 @@
+<view class='page-container-classname'>
+                <view class='flex center' onChildRef='saveChildRef0'>
+  <view style='padding: 4rpx 12rpx 6rpx 10rpx; font-size: 28rpx; border-radius: 28rpx; border: 2rpx solid #9259ff; color: #9259ff; margin-top: 200rpx;'>
+    + 适当放风透气
+  </view>
+  <view style='padding: 4rpx 12rpx 6rpx 10rpx; font-size: 28rpx; border-radius: 28rpx; background-color: #9259ff; color: white; margin-top: 200rpx;'>
+    √ 适当放风透气
+  </view>
+</view>
+            </view>

@@ -1,0 +1,60 @@
+<view class='page-container-classname'>
+                <titlebar title='我的收藏' onChildRef='saveChildRef1' _parent_ref="{{isMounted}}">
+</titlebar><view style='padding-top:{{customHeadHeight}}px; width:100%;'>
+  <block a:if='{{petArray.length==0}}'>
+    <view class='flex center' style='height: 70vh;'>
+      <view class='flex flex-column center'>
+        <image src='https://res.511cwpt.com/favorite_nopet.png' style='height:350rpx; width:670rpx; '>
+        </image>
+        <image src='https://res.511cwpt.com/favorite_nopet_btn.png' style='height: 60rpx; width: 220rpx; margin-top: 38rpx;' onTap='onGotoTap'>
+        </image>
+      </view>
+    </view>
+  </block>
+  <block a:else >
+    <block a:for='{{petArray}}' a:key='id' ref-numbers='{{petArray}}'>
+      <view class='petItem flex' style='height:{{itemHeight}}px;'>
+        <image src='{{item.cover}}?imageMogr2/thumbnail/500x' mode='aspectFill' class='petImg' style='height:280rpx; width:260rpx;' data-id='{{item.id}}' onTap='onPetTap'>
+        </image>
+        <view class='petInfo' style='height:{{itemHeight-32}}px; width:{{app.globalData.screenWidth-itemHeight-16}}px; '>
+          <view class='petInfoItem flex' style='flex-direction:row; justify-content:space-between;' data-id='{{item.id}}' onTap='onPetTap'>
+            <view class='petName' style='width:fit-content; font-size:{{fontSize}}px; '>
+              {{item.name}}
+            </view>
+            <view style='font-size:{{fontSize-3}}px; justify-content: center;'>
+              {{item.year}}岁{{item.month}}个月              <image src='{{item.genderUrl}}' style='width:18rpx; height:26rpx; padding-left:8px; '>
+              </image>
+            </view>
+          </view>
+          <view class='petInfoItem' style='display: flex; flex-direction:row;  align-items: center;' data-id='{{item.id}}' onTap='onPetTap'>
+            <block a:for='{{item.options}}' a:for-item='option' a:key='name' ref-numbers='{{item.options}}'>
+              <block a:if='{{option.value==1}}'>
+                <view class='tags' style='font-size:11px; border-radius:10px; '>
+                  已{{option.desc}}
+                </view>
+                <view style='width:8px; '>
+                </view>
+              </block>
+              <block a:elif='{{option.value==2}}'>
+                <view class='tags' style='font-size:11px; border-radius:10px; '>
+                  未{{option.desc}}
+                </view>
+                <view style='width:8px; '>
+                </view>
+              </block>
+            </block>
+          </view>
+          <view class='petInfoItem petLocation' style='font-size:{{fontSize-5}}px;' data-id='{{item.id}}' onTap='onPetTap'>
+            {{item.locationStr}}
+          </view>
+          <view class='petInfoItem' style=" ">
+            <view class='flex' style='font-size:{{fontSize-7}}px; background-color:#FF5998; color:white; border-radius:16px; width:70%; justify-content:center; align-items:center; height:90%;' data-id='{{item.id}}' onTap='onUnFavTap'>
+              取消收藏
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </block>
+</view>
+            </view>

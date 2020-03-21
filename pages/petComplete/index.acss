@@ -1,0 +1,113 @@
+/* miniprogram/pages/adoptionDetail/adoptionDetail.wxss */
+
+.page-swiper {
+    width: 100%;
+    height: 500rpx;
+    border-radius: 10px;
+}
+.page-swiper swiper-item {
+    border-radius: 10px;
+}
+.page-swiper swiper-item image {
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.page-swiper swiper-item video {
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.round {
+    position: absolute;
+    width: 128rpx;
+    height: 128rpx;
+    border: 5rpx solid #fff;
+    background-color: #ff596f;
+    border-radius: 64rpx;
+}
+.heart {
+    position: relative;
+    top: 5rpx;
+    width: 54rpx;
+    height: 48rpx;
+    border: 1px solid #fff;
+    background-color: #ff596f;
+}
+.viewnum {
+    position: absolute;
+    width: fit-content;
+    right: 36rpx;
+    font-size: 28rpx;
+    color: #9b9b9b;
+}
+
+.tags {
+    color: #9259ff;
+    border: 1px solid rgba(146, 89, 255, 0.6);
+    width: 124rpx;
+    height: 60rpx;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30rpx;
+}
+
+.cancelPopup {
+    width: 100%;
+    font-size: 16px;
+}
+.cancelPopupTitle {
+    padding: 16px 0 16px 16px;
+}
+.cancelPopupInfo {
+    height: 33%;
+    padding: 16px 16px 16px 16px;
+}
+.cancelPopupConfirm {
+    width: 100%;
+    background-color: #9057ff;
+    font-size: 20px;
+    border-radius: 30px;
+    color: white;
+}
+.cancelPopupCancel {
+    width: 100%;
+    background-color: white;
+    font-size: 20px;
+    border-radius: 30px;
+    color: #9b9b9b;
+    border: 1px solid #9b9b9b;
+}
+.report-textarea {
+    width: 100%;
+    border: 1px solid #9b9b9b;
+    justify-content: left;
+}
+.petName {
+    width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.submitted_btn {
+    background-color: #fff;
+    color: #ddd;
+    width: 600rpx;
+    border-radius: 60rpx;
+    border: 1px solid #ddd;
+    font-size: 48rpx;
+}
+.submit_btn {
+    background-color: #ff5998;
+    color: white;
+    width: 600rpx;
+    border-radius: 60rpx;
+    height: 100rpx;
+    font-size: 48rpx;
+    justify-content: center;
+    align-items: center;
+}

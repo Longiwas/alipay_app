@@ -1,0 +1,92 @@
+.action_image_view {
+    margin: 0 40rpx;
+    height: 300rpx;
+}
+.action_image_view image {
+    width: 100%;
+    height: 100%;
+    border-radius: 20rpx;
+}
+.action_more_view {
+    margin: 20rpx 40rpx 0 40rpx;
+    padding: 16rpx 20rpx;
+    font-size: 30rpx;
+    background-color: #d1e5fe;
+    border-radius: 15rpx;
+    box-shadow: 4rpx 4rpx 4rpx rgba(115, 151, 244, 0.7);
+}
+.right_image {
+    height: 30rpx;
+    width: 15rpx;
+    margin-top: 8rpx;
+}
+.system_like_view {
+    margin: 20rpx 40rpx 0rpx 40rpx;
+}
+.system_message_view {
+    width: 325rpx;
+    height: 110rpx;
+    border-radius: 15rpx;
+    background-color: #d1e5fe;
+    box-shadow: 4rpx 4rpx 4rpx rgba(115, 151, 244, 0.7);
+    position: relative;
+}
+.system_message_redot {
+    position: absolute;
+    top: 18rpx;
+    right: 73rpx;
+    height: 16rpx;
+    width: 16rpx;
+}
+.message_view {
+    margin: 20rpx 40rpx 0 40rpx;
+}
+.nomessage_image {
+    width: 350rpx;
+    height: 220rpx;
+    margin-top: 150rpx;
+}
+
+.item_view {
+    width: 670rpx;
+}
+.avatar_image {
+    height: 70rpx;
+    width: 70rpx;
+    margin: 30rpx 30rpx 30rpx 0;
+    border-radius: 40rpx;
+}
+.cover_image {
+    height: 70rpx;
+    width: 70rpx;
+    margin: 30rpx 0;
+    border-radius: 20rpx;
+}
+.cover_view {
+    color: silver;
+    font-size: 24rpx;
+    height: 100rpx;
+    width: 100rpx;
+    margin: 20rpx;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+}
+.content_view {
+    width: 500rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    justify-content: left;
+}
+.comment_view {
+    font-size: 30rpx;
+    color: #808080;
+}
+.read {
+    opacity: 0.5;
+}
+.read_avatar {
+    opacity: 0.5;
+}

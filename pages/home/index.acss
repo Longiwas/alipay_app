@@ -1,0 +1,202 @@
+/**index.wxss**/
+.hot {
+    width: 100%;
+    display: flex;
+}
+.page-swiper {
+    width: 100%;
+    height: 300rpx;
+    border-radius: 25px;
+}
+.page-swiper swiper {
+    margin: 0 25rpx;
+}
+.page-swiper swiper-item {
+    border-radius: 10px;
+}
+.page-swiper swiper-item image {
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.flex {
+    display: flex;
+}
+.fullwidth {
+    width: 100%;
+}
+.smallheight {
+    height: 64px;
+}
+.padding {
+    padding: 0 8px 0 8px;
+}
+.view_padding {
+    padding: 0 16px 0 16px;
+}
+.margin {
+    margin: 16px 8px 16px 8px;
+}
+.center {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.picker {
+    height: 64px;
+    width: 33%;
+}
+.combobox {
+    font-weight: bold;
+}
+.transform {
+    transform: rotate(90deg);
+}
+.icon {
+    height: 16px;
+    width: 16px;
+}
+.index_btn_view {
+    width: 327rpx;
+    height: 164rpx;
+    color: #fff;
+    margin-right: 38rpx;
+}
+.index_adoption_btn {
+    width: 327rpx;
+    height: 164rpx;
+    color: #fff;
+    margin-left: 38rpx;
+}
+.buttons {
+    width: 100%;
+    margin: 26rpx 0 0 0;
+    justify-content: space-between;
+}
+.index_btn {
+    width: 100%;
+    height: 100%;
+    padding: 16px 8px 16px 8px;
+    background: #1e90ff;
+    color: #fff;
+}
+.titlecenter {
+    margin-left: 38rpx;
+    margin-top: 18rpx;
+}
+.titlecenter image {
+    height: 29rpx;
+    width: 104rpx;
+}
+.home_subscribe_button {
+    position: fixed;
+    width: 150rpx;
+    height: 180rpx;
+    top: 684rpx;
+    right: -40rpx;
+    padding: 0 !important;
+}
+.home_subscribe_button:hover {
+    background-color: transparent;
+}
+.home_subscribe_button image {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-45deg);
+}
+.sub_info_window {
+    width: 631rpx;
+    height: 924rpx;
+    background-color: transparent !important;
+}
+.sub_info_window_top {
+    width: 631rpx;
+    height: 834rpx;
+}
+.sub_info_window_button {
+    width: 456rpx;
+    height: 80rpx;
+    padding: 0 !important;
+}
+.sub_info_window_button:hover {
+    background-color: transparent;
+}
+.sub_info_window_button image {
+    width: 456rpx;
+    height: 80rpx;
+}
+
+/*card*/
+.card_main {
+    height: 410rpx;
+    width: 326rpx;
+    background: rgba(250, 250, 250, 1);
+    box-shadow: 0px 2rpx 5rpx 0px rgba(77, 73, 60, 0.17);
+    margin-top: 40rpx;
+    border-radius: 12rpx;
+}
+.petimg {
+    width: 326rpx;
+    height: 302rpx;
+    border-top-left-radius: 12rpx;
+    border-top-right-radius: 12rpx;
+}
+.petinfo {
+    padding: 0 14rpx;
+    border-radius: 0px 0px 12rpx 12rpx;
+}
+.petnamegender {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30rpx;
+}
+.petnamegender image {
+    height: 24rpx;
+    width: 14rpx;
+}
+.petagelocation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22rpx;
+}
+.petage_string {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 30%;
+}
+.petlocation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 70%;
+}
+.petlocation_image {
+    height: 18rpx;
+    width: 14rpx;
+}
+.petlocation_string {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.pettags {
+    font-size: 18rpx;
+    color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6rpx;
+}
+.tag {
+    padding: 2rpx 10rpx;
+    background-color: #ab8ef5;
+    border-radius: 15rpx;
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="160px" height="120px" viewBox="0 0 160 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>送养ico@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="33.3656024%" y1="120.775812%" x2="33.3656024%" y2="18.7885623%" id="linearGradient-1">
+            <stop stop-color="#FFDA47" offset="0%"></stop>
+            <stop stop-color="#FE7109" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="160" height="120" rx="8"></rect>
+        <linearGradient x1="42.2139125%" y1="255.580673%" x2="42.2139125%" y2="0%" id="linearGradient-4">
+            <stop stop-color="#FFFFFF" stop-opacity="0.0757472826" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="首页-copy-2" transform="translate(-197.000000, -319.000000)">
+            <g id="送养ico" transform="translate(197.000000, 319.000000)">
+                <mask id="mask-3" fill="white">
+                    <use xlink:href="#path-2"></use>
+                </mask>
+                <use id="Mask-Copy" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                <g id="Group-2" mask="url(#mask-3)" fill="url(#linearGradient-4)">
+                    <g transform="translate(54.000000, 22.000000)" id="Combined-Shape">
+                        <path d="M0,19.2740964 L51.2263127,-1.42108547e-14 L15.8353127,25.6266359 L0,19.2740964 Z M53,0.664433518 L37.0321002,33.8637654 L18.0706377,26.265381 L53,0.664433518 Z M14.8338742,26.923251 L24.046278,30.7028718 L18.1212428,36 L14.8338742,26.923251 Z"></path>
+                    </g>
+                </g>
+                <text id="我要送养" mask="url(#mask-3)" font-family="PingFangSC-Semibold, PingFang SC" font-size="24" font-weight="500" line-spacing="24" fill="#FFFFFF">
+                    <tspan x="32.5" y="99">我要送养</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

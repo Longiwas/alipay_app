@@ -1,0 +1,10 @@
+{
+	"usingComponents": {
+		"van-icon": "../../dist/icon/index",
+		"van-checkbox-group": "../../dist/checkbox-group/index",
+		"van-checkbox": "../../dist/checkbox/index",
+		"van-toast": "../../dist/toast/index",
+		"titlebar": "../../components/titlebar/titlebar",
+		"template-window": "../../components/template-window/index"
+	}
+}

@@ -1,0 +1,10 @@
+.top_image {
+    margin-bottom: 15rpx;
+}
+.tab_selection {
+}
+.item_image {
+    height: 105rpx;
+    width: 105rpx;
+    margin-right: 5rpx;
+}

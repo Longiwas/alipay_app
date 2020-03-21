@@ -1,0 +1,108 @@
+<view class='page-container-classname'>
+                <titlebar title='领养攻略' onChildRef='saveChildRef1' _parent_ref="{{isMounted}}">
+</titlebar><view style='margin-top:{{customHeadHeight}}px;'>
+  <view class='title'>
+    领养流程
+  </view>
+  <view class='step step1'>
+    根据自身情况设定筛选条件
+  </view>
+  <view class='stepline stepline12'>
+  </view>
+  <view class='step step2'>
+    选择想领养的宠物进行申请
+  </view>
+  <view class='step step3'>
+    提交申请，分享给好友进行助力
+  </view>
+  <view class='stepline stepline34'>
+  </view>
+  <view class='step step4'>
+    如实回答送养人设定的问题
+  </view>
+  <view class='step step5'>
+    等待送养人联系
+  </view>
+  <view class='step step6'>
+    交接宠物并签定领养协议
+  </view>
+  <view class='title2'>
+    小贴士
+  </view>
+  <image class='backimg' src='/images/adoption_guide_detail.png'>
+  </image>
+  <view class='subtitle1'>
+    一、如何提升领养成功率
+  </view>
+  <view class='flex flex-column content1'>
+    <view>
+      1. 选择距离近的宠物
+    </view>
+    <view>
+      2. 如实回答问题
+    </view>
+    <view>
+      3. 让更多朋友助力证明自己是个合格的领养人
+    </view>
+  </view>
+  <view class='subtitle2'>
+    二、注意事项
+  </view>
+  <view class='flex flex-row content2'>
+    <view class='flex flex-column'>
+      <text decode='true'>
+        1.&nbsp;
+      </text>
+      <text decode='true'>
+        2.&nbsp;
+      </text>
+      <text decode='true'>
+        3.&nbsp;
+      </text>
+      <text decode='true'>
+        4.&nbsp;
+      </text>
+    </view>
+    <view class='flex flex-column'>
+      <view>
+        关注服务号，以防收不到消息
+      </view>
+      <view>
+        不接受任何形式的宠物买卖
+      </view>
+      <view>
+        认真核实送养人的身份信息
+      </view>
+      <view>
+        如遇诈骗行为，请举报或联系客服。一经核实，平台则将诈骗方永久拉入黑名单，且追究责任。
+      </view>
+    </view>
+  </view>
+  <view class='flex flex-column center information' onTap='onCopyTap'>
+    <view>
+      添加客服微信进宠物交流群。
+    </view>
+    <view class='flex flex-row'>
+      <view class='grape'>
+        Wyyqppcds
+      </view>
+      <view>
+        （点击复制）
+      </view>
+    </view>
+    <view>
+      这里面人讲话超有意思，我超喜欢这里的（手动滑稽）
+    </view>
+  </view>
+  <image src='/images/adoption_guide_detail_button.svg' class='start' onTap='onStartTap'>
+  </image>
+  <view class='flex flex-column center bottom'>
+    <view style='font-weight:bold'>
+      联系我们
+    </view>
+    <text decode='true'>
+      公众号:益只宠物领养救助平台&nbsp;&nbsp;微博:益只宠物领养救助平台&nbsp;&nbsp;微信:wyyappcds
+    </text>
+  </view>
+</view>
+            </view>

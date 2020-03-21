@@ -1,0 +1,13 @@
+<view class='page-container-classname'>
+                <titlebar title='更改名字' onChildRef='saveChildRef1' _parent_ref="{{isMounted}}">
+</titlebar><view class='flex flex-column' style='margin-top:{{customHeadHeight}}px; border-top:1px solid #DDDCDF'>
+  <input class='nickName_input' value='{{userInfo.nickName}}' onInput='onNickNameChange'>
+  </input>
+  <text class='nickName_tip'>
+    好名字可以让送养人更容易记住你
+  </text>
+  <button class='nickName_savebtn nickName_savebtn_color' disabled='{{btn_disabled}}' onTap='onSaveButtonTap'>
+    保存
+  </button>
+</view>
+            </view>

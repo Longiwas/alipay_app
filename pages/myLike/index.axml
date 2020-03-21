@@ -1,0 +1,28 @@
+<view class='page-container-classname'>
+                <titlebar title='我的点赞' onChildRef='saveChildRef1' _parent_ref="{{isMounted}}">
+</titlebar><view class='flex flex-column vcenter' style='margin-top:{{customHeadHeight}}px;'>
+  <block a:for='{{myLikeList}}' a:key='id' ref-numbers='{{myLikeList}}'>
+    <view class='flex flex-row hcenter item_view' data-id='{{item.pet.id}}' onTap='onLikeTap'>
+      <image src="{{item.author.avatar+'?imageMogr2/thumbnail/100x'}}" class='avatar_image'>
+      </image>
+      <view class='content_view hcenter'>
+        {{item.author.name}} ❤️ 赞了        <block a:if="{{item['like-type']=='message'}}">
+          {{item.data.author.name}}的评论
+        </block>
+        <block a:if="{{item['like-type']=='pet'}}">
+          {{item.pet.name}}
+        </block>
+      </view>
+      <block a:if="{{item['like-type']=='message'}}">
+        <view class='cover_view'>
+          {{item.data.content}}
+        </view>
+      </block>
+      <block a:if="{{item['like-type']=='pet'}}">
+        <image src="{{item.pet.cover+'?imageMogr2/thumbnail/100x'}}" class='cover_image'>
+        </image>
+      </block>
+    </view>
+  </block>
+</view>
+            </view>

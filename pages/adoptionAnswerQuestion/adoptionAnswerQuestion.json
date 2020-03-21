@@ -1,0 +1,7 @@
+{
+	"usingComponents": {
+		"van-popup": "../../dist/popup/index",
+		"titlebar": "../../components/titlebar/titlebar",
+		"template-window": "../../components/template-window/index"
+	}
+}

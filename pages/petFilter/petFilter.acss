@@ -1,0 +1,18 @@
+.tags_enable {
+    color: #9259ff;
+    border: 1px solid #9259ff;
+}
+.tags_disable {
+    color: #cdcdcd;
+    border: 1px solid #cdcdcd;
+}
+.tags {
+    padding: 0 8px 0 8px;
+    width: 104rpx;
+    height: 60rpx;
+    border-radius: 30rpx;
+    font-size: 28rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

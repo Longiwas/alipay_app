@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="160px" height="120px" viewBox="0 0 160 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>领养ico@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="33.3656024%" y1="92.125822%" x2="33.3656024%" y2="18.253647%" id="linearGradient-1">
+            <stop stop-color="#FF8FC2" offset="0%"></stop>
+            <stop stop-color="#FF66AC" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="160" height="120" rx="8"></rect>
+        <linearGradient x1="42.2139125%" y1="255.580673%" x2="42.2139125%" y2="0%" id="linearGradient-4">
+            <stop stop-color="#FFFFFF" stop-opacity="0.0757472826" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="首页-copy-2" transform="translate(-18.000000, -319.000000)">
+            <g id="领养ico" transform="translate(18.000000, 319.000000)">
+                <mask id="mask-3" fill="white">
+                    <use xlink:href="#path-2"></use>
+                </mask>
+                <use id="Mask-Copy" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                <path d="M74.8224242,53.2066774 C73.0616448,54.759685 71.6847881,55.8368641 71.5531484,55.9362824 C71.258989,56.170133 70.9183834,56.2792632 70.5777778,56.2792632 C70.2371722,56.2792632 69.8965666,56.170133 69.6024072,55.9362824 C69.2927657,55.7024318 62.0781199,50.0744274 59.2139364,45.5377259 C58.2230837,43.9787219 57,42.029967 57,39.2705299 C57,34.9014241 60.0464859,31.2957807 63.9281727,30.9029762 C63.5002902,32.1798308 63.2666667,33.5583755 63.2666667,34.9952036 C63.2666667,38.904406 65.0072089,41.6651422 66.4172685,43.8737312 C68.379724,46.9681457 71.777355,50.4209489 74.8224242,53.2066774 Z M93.1381351,22 C99.1308881,22 104,27.3447853 104,33.9042945 C104,37.8134969 102.259458,40.5742331 100.849398,42.7828221 C96.7514126,49.1877301 86.5064488,57.1828221 86.0658051,57.5141104 C85.6471937,57.8453988 85.1624857,58 84.6777778,58 C84.1930698,58 83.7083618,57.8453988 83.2897504,57.5141104 C82.8491068,57.1828221 72.5821107,49.209816 68.5061574,42.7828221 C67.0960978,40.5742331 65.3555556,37.8134969 65.3555556,33.9042945 C65.3555556,27.3447853 70.2246674,22 76.2174205,22 C79.5442797,22 82.6508172,23.6785276 84.6777778,26.4392638 C86.7267706,23.6785276 89.8112758,22 93.1381351,22 Z" id="Combined-Shape" fill="url(#linearGradient-4)" mask="url(#mask-3)"></path>
+                <g id="Group-4" mask="url(#mask-3)">
+                    <g transform="translate(59.000000, 23.000000)"></g>
+                </g>
+                <text id="我要领养" mask="url(#mask-3)" font-family="PingFangSC-Semibold, PingFang SC" font-size="24" font-weight="500" line-spacing="24" fill="#FFFFFF">
+                    <tspan x="32" y="99">我要领养</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

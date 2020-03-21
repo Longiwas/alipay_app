@@ -1,0 +1,4 @@
+/* miniprogram/pages/adoptionComplete/adoptionComplete.wxss */
+.sharebutton:hover {
+    background-color: white;
+}

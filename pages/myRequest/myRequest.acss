@@ -1,0 +1,187 @@
+.selected {
+    color: #9259ff;
+    border-bottom: 2px solid #9259ff;
+}
+.tabpage {
+    position: relative;
+    padding-top: 32px;
+}
+.deactivate {
+    display: none;
+}
+.scroll-view {
+    height: calc(100% + 32px);
+    transform: translateY(-32px);
+}
+.pulldown {
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+    text-align: center;
+}
+.petItem {
+    width: 100%;
+    flex-direction: row;
+    border-bottom: 1px solid #c2c2c2;
+}
+.petImg {
+    border-radius: 10%;
+    margin: 35rpx;
+}
+.petInfo {
+    flex-direction: column;
+}
+.petInfoItem {
+    height: 25%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.petName {
+    font-weight: bold;
+    overflow: hidden;
+    line-height: 100%;
+}
+.petLocation {
+    color: #9b9b9b;
+}
+.locationImg {
+    height: 30rpx;
+    width: 28rpx;
+    margin-right: 8rpx;
+}
+.tags {
+    color: #9259ff;
+    border: 1px solid rgba(146, 89, 255, 0.6);
+    padding: 4rpx 20rpx;
+    border-radius: 30rpx;
+    font-size: 24rpx;
+    text-align: center;
+}
+.op06 {
+    opacity: 0.6;
+}
+.btn_9057FF {
+    background: rgba(144, 87, 255, 1);
+    border-radius: 30rpx;
+    font-size: 24rpx;
+    font-weight: 400;
+    color: white;
+    line-height: 24rpx;
+    padding: 12rpx 28rpx;
+}
+.btn_FF5998 {
+    background: rgba(255, 89, 152, 1);
+    border-radius: 24rpx;
+    font-size: 24rpx;
+    font-weight: 400;
+    color: white;
+    line-height: 24rpx;
+    padding: 12rpx 28rpx;
+}
+.btn_21 {
+    background: rgba(255, 89, 152, 1);
+    border-radius: 24rpx;
+    font-size: 24rpx;
+    font-weight: 400;
+    color: white;
+    padding: 4rpx 18rpx;
+    margin-right: 12rpx;
+}
+.btn_22 {
+    background: rgba(144, 87, 255, 1);
+    border-radius: 24rpx;
+    font-size: 24rpx;
+    font-weight: 400;
+    color: white;
+    padding: 4rpx 20rpx;
+    margin-right: 12rpx;
+}
+.btn_23 {
+    background: rgba(144, 87, 255, 1);
+    border-radius: 24rpx;
+    font-size: 24rpx;
+    font-weight: 400;
+    color: white;
+    padding: 4rpx 18rpx;
+    margin-right: 12rpx;
+}
+.failed-popup {
+    width: 100%;
+}
+.failed-popup-title {
+    width: 100%;
+    margin: 16px 0 16px 0;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    color: #5b5b5b;
+}
+.failed-popup-content {
+    margin: 16px 35px 16px 35px;
+    font-size: 14px;
+    color: #9b9b9b;
+}
+.failed-popup-button-view {
+    margin: 16px 0 16px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.failed-popup-button {
+    height: 50px;
+    width: 90%;
+    margin: 8px 0 8px 0;
+    border-radius: 50px;
+    border: 1px solid #9057ff;
+    color: #9057ff;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.failed-popup-other-button {
+    height: 50px;
+    width: 90%;
+    margin: 8px 0 8px 0;
+    border-radius: 50px;
+    border: 1px solid #9057ff;
+    background-color: #9057ff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.cancelPopup {
+    width: 100%;
+    height: 250px;
+    font-size: 16px;
+}
+.cancelPopupInfo {
+    height: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.cancelPopupConfirm {
+    width: 600rpx;
+    height: 100rpx;
+    background-color: #9057ff;
+    font-size: 20px;
+    border-radius: 30px;
+    color: white;
+}
+.cancelPopupCancel {
+    width: 600rpx;
+    height: 100rpx;
+    background-color: white;
+    font-size: 20px;
+    border-radius: 30px;
+    color: #9b9b9b;
+    border: 1px solid #9b9b9b;
+}

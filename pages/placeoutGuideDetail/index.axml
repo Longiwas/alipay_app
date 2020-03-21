@@ -1,0 +1,146 @@
+<view class='page-container-classname'>
+                <titlebar title='送养攻略' onChildRef='saveChildRef1' _parent_ref="{{isMounted}}">
+</titlebar><view class='main' style='margin-top:{{customHeadHeight}}px;'>
+  <view class='title1'>
+    送养流程
+  </view>
+  <view class='step step1'>
+    发布
+  </view>
+  <view class='step step2'>
+    设置问题
+  </view>
+  <view class='step step3 flex flex-column center'>
+    <view>
+      查看申请
+    </view>
+    <view>
+      联系合适的申请人进行沟通，进一步了解
+    </view>
+  </view>
+  <view class='step step4'>
+    确定领养人
+  </view>
+  <view class='step step5'>
+    交接宠物并签订送养协议
+  </view>
+  <view class='step step6'>
+    完成送养
+  </view>
+  <view class='stepline'>
+  </view>
+  <view class='title2'>
+    小贴士
+  </view>
+  <image class='img1' src='/images/adoption_guide_detail.png'>
+  </image>
+  <view class='subtitle1'>
+    一、如何提升送养效率
+  </view>
+  <view class='subcontent1 flex flex-column'>
+    <view>
+      <text decode='true'>
+        1.&nbsp;
+      </text>
+      <view>
+        清晰原图
+      </view>
+    </view>
+    <view>
+      <text decode='true'>
+        2.&nbsp;
+      </text>
+      <view>
+        一条信息一只宠物
+      </view>
+    </view>
+    <view>
+      <text decode='true'>
+        3.&nbsp;
+      </text>
+      <view>
+        多角度拍摄，有视频更好
+      </view>
+    </view>
+    <view>
+      <text decode='true'>
+        4.&nbsp;
+      </text>
+      <view>
+        详细说明宠物的来源，习性，送养原因和领养要求等(通过申请后我们还会通过合作的各大平台进行二次传播)
+      </view>
+    </view>
+    <view>
+      <text decode='true'>
+        5.&nbsp;
+      </text>
+      <view>
+        发布完成可生成海报转发至其他平台，吸引更多领养人
+      </view>
+    </view>
+  </view>
+  <view class='subtitle2'>
+    二、注意事项
+  </view>
+  <view class='subcontent2 flex flex-column'>
+    <view>
+      <text decode='true'>
+        1.&nbsp;
+      </text>
+      <view>
+        关注服务号，以防收不到消息
+      </view>
+    </view>
+    <view>
+      <text decode='true'>
+        2.&nbsp;
+      </text>
+      <view>
+        不接受任何形式的宠物买卖
+      </view>
+    </view>
+    <view>
+      <text decode='true'>
+        3.&nbsp;
+      </text>
+      <view>
+        认真核实领养人的身份信息
+      </view>
+    </view>
+    <view>
+      <text decode='true'>
+        4.&nbsp;
+      </text>
+      <view>
+        如遇诈骗行为，请举报或联系客服。一经核实，平台则将诈骗方永久拉入黑名单，且追究责任。
+      </view>
+    </view>
+  </view>
+  <view class='flex flex-column center information' onTap='onCopyTap'>
+    <view>
+      添加客服微信进宠物交流群。
+    </view>
+    <view class='flex flex-row'>
+      <view class='grape'>
+        Wyyqppcds
+      </view>
+      <view>
+        （点击复制）
+      </view>
+    </view>
+    <view>
+      这里面人讲话超有意思，我超喜欢这里的（手动滑稽）
+    </view>
+  </view>
+  <image src='/images/placeout_guide_detail_button.svg' class='start' onTap='onStartTap'>
+  </image>
+  <view class='flex flex-column center bottom'>
+    <view style='font-weight:bold'>
+      联系我们
+    </view>
+    <text decode='true'>
+      公众号:益只宠物领养救助平台&nbsp;&nbsp;微博:益只宠物领养救助平台&nbsp;&nbsp;微信:wyyappcds
+    </text>
+  </view>
+</view>
+            </view>

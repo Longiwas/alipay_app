@@ -1,0 +1,28 @@
+<view class='page-container-classname'>
+                <titlebar title='系统消息' onChildRef='saveChildRef1' _parent_ref="{{isMounted}}">
+</titlebar><view class='flex flex-column vcenter' style='margin-top:{{customHeadHeight}}px;'>
+  <block a:for='{{systemMessages}}' ref-numbers='{{systemMessages}}'>
+    <view class='flex flex-column system_view' data-id='{{item.id}}' onTap='onMessageTap'>
+      <view class='title_view'>
+        {{item.title}}
+      </view>
+      <view class='date_view'>
+        {{item.date}}
+      </view>
+      <view class='content_view'>
+        {{item.content}}
+      </view>
+      <view class='line_view'>
+      </view>
+      <view class='flex flex-row detail_view spacebetween'>
+        <view>
+          详情
+        </view>
+        <van-icon name='arrow' custom-class='arrow_icon' _parent_ref="{{isMounted}}" onChildRef='saveChildRef2'>
+        </van-icon>
+      </view>
+    </view>
+  </block>
+</view><template-window show='{{template_show}}' templateIds='{{templateIds}}' _parent_ref="{{isMounted}}" onAuthorizeComplete='confirm' onChildRef='saveChildRef3'>
+</template-window>
+            </view>

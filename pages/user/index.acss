@@ -1,0 +1,67 @@
+/* miniprogram/pages/user/index.wxss */
+.login_btn text {
+    text-align: center;
+    justify-content: cener;
+}
+.option_item {
+    height: 112rpx;
+    font-size: 30rpx;
+    align-items: center;
+    border-bottom: 1rpx solid #eaeaea;
+    justify-content: space-between;
+}
+.right_icon {
+    height: 25rpx;
+    width: 14rpx;
+    margin-right: 16rpx;
+}
+.title_area {
+    padding: 16rpx 32rpx 64rpx 64rpx;
+    background-color: #fd75b8;
+    justify-content: space-between;
+}
+.user_homepage {
+    color: white;
+    margin-right: 16rpx;
+    font-size: 32rpx;
+    /*border: 2rpx solid white;
+  border-radius: 15rpx;*/
+}
+
+.home_subscribe_button {
+    position: fixed;
+    width: 150rpx;
+    height: 180rpx;
+    top: 684rpx;
+    right: -40rpx;
+    padding: 0 !important;
+}
+.home_subscribe_button:hover {
+    background-color: transparent;
+}
+.home_subscribe_button image {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-45deg);
+}
+.sub_info_window {
+    width: 631rpx;
+    height: 924rpx;
+    background-color: transparent !important;
+}
+.sub_info_window_top {
+    width: 631rpx;
+    height: 834rpx;
+}
+.sub_info_window_button {
+    width: 456rpx;
+    height: 80rpx;
+    padding: 0 !important;
+}
+.sub_info_window_button:hover {
+    background-color: transparent;
+}
+.sub_info_window_button image {
+    width: 456rpx;
+    height: 80rpx;
+}

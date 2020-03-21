@@ -1,0 +1,43 @@
+/* miniprogram/pages/myLike/index.wxss */
+.item_view {
+    margin: 20rpx 40rpx 0 40rpx;
+    height: 160rpx;
+    background-color: #fafafa;
+    box-shadow: 4rpx 4rpx rgba(158, 183, 247, 0.19);
+    border-radius: 20rpx;
+}
+.avatar_image {
+    height: 80rpx;
+    width: 80rpx;
+    margin: 30rpx 20rpx;
+    border-radius: 40rpx;
+}
+.cover_image {
+    height: 100rpx;
+    width: 100rpx;
+    margin: 20rpx;
+    border-radius: 20rpx;
+}
+.cover_view {
+    color: silver;
+    font-size: 24rpx;
+    height: 100rpx;
+    width: 100rpx;
+    margin: 20rpx;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+}
+.content_view {
+    width: 410rpx;
+    margin: 30rpx 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    justify-content: left;
+}
+.comment_view {
+    font-size: 30rpx;
+    color: #808080;
+}

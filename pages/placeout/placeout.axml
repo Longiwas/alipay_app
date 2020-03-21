@@ -1,0 +1,179 @@
+<view class='page-container-classname'>
+                <titlebar id='placeout' title='发布送养' onChildRef='saveChildRef1' _parent_ref="{{isMounted}}">
+</titlebar><view class='upload-view' style='padding-top:{{customHeadHeight}}px; '>
+  <view class='upload-item' onTap='onUploadVideo'>
+    <image src='/images/upload_video.png'>
+    </image>
+    <text>
+      上传视频
+    </text>
+  </view>
+  <view class='upload-item' onTap='onUploadImage'>
+    <image src='/images/upload_image.png'>
+    </image>
+    <text>
+      上传图片
+    </text>
+  </view>
+</view><scroll-view scroll-x=" " hidden='{{hideView}}' style='height:300rpx; padding: 32rpx 0 32rpx 0; width : 100%; white-space: nowrap; '>
+  <view style='height:240rpx; width:280rpx; padding:32rpx 0 32rpx 32rpx; display:inline-block; position:relative; ' a:if='{{!hideVideo}}'>
+    <image src='/images/redcross.svg' style='position:absolute; right:0rpx; top:32rpx; width:48rpx; height:48rpx; z-index:2;' onTap='onRemoveVideoTap'>
+    </image>
+    <video src='{{video}}' style='height:120px; width:140px; z-index:1;' hidden='{{hideVideo}}'>
+    </video>
+  </view>
+  <block a:for='{{imageArray}}' a:key='{{index}}' ref-numbers='{{imageArray}}'>
+    <view style='height:120px; width:140px; padding:0 0 0 32rpx; display:inline-block; position:relative; '>
+      <image src='/images/redcross.svg' style='position:absolute; right:0px; top:0; width:24px; height:24px; ' data-index='{{index}}' onTap='onRemoveTap'>
+      </image>
+      <image src='{{item}}' style='height:100%; width:100%; ' animation='{{animationArray[index]}}' onTouchMove='onTouchMoveEvent' onTouchStart='onLongTouchEvent' onTouchCancel='onTouchCancelEvent'>
+      </image>
+    </view>
+  </block>
+</scroll-view><view class='hintHead'>
+  提示：
+</view><view class='hint'>
+  1.请至少选择三张图, 第一张图将默认为封面；
+</view><view class='hint'>
+  2.图片尺寸不低于600px，且不带文字水印或二维码；
+</view><view class='hint'>
+  3.我们会将优质内容推荐至首页，并通过其他合作平台再次传播
+</view><view class='form'>
+  <text>
+    宠物信息
+  </text>
+  <view class='section'>
+    <label>
+      昵称      <label style='color:red'>
+        *
+      </label>
+    </label>
+    <input placeholder='请输入宠物昵称' value='{{nickName}}' onInput='onNickNameInput'>
+    </input>
+  </view>
+  <view class='section'>
+    <label>
+      年龄      <label style='color:red'>
+        *
+      </label>
+    </label>
+    <view class='age_big_view'>
+      <view class='age_view'>
+        <picker mode='multiSelector' range='{{[yearRange, monthRange]}}' onChange='onYearChange'>
+          {{ageText}}
+        </picker>
+      </view>
+    </view>
+  </view>
+  <view class='section'>
+    <label>
+      地区      <label style='color:red'>
+        *
+      </label>
+    </label>
+    <view class='age_big_view'>
+      <view class='age_view'>
+        <picker mode='region' onChange='onLocationChange'>
+          {{locationText}}
+        </picker>
+      </view>
+    </view>
+  </view>
+  <view class='section'>
+    <label>
+      性别
+    </label>
+    <button class='flex  center {{selectedGender[0]}}' data-index='{{0}}' onTap='onGenderTap'>
+      未知
+    </button>
+    <button class='flex  center {{selectedGender[1]}}' data-index='{{1}}' onTap='onGenderTap'>
+      <image src='/images/male.svg' style='height:14px; width:14px;'>
+      </image>
+      男孩
+    </button>
+    <button class='flex  center {{selectedGender[2]}}' data-index='{{2}}' onTap='onGenderTap'>
+      <image src='/images/female.svg' style='height:14px; width:14px;'>
+      </image>
+      女孩
+    </button>
+  </view>
+  <view class='section'>
+    <label>
+      类别
+    </label>
+    <block a:for='{{categoriesRawData}}' a:key='{{id}}' ref-numbers='{{categoriesRawData}}'>
+      <button class='{{selectedType[index]}} flex center' data-type='{{item.id}}' data-index='{{index}}' onTap='onTypeTap'>
+        {{item.desc}}
+      </button>
+    </block>
+  </view>
+  <text>
+    宠物状况
+  </text>
+  <block a:for='{{categories}}' a:key='{{name}}' ref-numbers='{{categories}}'>
+    <view class='section'>
+      <label>
+        {{item.desc}}
+      </label>
+      <button class='flex  center {{status[selectedTypeId][item.name][0]}}' data-name='{{item.name}}' data-value='{{0}}' onTap='onStatusTap'>
+        未知
+      </button>
+      <button class='flex  center {{status[selectedTypeId][item.name][1]}}' data-name='{{item.name}}' data-value='{{1}}' onTap='onStatusTap'>
+        有
+      </button>
+      <button class='flex  center {{status[selectedTypeId][item.name][2]}}' data-name='{{item.name}}' data-value='{{2}}' onTap='onStatusTap'>
+        无
+      </button>
+    </view>
+  </block>
+  <text>
+    联系方式
+  </text>
+  <view class='section'>
+    <label>
+      手机号      <label style='color:red'>
+        *
+      </label>
+    </label>
+    <input placeholder='请输入手机号' type='number' onInput='onPhoneInput'>
+    </input>
+  </view>
+  <view class='section'>
+    <label>
+      微信号
+    </label>
+    <input placeholder='请输入微信号' onInput='onWXInput'>
+    </input>
+  </view>
+  <view class='flex flex-row' style='align-items: flex-end; '>
+    <text class='flex'>
+      领养条件
+    </text>
+    <view class='flex' style='font-size: 20rpx; margin-left: 30rpx; color: #999999; height: 38rpx;'>
+      请选择领养人的申请条件
+    </view>
+  </view>
+  <view class='flex hcenter' style='flex-flow: row wrap; margin: 30rpx 0;'>
+    <block a:for='{{conditions}}' ref-numbers='{{conditions}}'>
+      <view data-index='{{index}}' class='flex flex-row condition_item hcenter' onTap='onConditionTap'>
+        <image src="{{conditions_selected[index]?'/images/placeout_checked.png':'/images/placeout_unchecked.png'}}" style='width: 30rpx; height: 30rpx; margin-right: 10rpx;'>
+        </image>
+        {{item}}
+      </view>
+    </block>
+  </view>
+  <text>
+    宠物故事
+  </text>
+  <view class='section'>
+    <textarea placeholder='输入送养宠物的性格行为、来源、过往经历、送养原因等。至少20个字' onInput='onStoryInput'>
+    </textarea>
+  </view>
+  <text class='tips'>
+    本平台有完整的送养流程，请勿暴露自己的联系方式。我们会将优质内容列入首页推荐，并通过其他合作平台再次传播。
+  </text>
+  <button class='next' onTap='onNextTap'>
+    下一步
+  </button>
+</view>
+            </view>

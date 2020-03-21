@@ -1,0 +1,15 @@
+.page-container-classname {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.remove_image {
+    margin-top: 270rpx;
+    width: 387rpx;
+    height: 500rpx;
+}
+.check_image {
+    margin-top: 380rpx;
+    width: 600rpx;
+    height: 80rpx;
+}

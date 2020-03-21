@@ -1,0 +1,15 @@
+<view class='page-container-classname'>
+                <view style='margin-top:{{customHeadHeight}}px; margin-left:16px; margin-right:16px; display:flex; flex-direction:column; align-items:center; justify-content:center;' onChildRef='saveChildRef0'>
+  <view style='display:flex; flex-direction:column; align-items:center; justify-content:center;'>
+    <image src='/images/success.svg' style='height:66px; width:66px; padding-bottom:15px;'>
+    </image>
+    <button open-type='share' class='sharebutton'>
+      <image src='https://res.511cwpt.com/adoption_complete_image.png' style='height:490rpx; width:694rpx;'>
+      </image>
+    </button>
+    <button style='background-color:#EEE; color:#BBB; border-radius:50rpx; border:1px solid #BBB; width: 50%; margin-top: 35rpx;' onTap='onIndexTap'>
+      返回首页
+    </button>
+  </view>
+</view>
+            </view>

@@ -1,0 +1,119 @@
+/* pages/adoptionAgre/adoptionAgre.wxss */
+page {
+    color: #5b5b5b;
+}
+.title {
+    font-size: 28rpx;
+    font-weight: 500;
+}
+.petImg {
+    height: 200rpx;
+    width: 200rpx;
+    padding: 40rpx;
+}
+.petRightInfo {
+    margin: 40rpx 40rpx 40rpx 0;
+}
+.agreTitle {
+    font-size: 26rpx;
+    font-weight: 600;
+}
+.agreContent {
+    font-size: 26rpx;
+    font-weight: 400;
+}
+.tags {
+    color: #9259ff;
+    border: 1px solid rgba(146, 89, 255, 0.6);
+    font-size: 24rpx;
+    padding: 4rpx 20rpx;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30rpx;
+}
+.sign {
+    color: white;
+    background-color: #9057ff;
+    margin-bottom: 16px;
+    width: 90%;
+    border-radius: 50px;
+}
+.sign_disable {
+    color: #9b9b9b;
+    background-color: white;
+    margin-bottom: 16px;
+    width: 90%;
+    border-radius: 50px;
+    border: 1px solid #9b9b9b;
+}
+.edit {
+    color: gray;
+    background-color: white;
+    margin-bottom: 16px;
+    width: 100%;
+    border-radius: 50px;
+    border: 1px solid gray;
+}
+.sign_input {
+    padding: 8px 0 8px 16px;
+    margin: 8px 0 8px 0;
+    border: 1px solid #9b9b9b;
+    border-radius: 50px;
+}
+.confirm {
+    color: white;
+    background-color: #ff5998;
+    margin-bottom: 16px;
+    width: 90%;
+    border-radius: 50px;
+}
+
+.failed-popup {
+    width: 100%;
+}
+.failed-popup-title {
+    width: 100%;
+    margin: 16px 0 16px 0;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    color: #5b5b5b;
+}
+.failed-popup-content {
+    margin: 16px 16px 16px 16px;
+    font-size: 14px;
+    color: #9b9b9b;
+}
+.failed-popup-button-view {
+    margin: 16px 0 16px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.failed-popup-button {
+    height: 50px;
+    width: 90%;
+    margin: 8px 0 8px 0;
+    border-radius: 50px;
+    border: 1px solid #9057ff;
+    color: #9057ff;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.failed-popup-other-button {
+    height: 50px;
+    width: 90%;
+    margin: 8px 0 8px 0;
+    border-radius: 50px;
+    border: 1px solid #9057ff;
+    background-color: #9057ff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}

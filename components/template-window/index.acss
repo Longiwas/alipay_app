@@ -1,0 +1,10 @@
+.template-window {
+    background-color: rgba(0, 0, 0, 0) !important;
+    width: 690rpx;
+    height: 428rpx;
+}
+.template-image {
+    width: 690rpx;
+    height: 428rpx;
+    background-color: rgba(0, 0, 0, 0);
+}

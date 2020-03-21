@@ -1,0 +1,6 @@
+{
+	"usingComponents": {
+		"titlebar": "../../components/titlebar/titlebar",
+		"login-window": "../../components/login-window/index"
+	}
+}

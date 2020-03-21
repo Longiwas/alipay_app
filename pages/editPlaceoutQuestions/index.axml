@@ -1,0 +1,36 @@
+<view class='page-container-classname'>
+                <titlebar id='placeout' title='发布送养' onChildRef='saveChildRef1' _parent_ref="{{isMounted}}">
+</titlebar><view class='main_view' style='margin-top:{{customHeadHeight}}px;'>
+  <van-checkbox-group value='{{ selectedQuestion }}' _parent_ref="{{isMounted}}" onChange='onChange' onChildRef='saveChildRef2'>
+    <van-checkbox a:for='{{ questions }}' a:key='*this' name='{{ index }}' custom-class='question' label-class='{{textColor[index]}}' ref-numbers='{{ questions }}' _parent_ref="{{isMounted}}" onChildRef='saveChildRef3'>
+      <view>
+        {{ item }}
+      </view>
+    </van-checkbox>
+  </van-checkbox-group>
+  <view class='custom-title'>
+  </view>
+  <text>
+    自定义问题列表
+  </text>
+  <van-checkbox-group value="{{ ['0', '1', '2', '3', '4', '5', '6', '7', '8'] }}" _parent_ref="{{isMounted}}" onChildRef='saveChildRef4'>
+    <van-checkbox a:for='{{ customQuestions }}' a:key='*this' name='{{ index }}' custom-class='{{customQuestionsSelected[index]}}' use-icon-slot=" " ref-numbers='{{ customQuestions }}' _parent_ref="{{isMounted}}" onChildRef='saveChildRef5'>
+      <van-icon slot='icon' name='clear' color='red' size='20px' data-index='{{index}}' _parent_ref="{{isMounted}}" onTap='onCustomChange' onChildRef='saveChildRef6'>
+      </van-icon>
+      <view class='custom-question' style='width:{{app.globalData.screenWidth-32-20-16}}px;'>
+        <input class='custom-input' placeholder='自定义问题,选填' style='width:{{app.globalData.screenWidth-32-20-16-80}}px;' data-index='{{index}}' value='{{item}}' onInput='onCustomQuestionInput'>
+        </input>
+        <button class='addBtn {{customQuestionsAddBtnShow[index]}}' data-index='{{index}}' onTap='onAddTap'>
+          添加+
+        </button>
+      </view>
+    </van-checkbox>
+  </van-checkbox-group>
+  <button class='confirm' onTap='onConfirmTap'>
+    发布送养
+  </button>
+  <view style='width:100%; height:32px;'>
+  </view>
+</view><van-toast id='van-toast' _parent_ref="{{isMounted}}" onChildRef='saveChildRef7'>
+</van-toast>
+            </view>

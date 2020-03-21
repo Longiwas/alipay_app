@@ -1,0 +1,110 @@
+<view class='page-container-classname'>
+                <titlebar title='分享助力' onChildRef='saveChildRef1' _parent_ref="{{isMounted}}">
+</titlebar><view class='main_view' style='padding-top:{{customHeadHeight}}px;'>
+  <view style='height:40rpx;'>
+  </view>
+  <view class='title_view'>
+    <view class='flex flex-row adoption_info'>
+      <image class='adoption_avatar' src='{{applicant.avatarUrl}}' mode='aspectFill'>
+      </image>
+      <view class='flex flex-column'>
+        <view class='adoption_name adoption_title'>
+          {{applicant.nickName}}
+        </view>
+        <view class='flex adoption_request adoption_title'>
+          我要领养          <image src='/images/heart.png'>
+          </image>
+        </view>
+      </view>
+    </view>
+    <view class='flex flex-row pet_info'>
+      <image class='pet_image' src='{{petCover}}' mode='aspectFill'>
+      </image>
+      <view class='flex flex-column pet_infolist'>
+        <view class='flex flex-row pet_name'>
+          <view class='pet_name_hidden'>
+            {{petName}}
+          </view>
+          <view class='flex flex-row pet_agender'>
+            {{year}}岁{{month}}个月            <image src='{{genderUrl}}'>
+            </image>
+          </view>
+        </view>
+        <view class='flex flex-row pet_tags'>
+          <block a:for='{{options}}' a:key='name' ref-numbers='{{options}}'>
+            <block a:if='{{item.value==1}}'>
+              <view class='tags'>
+                已{{item.desc}}
+              </view>
+            </block>
+            <block a:elif='{{item.value==2}}'>
+              <view class='tags'>
+                未{{item.desc}}
+              </view>
+            </block>
+          </block>
+        </view>
+        <view class='flex flex-row pet_location'>
+          <van-icon name='location-o' custom-class='pet_location_icon' _parent_ref="{{isMounted}}" onChildRef='saveChildRef2'>
+          </van-icon>
+          {{locationStr}}
+        </view>
+      </view>
+    </view>
+    <view class='flex flex-row adoption_string'>
+      已有      <view class='flex powered_num'>
+        {{power}}人助力, 快来帮我助力吧
+      </view>
+    </view>
+    <view class='flex flex-row adoption_btn_view'>
+      <block a:if='{{powered}}'>
+        <view class='flex index_btn' onTap='onIndexTap'>
+          朕也要领养!
+        </view>
+      </block>
+      <block a:else >
+        <block a:if='{{supportBtnType}}'>
+          <button class='flex support_btn' onTap='onSupportTap'>
+            帮他助力一下
+          </button>
+        </block>
+        <block a:else >
+          <button class='flex support_btn' open-type='getAuthorize' onGetAuthorize='onGetUserInfoTap' scope='userInfo'>
+            帮他助力一下
+          </button>
+        </block>
+      </block>
+    </view>
+  </view>
+  <view style='height:36rpx;'>
+  </view>
+  <view class='powered_user_title'>
+    <view class='powered_user_title_text'>
+      助力好友列表
+    </view>
+    <view class='radius_left_bottom'>
+    </view>
+    <view class='radius_right_bottom'>
+    </view>
+  </view>
+  <view class='powered_user_list'>
+    <view class='flex flex-column powered_user_list_padding'>
+      <block a:for='{{powered_users}}' ref-numbers='{{powered_users}}'>
+        <view class='flex flex-row powered_user_list_item'>
+          <image src='{{item.avatarUrl}}'>
+          </image>
+          <view class='flex powered_user_list_item_name textoverflow'>
+            {{item.nickName}}
+          </view>
+          <view class='flex textoverflow' style='width:200rpx;'>
+            助力了一下
+          </view>
+          <view class='flex textoverflow' style='width:120rpx; font-size:28rpx;color:#9B9B9B;'>
+            {{item.timeStr}}
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+            </view>

@@ -1,0 +1,8 @@
+{
+	"usingComponents": {
+		"van-icon": "/dist/icon/index",
+		"card": "/components/card/card",
+		"navbar": "../../components/navbar/navbar",
+		"van-popup": "../../dist/popup/index"
+	}
+}

@@ -1,0 +1,18 @@
+<view class='navbar-navbar {{className}}' onChildRef='saveChildRef0'>
+  <view class='customHead flex' style='height:{{customHeadHeight}}px; padding-top:{{customHeadTopPadding}}px; font-size:40rpx;'>
+    <view class='small_part' onTap='locationTap'>
+      <view class='left' a:if='{{showLocation}}'>
+        <image class='location_icon' src='/images/location-o.svg'>
+        </image>
+        <view class='location_text'>
+          {{location}}
+        </view>
+      </view>
+    </view>
+    <view class='big_part'>
+      {{title}}
+    </view>
+    <view class='small_part'>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,24 @@
+/* miniprogram/pages/nickNameSetting/index.wxss */
+.nickName_input {
+    margin: 50rpx 32rpx 32rpx 32rpx;
+    padding-bottom: 16rpx;
+    padding-left: 16rpx;
+    border-bottom: 1px solid rgba(63, 185, 60, 0.5);
+}
+.nickName_tip {
+    margin: 0 32rpx 32rpx 32rpx;
+    padding-left: 16rpx;
+    font-size: 28rpx;
+    color: #b2b2b2;
+}
+.nickName_savebtn {
+    color: white !important;
+    width: 686rpx;
+    border-radius: 62rpx;
+}
+.nickName_savebtn_color {
+    background-color: rgba(63, 185, 60, 1);
+}
+.nickName_savebtn_color[disabled] {
+    background-color: rgba(63, 185, 60, 0.2) !important;
+}

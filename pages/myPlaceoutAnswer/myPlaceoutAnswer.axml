@@ -1,0 +1,87 @@
+<view class='page-container-classname'>
+                <titlebar title='选择领养人' onChildRef='saveChildRef1' _parent_ref="{{isMounted}}">
+</titlebar><view class='title' style='padding-top:{{customHeadHeight}}px; '>
+  <view>
+    <image src='{{cover}}' mode='aspectFill' style='height:270rpx; width:270rpx; margin:30rpx;border-radius:4px;'>
+    </image>
+  </view>
+  <view class='contentView'>
+    <view class='contentViewName'>
+      <view style='font-size:16px;'>
+        {{name}}
+      </view>
+      <view style='font-size:14px; color:#5B5B5B'>
+        {{year}}岁{{month}}月        <image src='{{genderIcon}}' class='icon'>
+        </image>
+      </view>
+    </view>
+    <view class='contentViewTags'>
+      <block a:for='{{options}}' a:key='name' ref-numbers='{{options}}'>
+        <block a:if='{{item.value==1}}'>
+          <view class='flex center tags'>
+            已{{item.desc}}
+          </view>
+        </block>
+        <block a:elif='{{item.value==2}}'>
+          <view class='flex center tags'>
+            未{{item.desc}}
+          </view>
+        </block>
+      </block>
+    </view>
+    <view class='contentLocation'>
+      <van-icon name='location-o' size='15px' _parent_ref="{{isMounted}}" onChildRef='saveChildRef2'>
+      </van-icon>
+      {{location}}
+    </view>
+    <view class='contentLocation'>
+      申请领养人数: {{wishNum}}
+    </view>
+  </view>
+</view><view class='wishListView'>
+  <block a:for='{{wishList}}' a:key='id' ref-numbers='{{wishList}}'>
+    <view class='wishListViewDetail'>
+      <image class='wishListViewDetailAvatar' src='{{item.applicant.avatarUrl}}'>
+      </image>
+      <view class='wishListViewDetailInfo'>
+        <view class='wishListViewDetailName'>
+          {{item.applicant.nickName}}
+        </view>
+        <view class='wishListViewDetailSupport'>
+          {{item.power}}人支持
+        </view>
+      </view>
+      <view class='wishListViewDetailBtn'>
+        <view class='answer_btn' data-id='{{item.id}}' onTap='onAnswerTap'>
+          领养回答
+        </view>
+        <view class='choose_btn' data-id='{{item.id}}' style="{{selected==item.id?'color:white; background-color:#9057FF':'color:#9057FF; background-color:white; '}}" onTap='onSelectedTap'>
+          {{selected==item.id?"已选择":"选择TA"}}
+        </view>
+      </view>
+    </view>
+    <view class='tp16'>
+    </view>
+  </block>
+  <view style='height:200rpx; width:100%;'>
+  </view>
+</view><view class='flex_view'>
+  <view class='doc_view flex flex-row '>
+    选择即代表同意    <view class='blue' onTap='onXieyiTap'>
+      《用户送养协议》
+    </view>
+  </view>
+  <button class='confirm_btn' form-type='submit' onTap='onConfirmShow'>
+    继续
+  </button>
+</view><van-popup show='{{ confirmShow }}' position='bottom' _parent_ref="{{isMounted}}" onClose='onConfirmClose' onChildRef='saveChildRef3'>
+  <view class='confirmPopupInfo' style='padding:0 75rpx; margin-top:48rpx;'>
+    请当面交接宠物的时候仔细核对对方身份证明与手机号
+  </view>
+  <view class='confirmPopupInfo'>
+    <button class='flex center confirmPopupBtn confirmPopupConfirm' onTap='onConfirmTap'>
+      确认送养
+    </button>
+  </view>
+</van-popup>
+            </view>

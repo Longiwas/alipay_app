@@ -1,0 +1,38 @@
+<view class='page-container-classname'>
+                <titlebar title='选择城市' onChildRef='saveChildRef1' _parent_ref="{{isMounted}}">
+</titlebar><view>
+  <view class='fullwidth' style='padding-top:{{customHeadHeight}}px; height:{{screenHeight}}px; '>
+    <view id='city_bar' class='lp16' style='font-size:32rpx; color:#A8BAD0;'>
+      当前定位城市
+    </view>
+    <view id='city_now' class='lp16' style='font-size:32rpx; padding:16px 0 16px 16px;' onTap='onLocationTap'>
+      <van-icon name='location-o' custom-style='padding-right:8px;' _parent_ref="{{isMounted}}" onChildRef='saveChildRef2'>
+      </van-icon>
+      {{city}}
+    </view>
+    <view class='fullwidth flex' style='height:{{scrollableHeight}}px; '>
+      <scroll-view class='citylist' style='flex-direction:column; width:34%; text-align:left; font-size:32rpx; float:left; height:100%; ' scroll-y='true'>
+        <block a:for='{{provinceArray}}' a:key='id' ref-numbers='{{provinceArray}}'>
+          <view class='center {{provinceColor[item.id]}}' data-provinceid='{{item.id}}' onTap='onProvinceTap'>
+            {{item.fullname}}
+          </view>
+        </block>
+      </scroll-view>
+      <scroll-view scroll-y='true' class='citylist' style='flex-direction:column; width:33%; text-align:left; font-size:32rpx; float:right; background-color:{{cityBackgroundColor}}; height:{{scrollableHeight}}px;'>
+        <block a:for='{{cityArray}}' a:key='id' ref-numbers='{{cityArray}}'>
+          <view class='center {{cityColor[item.id]}}' data-cityid='{{item.id}}' onTap='onCityTap'>
+            {{item.fullname}}
+          </view>
+        </block>
+      </scroll-view>
+      <scroll-view scroll-y='true' class='citylist' style='flex-direction:column; width:33%; text-align:left; font-size:32rpx; float:right; background-color:{{areaBackgroundColor}};  height:{{scrollableHeight}}px;'>
+        <block a:for='{{areaArray}}' a:key='id' ref-numbers='{{areaArray}}'>
+          <view class='center ' data-areaid='{{item.id}}' onTap='onAreaTap'>
+            {{item.fullname}}
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+</view>
+            </view>

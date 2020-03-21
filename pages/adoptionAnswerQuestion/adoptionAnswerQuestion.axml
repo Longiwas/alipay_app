@@ -1,0 +1,58 @@
+<view class='page-container-classname'>
+                <titlebar title='领养人信息' onChildRef='saveChildRef1' _parent_ref="{{isMounted}}">
+</titlebar><view style='margin:0 16px 0 16px; margin-top:{{customHeadHeight}}px; height:{{app.globalData.screenHeight+16}}px; font-size:14px;'>
+  <view style='height:30rpx;'>
+  </view>
+  <view class='flex'>
+    <view class='title_view'>
+      领养问答
+    </view>
+  </view>
+  <block a:for='{{questions}}' a:key='index' ref-numbers='{{questions}}'>
+    <view style='padding-top:16px;'>
+      <view style='padding-bottom:8px; color:#4A4A4A'>
+        {{index+1}}.{{item}}
+      </view>
+      <input placeholder='请输入回答' data-index='{{index}}' style='border:1px solid rgba(155,155,155,0.5); border-radius: 4px; height:40px; padding:0 12px; margin-left:16px;' onInput='onInputChange'>
+      </input>
+    </view>
+  </block>
+  <view style='height:60rpx;'>
+  </view>
+  <view class='flex'>
+    <view class='flex title_view'>
+      请输入您的联系方式
+    </view>
+  </view>
+  <view style='padding-top:16px;'>
+    <input placeholder='手机号(必填)' type='number' style='border:1px solid rgba(155,155,155,0.5); border-radius: 4px; height:40px; padding:0 12px; margin-left:16px;' onInput='onPhoneInput'>
+    </input>
+    <view style='height:32rpx;'>
+    </view>
+    <input placeholder='微信号(选填)' style='border:1px solid rgba(155,155,155,0.5); border-radius: 4px; height:40px; padding:0 12px; margin-left:16px;' onInput='onWxIdInput'>
+    </input>
+  </view>
+  <view style='height:60rpx;'>
+  </view>
+  <view class='failed-popup-button-view'>
+    <button class='flex center failed-popup-other-button' loading='{{submitBtn_disabled}}' disabled='{{submitBtn_disabled}}' onTap='onConfirmTap'>
+      {{submitBtn_disabled?"确认中":"确认领养"}}
+    </button>
+  </view>
+  <view style='height:60rpx;'>
+  </view>
+</view><van-popup show='{{failedReasonShow}}' position='bottom' custom-class='failed-popup' _parent_ref="{{isMounted}}" onClose='onFailedClose' onChildRef='saveChildRef2'>
+  <view class='failed-popup-title'>
+    请输入您的联系方式
+  </view>
+  <view class='flex flex-column hcenter failed-popup-content'>
+    <input placeholder='手机号(必填)' class='sign_input' type='number' onInput='onPhoneInput'>
+    </input>
+    <input placeholder='微信号(选填)' class='sign_input' onInput='onWxIdInput'>
+    </input>
+  </view>
+  <view class='failed-popup-button-view'>
+  </view>
+</van-popup><template-window show='{{template_show}}' templateIds='{{templateIds}}' _parent_ref="{{isMounted}}" onAuthorizeComplete='onAuthorizeComplete' onChildRef='saveChildRef3'>
+</template-window>
+            </view>

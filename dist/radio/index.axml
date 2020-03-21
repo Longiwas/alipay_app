@@ -1,0 +1,18 @@
+<view class='radio-index {{className}}' onChildRef='saveChildRef0'>
+  <import-sjs from='../wxs/utils.sjs' name='utils'>
+  </import-sjs>
+  <view class='van-radio {{customClass}}'>
+    <view class='van-radio__input'>
+      <radio-group onChange='onChange'>
+        <radio value='{{ name }}' checked='{{ value === name }}' disabled='{{ disabled }}' class='van-radio__control'>
+        </radio>
+      </radio-group>
+      <van-icon class="{{ utils.bem('radio__icon', { disabled, checked: !disabled && name === value, check: !disabled && name !== value }) }}" custom-class='{{iconClass}}' color="{{ value === name ? checkedColor : '' }}" name="{{ value === name ? 'checked' : 'circle' }}" _parent_ref="{{isMounted}}" onChildRef='saveChildRef1'>
+      </van-icon>
+    </view>
+    <view class='van-radio__label van-radio__label--{{ labelPosition }} {{labelClass}}' onTap='onClickLabel'>
+      <slot>
+      </slot>
+    </view>
+  </view>
+</view>

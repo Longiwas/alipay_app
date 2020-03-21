@@ -1,0 +1,11 @@
+{
+	"onReachBottomDistance": 50,
+	"usingComponents": {
+		"titlebar": "../../components/titlebar/titlebar",
+		"van-icon": "../../dist/icon/index",
+		"van-popup": "../../dist/popup/index",
+		"navbar": "../../components/navbar/navbar",
+		"login-window": "../../components/login-window/index",
+		"template-window": "../../components/template-window/index"
+	}
+}

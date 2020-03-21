@@ -1,0 +1,6 @@
+<view class='page-container-classname'>
+                <titlebar title='帮我找家' onChildRef='saveChildRef1' _parent_ref="{{isMounted}}">
+</titlebar><image src='{{imageUrl}}' class='adoption_help' style='margin-top:{{customHeadHeight}}px;'>
+</image><image src='/images/adoption_help_download.png' class='adoption_help_download' onTap='onSaveTap'>
+</image>
+            </view>

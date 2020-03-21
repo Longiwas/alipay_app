@@ -1,0 +1,175 @@
+.selected {
+    color: #9259ff;
+    border-bottom: 2px solid #9259ff;
+}
+.tabpage {
+    position: relative;
+}
+.deactivate {
+    display: none;
+}
+.scroll-view {
+    height: calc(100% + 32px);
+    transform: translateY(-32px);
+}
+.nopet_image {
+    width: 450rpx;
+    height: 463rpx;
+    margin: 200rpx 150rpx 0 150rpx;
+}
+.pulldown {
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+    text-align: center;
+}
+.petItem {
+    width: 100%;
+    flex-direction: row;
+}
+.petImg {
+    margin: 8rpx 34rpx;
+    border-radius: 10%;
+    height: 223rpx;
+    width: 223rpx;
+}
+.petGender {
+    height: 28rpx;
+    width: 28rpx;
+    margin: 24rpx 0 0 0;
+}
+.petInfo {
+    width: 410rpx;
+    padding: 8rpx 0;
+    flex-direction: column;
+    border-bottom: 1px solid #dddcdf;
+}
+.petInfoItem {
+    height: 25%;
+    width: 100%;
+}
+.petInfoSpaceBetween {
+    justify-content: space-between;
+}
+.petName {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 100%;
+    font-size: 30rpx;
+    font-weight: 400;
+    width: 34%;
+    margin: 24rpx 0 0 16rpx;
+}
+.petAge {
+    margin-left: 8px;
+    font-size: 24rpx;
+    line-height: 100%;
+}
+.locationImg {
+    height: 21rpx;
+    width: 17rpx;
+    margin-right: 8rpx;
+}
+.petLocation {
+    color: #9b9b9b;
+    font-size: 24rpx;
+    line-height: 100%;
+}
+.petButton {
+    font-size: 24rpx;
+    color: white;
+    border-radius: 16px;
+    width: 180rpx;
+    justify-content: center;
+    align-items: center;
+    height: 48rpx;
+}
+.tags {
+    color: white;
+    background-color: #ab8ef5;
+    padding: 0 8px 0 8px;
+    text-align: center;
+    font-size: 24rpx;
+    border-radius: 20rpx;
+    margin-left: 12rpx;
+}
+.subscribe_city {
+    padding: 4px 0 4px 0;
+    height: 32px;
+    width: 100%;
+    position: fixed;
+    z-index: 5;
+    background-color: #9259ff;
+    color: #fff;
+    font-size: 13px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.subscribe_btn {
+    font-size: 12px;
+    width: 60px;
+    height: 24px;
+    border-radius: 32px;
+    color: #9259ff;
+    margin-left: 16px;
+    margin-right: 0px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.subscribe_cancel_btn {
+    font-size: 12px;
+    width: 60px;
+    height: 24px;
+    border-radius: 32px;
+    color: #fff;
+    margin-left: 8px;
+    margin-right: 0px;
+    background-color: #9259ff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.home_subscribe_button {
+    position: fixed;
+    width: 150rpx;
+    height: 180rpx;
+    top: 684rpx;
+    right: -40rpx;
+    padding: 0 !important;
+}
+.home_subscribe_button:hover {
+    background-color: transparent;
+}
+.home_subscribe_button image {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-45deg);
+}
+.sub_info_window {
+    width: 631rpx;
+    height: 924rpx;
+    background-color: transparent !important;
+}
+.sub_info_window_top {
+    width: 631rpx;
+    height: 834rpx;
+}
+.sub_info_window_button {
+    width: 456rpx;
+    height: 80rpx;
+    padding: 0 !important;
+}
+.sub_info_window_button:hover {
+    background-color: transparent;
+}
+.sub_info_window_button image {
+    width: 456rpx;
+    height: 80rpx;
+}

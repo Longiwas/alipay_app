@@ -1,0 +1,228 @@
+.title {
+    display: flex;
+    flex-direction: row;
+}
+.tp16 {
+    height: 16px;
+    width: 100%;
+}
+.wishListView {
+    margin: 0 16px 0 16px;
+    display: flex;
+    flex-direction: column;
+}
+.wishListViewDetail {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+}
+.wishListViewDetailAvatar {
+    height: 64px;
+    width: 64px;
+    border-radius: 32px;
+}
+.wishListViewDetailInfo {
+    width: 25%;
+    height: 100%;
+    margin-left: 16px;
+}
+.wishListViewDetailName {
+    font-size: 15px;
+    height: 50%;
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.wishListViewDetailSupport {
+    font-size: 14px;
+    height: 50%;
+    color: #9b9b9b;
+}
+.wishListViewDetailBtn {
+    margin-left: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.answer_btn {
+    color: white;
+    font-size: 12px;
+    background-color: #ff5998;
+    border-radius: 50px;
+    padding: 4px 12px 4px 12px;
+    margin: 0 8px 0 8px;
+}
+.choose_btn {
+    font-size: 12px;
+    border: 1px solid rgba(146, 89, 255, 0.6);
+    border-radius: 50px;
+    padding: 4px 12px 4px 12px;
+    margin: 0 0 0 8px;
+}
+.flex_view {
+    position: fixed;
+    bottom: 0px;
+    padding-bottom: 64rpx;
+    padding-top: 26rpx;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.doc_view {
+    font-size: 24rpx;
+    color: #9b9b9b;
+    margin-bottom: 26rpx;
+}
+.confirm_btn {
+    width: 600rpx;
+    background-color: #9057ff;
+    color: white;
+    font-size: 40rpx;
+    border-radius: 100rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.answer_popup {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.answer_popup_title {
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.answer_popup_info {
+    background-color: #9057ff;
+    height: 200rpx;
+    display: flex;
+    align-items: center;
+}
+.answer_popup_avatar {
+    height: 100rpx;
+    width: 100rpx;
+    margin: 0 32px 0 32px;
+    border-radius: 50rpx;
+}
+.answer_popup_detail {
+    font-size: 16px;
+    color: white;
+}
+.answer_popup_detail view {
+    height: 50%;
+}
+.answer_popup_list {
+    margin: 16px;
+    display: flex;
+    flex-direction: column;
+}
+.answer_popup_list_question {
+    display: flex;
+    flex-direction: row;
+    font-size: 15px;
+    color: #4a4a4a;
+    margin-bottom: 16px;
+}
+.answer_popup_list_question_num {
+    width: 50rpx;
+}
+.answer_popup_list_question_answer {
+    color: #9b9b9b;
+}
+.answer_popup_confirm {
+    width: 80%;
+    border-radius: 50px;
+    background-color: #9057ff;
+    color: white;
+    margin-bottom: 32px;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.close_icon {
+    position: absolute !important;
+    width: 32px;
+    height: 32px;
+    left: 16px;
+}
+.coverView {
+    width: 150px;
+    height: 150px;
+}
+.coverImage {
+    width: 150px;
+    height: 150px;
+}
+.contentView {
+    display: flex;
+    padding: 16rpx 0;
+    flex-direction: column;
+}
+.contentView view {
+    height: 25%;
+    display: flex;
+    flex-direction: row;
+}
+.contentViewName {
+    display: flex;
+    justify-content: space-between;
+}
+.contentViewName view {
+    height: 100%;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+}
+.contentViewTags {
+    align-items: center;
+}
+.contentViewTags .tags {
+    color: #9259ff;
+    border: 1px solid #9259ff;
+    padding: 8rpx 18rpx;
+    font-size: 24rpx;
+    border-radius: 20rpx;
+    margin-right: 16rpx;
+    text-align: center;
+}
+.contentLocation {
+    font-size: 14px;
+    color: #9b9b9b;
+    align-items: center;
+}
+
+.blue {
+    color: #4a90e2;
+}
+.confirmPopupInfo {
+    margin-bottom: 64rpx;
+}
+.confirmPopupBtn {
+    height: 100rpx;
+    width: 600rpx;
+    border-radius: 50rpx;
+}
+.confirmPopupConfirm {
+    background-color: #9057ff;
+    color: white;
+    font-size: 40rpx;
+}
+.confirmPopupCancel {
+    background-color: white;
+    color: #9b9b9b;
+    border: 1px solid #9b9b9b;
+}

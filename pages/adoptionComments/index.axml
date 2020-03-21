@@ -1,0 +1,75 @@
+<view class='page-container-classname'>
+                <titlebar title='评论与留言' onChildRef='saveChildRef1' _parent_ref="{{isMounted}}">
+</titlebar><view class='flex flex-column' style='margin-top:{{customHeadHeight}}px; position:relative;'>
+  <block a:if='{{pet.id}}'>
+    <view class='flex flex-row pet_view' onTap='onPetTap'>
+      <image src='{{pet.cover}}?imageMogr2/thumbnail/100x' class='pet_cover' mode='aspectFill'>
+      </image>
+      <view class='flex flex-column vcenter'>
+        <view class='flex flex-row vcenter'>
+          <view>
+            {{pet.name}}
+          </view>
+          <image class='pet_gender' src='{{pet.genderUrl}}'>
+          </image>
+        </view>
+        <view class='flex flex-row' style='margin-top: 30rpx; '>
+          {{pet.year}}岁{{pet.month}}月
+        </view>
+      </view>
+    </view>
+  </block>
+  <view class='flex flex-row hcenter ' style='margin-top: 60rpx; '>
+    <view class='comment_title_view'>
+      评论
+    </view>
+  </view>
+  <view class='flex flex-column comments_view'>
+    <block a:for='{{comments}}' a:key='id' ref-numbers='{{comments}}'>
+      <view class='flex flex-row comments_item hcenter'>
+        <image class='comments_item_image' src="{{item.author.avatar+'?imageMogr2/thumbnail/200x'}}">
+        </image>
+        <view class='flex flex-column comments_content_view'>
+          <view class='flex flex-row comments_content_top' data-author='{{item.id}}' data-authorname='{{item.author.name}}' onTap='onReplyTap'>
+            <view class='flex flex-row comments_content_top_name'>
+              {{item.author.name}}              <block a:if='{{item.ref!=null}}'>
+                <text class='comments_content_top_name_response' decode='{{true}}'>
+                  &nbsp;&nbsp;回复&nbsp;&nbsp;{{item.ref.author.name}}
+                </text>
+              </block>
+            </view>
+            <view class='flex comments_content_top_datetime'>
+              {{item.date_str}}
+            </view>
+          </view>
+          <view class='flex flex-row comments_content_bottom'>
+            <view class='comments_content_bottom_content' data-author='{{item.id}}' data-authorname='{{item.author.name}}' onTap='onReplyTap'>
+              {{item.content}}
+            </view>
+            <view data-like='{{item.is_like}}' data-id='{{item.id}}' onTap='onCommentLikeTap'>
+              <image class="{{item.is_like?'comment_content_bottom_liked':'comment_content_bottom_like'}}" src="/images/{{item.is_like?'comment_liked':'comment_like'}}.png">
+              </image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <view a:if='{{comment_all}}' class='flex flex-column center' onTap='onCommentAllTap'>
+      <view>
+        查看所有的评论
+      </view>
+      <van-icon name='arrow-down' _parent_ref="{{isMounted}}" onChildRef='saveChildRef2'>
+      </van-icon>
+    </view>
+  </view>
+  <view class='flex hcenter flex-row button_view' a:if='{{!selected_view}}'>
+    <input class='comment_content_input' placeholder='{{placeholder}}' focus='{{comment_focus}}' value='{{comment}}' onBlur='onContentInput'>
+    </input>
+    <image class='comment_post_image' src='/images/post.png' style="visibility : {{show_post?'visible':'hidden'}}" onTap='onCommentPostTap'>
+    </image>
+  </view>
+  <view id='comments_view' style='height:100rpx;'>
+  </view>
+</view><login-window show='{{loginShow}}' _parent_ref="{{isMounted}}" onComplete='onAuthorizeComplete' onChildRef='saveChildRef3'>
+</login-window>
+            </view>

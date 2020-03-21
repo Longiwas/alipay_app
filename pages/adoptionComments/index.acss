@@ -1,0 +1,92 @@
+.comment_title_view {
+    border-bottom: 3rpx solid #ab8ef5;
+    font-size: 30rpx;
+    margin-left: 40rpx;
+}
+.comments_view {
+}
+.comments_item {
+    margin-left: 40rpx;
+    border-bottom: 2rpx solid #e1e1e1;
+}
+.comments_item_image {
+    height: 50rpx;
+    width: 50rpx;
+    border-radius: 25rpx;
+    margin: 32rpx 20rpx 30rpx 0;
+}
+.comments_content_view {
+    width: 590rpx;
+}
+.comments_content_top {
+    font-size: 26rpx;
+}
+.comments_content_top_name {
+    width: 462rpx;
+}
+.comments_content_top_name_response {
+    font-weight: bold;
+}
+.comments_content_top_datetime {
+    font-size: 20rpx;
+    width: 128rpx;
+    justify-content: right;
+    color: #c2c2c2;
+}
+.comments_content_bottom {
+    font-size: 24rpx;
+    color: #808080;
+}
+.comments_content_bottom_content {
+    width: 570rpx;
+}
+.comment_content_bottom_like {
+    width: 30rpx;
+    height: 31rpx;
+}
+.comment_content_bottom_liked {
+    width: 30rpx;
+    height: 36rpx;
+}
+.comment_content_input {
+    width: 600rpx;
+}
+.comment_post_button {
+    height: 60rpx;
+    width: 60rpx;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.comment_post_image {
+    height: 53rpx;
+    width: 53rpx;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.button_view {
+    position: fixed;
+    height: 100rpx;
+    bottom: 0rpx;
+    width: 750rpx;
+    justify-content: space-around;
+    border-top: 2rpx solid #c5c5c5;
+    z-index: 5;
+    background-color: white;
+}
+.pet_view {
+    margin-top: 30rpx;
+    font-size: 32rpx;
+    line-height: 32rpx;
+}
+.pet_cover {
+    margin-left: 65rpx;
+    height: 150rpx;
+    width: 150rpx;
+    margin-right: 50rpx;
+    border-radius: 10rpx;
+}
+.pet_gender {
+    width: 20rpx;
+    height: 36rpx;
+    margin: 0 20rpx;
+}

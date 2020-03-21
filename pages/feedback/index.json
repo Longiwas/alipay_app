@@ -1,0 +1,6 @@
+{
+	"usingComponents": {
+		"titlebar": "../../components/titlebar/titlebar",
+		"template-window": "../../components/template-window/index"
+	}
+}

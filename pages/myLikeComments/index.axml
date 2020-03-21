@@ -1,0 +1,23 @@
+<view class='page-container-classname'>
+                <titlebar title='我的点赞/评论' onChildRef='saveChildRef1' _parent_ref="{{isMounted}}">
+</titlebar><view class='flex flex-column main_view' style='margin-top:{{customHeadHeight}}px;'>
+  <view class='flex flex-row spacebetween item_view hcenter' onTap='onMyLikeTap'>
+    <view class='flex flex-row hcenter'>
+      <image class='icon_image' src='/images/me_3.png'>
+      </image>
+      我的点赞
+    </view>
+    <van-icon name='arrow' custom-class='arrow_van_icon' _parent_ref="{{isMounted}}" onChildRef='saveChildRef2'>
+    </van-icon>
+  </view>
+  <view class='flex flex-row spacebetween item_view hcenter' onTap='onMyCommentsTap'>
+    <view class='flex flex-row hcenter'>
+      <image class='icon_image' src='/images/me_4.png'>
+      </image>
+      我的评论
+    </view>
+    <van-icon name='arrow' custom-class='arrow_van_icon' _parent_ref="{{isMounted}}" onChildRef='saveChildRef3'>
+    </van-icon>
+  </view>
+</view>
+            </view>

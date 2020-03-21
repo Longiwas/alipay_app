@@ -1,0 +1,37 @@
+<view class='card-card {{className}}' onChildRef='saveChildRef0'>
+  <view class='card_main'>
+    <image mode='aspectFill' src='{{imgsrc}}' class='petimg'>
+    </image>
+    <view class='petinfo'>
+      <view class='petnamegender'>
+        <view>
+          {{name}}
+        </view>
+        <image src='{{genderUrl}}'>
+        </image>
+      </view>
+      <view class='petagelocation'>
+        <view class='petage_string'>
+          {{year}}岁{{month}}月
+        </view>
+        <view class='petlocation'>
+          <image class='petlocation_image' src='/images/location.png'>
+          </image>
+          <view class='petlocation_string'>
+            {{locationStr}}
+          </view>
+        </view>
+      </view>
+      <view class='pettags'>
+        <block a:for='{{tags}}' a:key='name' ref-numbers='{{tags}}'>
+          <view class='tag' a:if='{{item.value==1}}'>
+            已{{item.desc}}
+          </view>
+          <view class='tag' a:if='{{item.value==2}}'>
+            未{{item.desc}}
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

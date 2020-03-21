@@ -1,0 +1,32 @@
+/* miniprogram/pages/adoptionGuild/adoptionGuild.wxss */
+.guide_image {
+    width: 750rpx;
+    height: 284rpx;
+}
+.guide_button {
+    width: 592rpx;
+    height: 78rpx;
+    margin: 57rpx 79rpx 0 79rpx;
+}
+.guide_num {
+    width: 536rpx;
+    height: 65rpx;
+    margin: 111rpx 107rpx 0 107rpx;
+    z-index: 4;
+}
+.guide_num_text {
+    width: 536rpx;
+    height: 80rpx;
+    margin-top: 111rpx;
+    font-size: 24rpx;
+    color: #808080;
+    letter-spacing: 60;
+    line-height: 30rpx;
+    background-image: url(http://res.511cwpt.com/adoption_guide_num.png);
+    background-size: 100% 100%;
+}
+.guide_bottom {
+    margin: 82rpx 52rpx 0 84rpx;
+    width: 614rpx;
+    height: 510rpx;
+}

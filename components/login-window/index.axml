@@ -1,0 +1,12 @@
+<view class='login-window-index {{className}}' onChildRef='saveChildRef0'>
+  <van-popup show='{{show}}' position='center' custom-class='flex flex-column login_popup' _parent_ref="{{isMounted}}" onClose='onClose' onChildRef='saveChildRef1'>
+    <button class='login_popup_login' open-type='getAuthorize' onGetAuthorize='onAuthorizeTap' scope='userInfo'>
+      <image src='/images/login_popup_login.png'>
+      </image>
+    </button>
+    <view class='login_popup_cancel' onTap='onClose'>
+      <image src='/images/login_popup_cancel.png'>
+      </image>
+    </view>
+  </van-popup>
+</view>

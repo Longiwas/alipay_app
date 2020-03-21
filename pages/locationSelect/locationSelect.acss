@@ -1,0 +1,21 @@
+.page-container-classname {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.citylist view {
+    height: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.provinceSelected {
+    color: #9057ff;
+    background-color: white;
+}
+.center {
+    text-align: center;
+}

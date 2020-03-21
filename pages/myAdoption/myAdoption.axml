@@ -1,0 +1,313 @@
+<view class='page-container-classname'>
+                <titlebar title='我申请的领养' onChildRef='saveChildRef1' _parent_ref="{{isMounted}}">
+</titlebar><view class='fullwidth flex' style='height:32px; flex-direction:row; display: flex; font-size:36rpx; position:fixed; top:{{customHeadHeight}}px; z-index:5; background-color:#FFF; border-bottom:1px solid #DDDCDF; '>
+  <view class='{{selected[0]}}' style='width:33.3%; text-align:center;' data-index='{{0}}' onTap='onTabTap'>
+    申请中
+  </view>
+  <view class='{{selected[1]}}' style='width:33.3%; text-align:center;' data-index='{{1}}' onTap='onTabTap'>
+    领养中
+  </view>
+  <view class='{{selected[2]}}' style='width:33.3%; text-align:center;' data-index='{{2}}' onTap='onTabTap'>
+    已完成
+  </view>
+</view><view style='padding-top:{{customHeadHeight}}px;'>
+  <view class='tabpage'>
+    <view class='{{activate[0]}}'>
+      <block a:if='{{petArray.length<=0}}'>
+        <view style='height:250rpx'>
+        </view>
+        <view class='flex flex-column center'>
+          <image src='/images/adoption.svg' style='height:500rpx; width:550rpx; padding-bottom:16px;'>
+          </image>
+          <view style='font-size:18px; color:#9B9B9B;'>
+            您暂时还没有领养哦
+          </view>
+        </view>
+      </block>
+      <block a:for='{{petArray}}' a:key='id' ref-numbers='{{petArray}}'>
+        <view class='petItem flex'>
+          <image src='{{item.cover}}?imageMogr2/thumbnail/200x' mode='aspectFill' class='petImg' data-id='{{item.id}}' onTap='onPetTap'>
+          </image>
+          <view class='petInfo' style='padding:8rpx 0;'>
+            <view class='petInfoItem flex' style='flex-direction:row; justify-content:space-between;' data-id='{{item.id}}' onTap='onPetTap'>
+              <view class='flex petName hcenter' style='width:60%; font-size:32rpx; height:100%; '>
+                {{item.name}}
+              </view>
+              <view class='flex hcenter' style='font-size:28rpx; width:40%; height:100%; '>
+                {{item.year}}岁{{item.month}}个月                <image src='{{item.genderUrl}}' style='width:12px; height:12px; padding-left:4px; '>
+                </image>
+              </view>
+            </view>
+            <view class='petInfoItem' style='display: flex; flex-direction:row;  align-items: center;' data-id='{{item.id}}' onTap='onPetTap'>
+              <block a:for='{{item.options}}' a:for-item='option' a:key='name' ref-numbers='{{item.options}}'>
+                <block a:if='{{option.value==1}}'>
+                  <view class='flex tags center'>
+                    已{{option.desc}}
+                  </view>
+                  <view style='width:16rpx; '>
+                  </view>
+                </block>
+                <block a:elif='{{option.value==2}}'>
+                  <view class='flex tags center'>
+                    未{{option.desc}}
+                  </view>
+                  <view style='width:16rpx; '>
+                  </view>
+                </block>
+              </block>
+            </view>
+            <view class='flex petInfoItem petLocation flex-row' style='font-size:24rpx; justify-content: center;' data-id='{{item.id}}' onTap='onPetTap'>
+              <block a:if='{{item.power>4}}'>
+                <view class='flex flex-row' style='width:60%;align-items:center; justify-content:space-between;'>
+                  <block a:for='{{item.powered_list}}' a:for-item='user' ref-numbers='{{item.powered_list}}'>
+                    <image class='petPowerAvatar' src='{{user.avatarUrl}}'>
+                    </image>
+                  </block>
+                  <van-icon name='ellipsis' custom-class='petPowerAvatar' _parent_ref="{{isMounted}}" onChildRef='saveChildRef2'>
+                  </van-icon>
+                </view>
+              </block>
+              <block a:else >
+                <view class='flex flex-row' style='width:60%; align-items:center; justify-content:space-between;height:100%'>
+                  <block a:for='{{item.powered_list}}' a:for-item='user' ref-numbers='{{item.powered_list}}'>
+                    <image class='petPowerAvatar' src='{{user.avatarUrl}}'>
+                    </image>
+                  </block>
+                </view>
+              </block>
+              <view class='flex flex-row center' style='width:40%; align-items:center; font-size:28rpx;'>
+                <view style='color:#FF3083; width:fit-content; font-size:17px;'>
+                  <block a:if='{{item.power>9999}}'>
+                    超多
+                  </block>
+                  <block a:else >
+                    {{item.power}}人支持
+                  </block>
+                </view>
+              </view>
+            </view>
+            <view class='petInfoItem' style='justify-content: space-around; '>
+              <button class='flex btn_FF5998 center' data-id='{{item.id}}' data-cover='{{item.cover}}' data-location='{{item.locationStr}}' onTap='onShareTap'>
+                分享助力
+              </button>
+              <view a:if='{{item.power>=10}}' class='btn_22' data-id='{{item.id}}' onTap='onAdoptionInformationTap'>
+                送养人信息
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class='{{activate[1]}}'>
+      <block a:if='{{catArray.length<=0}}'>
+        <view style='height:250rpx'>
+        </view>
+        <view class='flex flex-column center'>
+          <image src='/images/adoption.svg' style='height:500rpx; width:550rpx; padding-bottom:16px;'>
+          </image>
+          <view style='font-size:18px; color:#9B9B9B;'>
+            您暂时还没有领养哦
+          </view>
+        </view>
+      </block>
+      <block a:for='{{catArray}}' a:key='id' ref-numbers='{{catArray}}'>
+        <view class='petItem flex'>
+          <image src='{{item.cover}}?imageMogr2/thumbnail/200x' mode='aspectFill' class='petImg' data-id='{{item.id}}' onTap='onPetTap'>
+          </image>
+          <view class='petInfo' style='padding:8rpx 0;'>
+            <view class='petInfoItem flex' style='flex-direction:row; justify-content:space-between;' data-id='{{item.id}}' onTap='onPetTap'>
+              <view class='flex petName hcenter' style='width:60%; font-size:32rpx; height:100%; '>
+                {{item.name}}
+              </view>
+              <view class='flex hcenter' style='font-size:28rpx; width:40%; height:100%; '>
+                {{item.year}}岁{{item.month}}个月                <image src='{{item.genderUrl}}' style='width:12px; height:12px; padding-left:4px; '>
+                </image>
+              </view>
+            </view>
+            <view class='petInfoItem' style='display: flex; flex-direction:row;  align-items: center;' data-id='{{item.id}}' onTap='onPetTap'>
+              <block a:for='{{item.options}}' a:for-item='option' a:key='name' ref-numbers='{{item.options}}'>
+                <block a:if='{{option.value==1}}'>
+                  <view class='flex tags center'>
+                    已{{option.desc}}
+                  </view>
+                  <view style='width:16rpx; '>
+                  </view>
+                </block>
+                <block a:elif='{{option.value==2}}'>
+                  <view class='flex tags center'>
+                    未{{option.desc}}
+                  </view>
+                  <view style='width:16rpx; '>
+                  </view>
+                </block>
+              </block>
+            </view>
+            <view class='petInfoItem petLocation' style='font-size:28rpx;' data-id='{{item.id}}' onTap='onPetTap'>
+              <image class='locationImg' src='/images/location-o.svg'>
+              </image>
+              {{item.locationStr}}
+            </view>
+            <view class='petInfoItem' style='display:flex; flex-direction:row;'>
+              <view style='margin:0 4px 0 0; '>
+                <view class='flex btn_22 center' data-cover='{{item.cover}}' data-name='{{item.name}}' data-phone='{{item.pet_profile.mobile}}' onTap='onPhoneTap'>
+                  查看电话
+                </view>
+              </view>
+              <view style='margin:0 4px 0 4px; '>
+                <view class='flex btn_21 center' data-id='{{item.id}}' data-pet-id='{{item.pet_id}}' onTap='onContractTap'>
+                  签署协议
+                </view>
+              </view>
+              <view style='margin:0 0 0 4px; '>
+                <view class='flex btn_23 center' data-id='{{item.id}}' onTap='onAdoptingCancelTap'>
+                  撤销
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class='{{activate[2]}}'>
+      <block a:if='{{otherArray.length<=0}}'>
+        <view style='height:250rpx'>
+        </view>
+        <view class='flex flex-column center'>
+          <image src='/images/adoption.svg' style='height:500rpx; width:550rpx; padding-bottom:16px;'>
+          </image>
+          <view style='font-size:18px; color:#9B9B9B;'>
+            您暂时还没有领养哦
+          </view>
+        </view>
+      </block>
+      <block a:for='{{otherArray}}' a:key='id' ref-numbers='{{otherArray}}'>
+        <view class='petItem flex'>
+          <image src='{{item.cover}}?imageMogr2/thumbnail/200x' mode='aspectFill' class='petImg' data-id='{{item.id}}' onTap='onPetTap'>
+          </image>
+          <view class='petInfo' style='padding:8rpx 0;'>
+            <view class='petInfoItem flex' style='flex-direction:row; justify-content:space-between;' data-id='{{item.id}}' onTap='onPetTap'>
+              <view class='flex petName hcenter' style='width:60%; font-size:32rpx; height:100%; '>
+                {{item.name}}
+              </view>
+              <view class='flex hcenter' style='font-size:28rpx; width:40%; height:100%; '>
+                {{item.year}}岁{{item.month}}个月                <image src='{{item.genderUrl}}' style='width:12px; height:12px; padding-left:4px; '>
+                </image>
+              </view>
+            </view>
+            <view class='petInfoItem' style='display: flex; flex-direction:row;  align-items: center;' data-id='{{item.id}}' onTap='onPetTap'>
+              <block a:for='{{item.options}}' a:for-item='option' a:key='name' ref-numbers='{{item.options}}'>
+                <block a:if='{{option.value==1}}'>
+                  <view class='flex tags center'>
+                    已{{option.desc}}
+                  </view>
+                  <view style='width:16rpx; '>
+                  </view>
+                </block>
+                <block a:elif='{{option.value==2}}'>
+                  <view class='flex tags center'>
+                    未{{option.desc}}
+                  </view>
+                  <view style='width:16rpx; '>
+                  </view>
+                </block>
+              </block>
+            </view>
+            <view class='petInfoItem petLocation' style='font-size:28rpx;' data-id='{{item.id}}' onTap='onPetTap'>
+              <image class='locationImg' src='/images/location-o.svg'>
+              </image>
+              {{item.locationStr}}
+            </view>
+            <view class='petInfoItem' style='display:flex; flex-direction:row;'>
+              <view class='flex center btn_31' data-id='{{item.id}}' data-pet-id='{{item.pet_id}}' onTap='onContractTap'>
+                已签协议
+              </view>
+              <view class='flex center btn_32' data-id='{{item.id}}' onTap='onPetTap'>
+                领养完成
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view><van-popup show='{{ cancelShow }}' position='bottom' custom-class='cancelPopup' _parent_ref="{{isMounted}}" onClose='onCancelClose' onChildRef='saveChildRef3'>
+  <view class='cancelPopupInfo'>
+    确定撤销?
+  </view>
+  <view class='cancelPopupInfo'>
+    <form report-submit='{{true}}' style='width:600rpx; height:100rpx;' onSubmit='onCancelConfirm'>
+      <button class='cancelPopupConfirm' form-type='submit'>
+        确认撤销
+      </button>
+    </form>
+  </view>
+  <view class='cancelPopupInfo'>
+    <button class='cancelPopupCancel' onTap='onCancelClose'>
+      取消
+    </button>
+  </view>
+</van-popup><van-popup show='{{ phoneShow }}' position='bottom' custom-class='phonePopup' _parent_ref="{{isMounted}}" onClose='onModalMaskTap' onChildRef='saveChildRef4'>
+  <view class='phonePopupTitle'>
+    <view class='phonePopupClose' onTap='onModalMaskTap'>
+      X
+    </view>
+    <view class='phonePopupImageView'>
+      <image class='phonePopupImage' src='{{phoneModalImage}}'>
+      </image>
+    </view>
+  </view>
+  <view class='phonePopupContent'>
+    <view class='phonePopupContentBlank'>
+    </view>
+    <view class='phonePopupContentInfo'>
+      {{phoneModalName}}的领养电话
+    </view>
+    <view class='phonePopupContentInfo'>
+      {{phoneModalPhone}}
+    </view>
+    <view class='phonePopupContentInfo'>
+      <button class='cancelPopupConfirm' data-phone='{{phoneModalPhone}}' onTap='onPhoneCallTap'>
+        拨打号码
+      </button>
+    </view>
+  </view>
+</van-popup><van-popup show='{{shareShow}}' position='center' custom-class='flex flex-column share_popup' _parent_ref="{{isMounted}}" onClose='onShareClose' onChildRef='saveChildRef5'>
+  <view class='share_popup_title'>
+    邀请好友前来助力
+  </view>
+  <view class='share_popup_content'>
+    分享给好友请他/她助力，不仅可以向宠主证明你可以照顾好它，满10个助力还能直接获取宠主的联系方式哦~
+  </view>
+  <button class='share_popup_button' open-type='share'>
+    <image src='/images/adoption_share_invitation.png'>
+    </image>
+  </button>
+</van-popup><van-popup show='{{informationShow}}' position='center' custom-class='flex flex-column information_popup' _parent_ref="{{isMounted}}" onClose='onInformationClose' onChildRef='saveChildRef6'>
+  <view class='information_popup_content'>
+    <view class='information_popup_content_left'>
+      <image src='{{adoptionInformation.cover}}'>
+      </image>
+      <view>
+        {{adoptionInformation.name}}
+      </view>
+    </view>
+    <view class='information_popup_content_right'>
+      <view class='information_popup_content_right_title'>
+        送养人信息
+      </view>
+      <view>
+        送养人: {{adoptionInformation.pet_profile.nickName}}
+      </view>
+      <view data-phone='{{adoptionInformation.pet_profile.mobile}}' onTap='onPhoneTap'>
+        手机号: {{adoptionInformation.pet_profile.mobile}}
+      </view>
+      <view data-wechatid='{{adoptionInformation.pet_profile.wechat_id}}' onTap='onWechatTap'>
+        微信号: {{adoptionInformation.pet_profile.wechat_id}}
+      </view>
+      <view class='information_popup_content_right_desc'>
+        点击即可复制文本哦~
+      </view>
+    </view>
+  </view>
+</van-popup>
+            </view>

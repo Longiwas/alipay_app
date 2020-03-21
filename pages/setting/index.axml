@@ -1,0 +1,58 @@
+<view class='page-container-classname'>
+                <titlebar title='设置' onChildRef='saveChildRef1' _parent_ref="{{isMounted}}">
+</titlebar><view style='margin-top:{{customHeadHeight}}px; border-top:1px solid #DDDCDF'>
+  <view class='setting_item' onTap='onAvatarTap'>
+    <view class='setting_item_text'>
+      头像
+    </view>
+    <view class='setting_item_value'>
+      <image class='setting_item_avatar' src='{{userInfo.avatarUrl}}'>
+      </image>
+      <van-icon name='arrow' custom-style='color:gray;' _parent_ref="{{isMounted}}" onChildRef='saveChildRef2'>
+      </van-icon>
+    </view>
+  </view>
+  <view class='setting_item' onTap='onNickNameTap'>
+    <view class='setting_item_text'>
+      昵称
+    </view>
+    <view class='setting_item_value'>
+      {{userInfo.nickName}}      <van-icon name='arrow' custom-style='color:gray;' _parent_ref="{{isMounted}}" onChildRef='saveChildRef3'>
+      </van-icon>
+    </view>
+  </view>
+  <picker class='setting_item' mode='selector' range-key='value' range="{{[{id:0, value:'未知'}, {id:1, value:'男'}, {id:2, value:'女'}]}}" onChange='onGenderChange'>
+    <view class='flex flex-row ' style='width:686rpx;'>
+      <view class='setting_item_text'>
+        性别
+      </view>
+      <view class='setting_item_value'>
+        {{genderStr}}        <van-icon name='arrow' custom-style='color:gray;' _parent_ref="{{isMounted}}" onChildRef='saveChildRef4'>
+        </van-icon>
+      </view>
+    </view>
+  </picker>
+  <picker class='setting_item' mode='region' value='{{userInfo.location}}' onChange='onLocationChange'>
+    <view class='flex flex-row ' style='width:686rpx;'>
+      <view class='setting_item_text'>
+        地区
+      </view>
+      <view class='setting_item_value'>
+        {{locationStr}}        <van-icon name='arrow' custom-style='color:gray;' _parent_ref="{{isMounted}}" onChildRef='saveChildRef5'>
+        </van-icon>
+      </view>
+    </view>
+  </picker>
+  <view style='height:8rpx; background-color:#DDDCDF; '>
+  </view>
+  <view class='setting_item'>
+    <view class='setting_item_text'>
+      新宠物提醒
+    </view>
+    <view class='setting_item_value'>
+      <switch checked='{{subscribed}}' disabled='{{subscribed_disable}}' onChange='onSubscribeChange'>
+      </switch>
+    </view>
+  </view>
+</view>
+            </view>

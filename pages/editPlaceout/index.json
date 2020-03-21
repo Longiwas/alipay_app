@@ -1,0 +1,4 @@
+{
+	"usingComponents": { "titlebar": "../../components/titlebar/titlebar" },
+	"defaultTitle": "修改送养"
+}

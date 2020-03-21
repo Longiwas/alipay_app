@@ -1,0 +1,105 @@
+.avatar_view {
+    margin-left: 40rpx;
+    margin-bottom: 20rpx;
+    margin-right: 60rpx;
+}
+.avatar_view image {
+    width: 196rpx;
+    height: 196rpx;
+    border-radius: 98rpx;
+}
+.information_view {
+    margin-right: 40rpx;
+}
+.station_view {
+    height: 33%;
+}
+.name_view {
+    font-size: 40rpx;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.gender_image {
+    height: 38rpx;
+    width: 28rpx;
+    margin-top: 8rpx;
+    margin-left: 44rpx;
+}
+.location_view {
+    height: 33%;
+    font-size: 30rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.location_image {
+    height: 29rpx;
+    width: 24rpx;
+    margin-right: 14rpx;
+}
+.grey_line_view {
+    height: 2rpx;
+    background-color: #e1e1e1;
+    margin: 0 40rpx;
+}
+.help_view {
+    height: 100rpx;
+    margin: 0 40rpx;
+}
+.help_view_left {
+    font-size: 30rpx;
+    margin: 30rpx 0;
+}
+.help_view_right {
+    width: 93rpx;
+    height: 93rpx;
+}
+.help_view_right image {
+    width: 93rpx;
+    height: 93rpx;
+}
+.cover_image {
+    height: 200rpx;
+    width: 200rpx;
+    margin-left: 40rpx;
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+    border-radius: 10rpx;
+}
+.info_view {
+    height: 220rpx;
+    width: 430rpx;
+    margin-left: 40rpx;
+    margin-right: 40rpx;
+    border-bottom: 2rpx solid #e1e1e1;
+}
+.info_view_item {
+    height: 25%;
+}
+.info_view_name {
+    font-size: 30rpx;
+}
+.info_view_ageandgender {
+    font-size: 24rpx;
+}
+.info_view_gender_image {
+    margin-left: 44rpx;
+    height: 24rpx;
+    width: 20rpx;
+}
+.info_view_location {
+    font-size: 24rpx;
+}
+.info_view_location_image {
+    height: 24rpx;
+    width: 20rpx;
+    margin-right: 15rpx;
+}
+
+.tag {
+    padding: 0 16rpx;
+    background-color: #ab8ef5;
+    border-radius: 20rpx;
+    color: white;
+    font-size: 24rpx;
+}

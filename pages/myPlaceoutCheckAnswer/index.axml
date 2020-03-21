@@ -1,0 +1,56 @@
+<view class='page-container-classname'>
+                <titlebar title='{{applicant.nickName}}的领养回答' onChildRef='saveChildRef1' _parent_ref="{{isMounted}}">
+</titlebar><image class='answer_popup_avatar' src='{{applicant.avatarUrl}}' style='margin-top:20rpx;'>
+</image><view style='margin-top:{{customHeadHeight}}px; height:84rpx;'>
+</view><view class='flex answer_popup_info flex-column vcenter' style=' font-size:28rpx; color:white;'>
+  <view class='flex center' style='margin-top:64rpx;'>
+    {{applicant.nickName}}
+  </view>
+  <view class='flex flex-row fullwidth' style=" ">
+    <view class='flex center flex-column' style='width:50%;' onTap='onMobileTap'>
+      <block a:if='{{profile.adoption_mobile}}'>
+        <view>
+          {{profile.adoption_mobile}}
+        </view>
+        <view class='btn'>
+          拨打电话
+        </view>
+      </block>
+    </view>
+    <view class='flex center flex-column' style='width:50%;' onTap='onWxIdTap'>
+      <block a:if='{{profile.adoption_wxid}}'>
+        <view>
+          {{profile.adoption_wxid}}
+        </view>
+        <view class='btn'>
+          复制微信号
+        </view>
+      </block>
+    </view>
+  </view>
+</view><view class='answer_popup_list'>
+  <block a:for='{{question_list}}' a:key='index' ref-numbers='{{question_list}}'>
+    <view class='answer_popup_list_question'>
+      <view class='answer_popup_list_question_num'>
+        {{index+1}}.
+      </view>
+      <view>
+        <view>
+          {{item}}
+        </view>
+        <view class='answer_popup_list_question_answer'>
+          {{answer_list[index]}}
+        </view>
+      </view>
+    </view>
+  </block>
+</view><view style='height:100rpx;'>
+</view><view class='center'>
+  <view class='answer_popup_confirm center' data-id='{{id}}' onTap='onSelectedTap'>
+    <van-icon name="{{selected==id?'checked':'passed'}}" color='white' custom-style='line-height:100rpx; margin-right:4px;' _parent_ref="{{isMounted}}" onChildRef='saveChildRef2'>
+    </van-icon>
+    {{selected==id?"已选择":"选择TA"}}
+  </view>
+</view><van-popup onChildRef='saveChildRef3'>
+</van-popup>
+            </view>

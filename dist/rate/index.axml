@@ -1,0 +1,6 @@
+<view class='rate-index {{className}}' onChildRef='saveChildRef0'>
+  <view class='van-rate {{customClass}}' onTouchMove='onTouchMove'>
+    <van-icon a:for='{{ list }}' a:key='*this' class='van-rate__item' custom-class='{{iconClass}}' size='{{ size }}px' data-index='{{ index }}' name='{{ item ? icon : voidIcon }}' color='{{ disabled ? disabledColor : item ? color : voidColor }}' ref-numbers='{{ list }}' _parent_ref="{{isMounted}}" onClick='onSelect' onChildRef='saveChildRef1'>
+    </van-icon>
+  </view>
+</view>

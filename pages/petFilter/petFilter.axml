@@ -1,0 +1,73 @@
+<view class='page-container-classname'>
+                <titlebar title='筛选' onChildRef='saveChildRef1' _parent_ref="{{isMounted}}">
+</titlebar><view style='padding:{{customHeadHeight}}px 40rpx 0;'>
+  年龄
+</view><view style='padding:16px; display:flex; flex=direction:row; '>
+  <view class='tags {{ageEnable[0]}}' data-index='{{0}}' onTap='onAgeTap'>
+    全部
+  </view>
+  <view style='width:8px; '>
+  </view>
+  <view class='tags {{ageEnable[1]}}' data-index='{{1}}' onTap='onAgeTap'>
+    幼年
+  </view>
+  <view style='width:8px; '>
+  </view>
+  <view class='tags {{ageEnable[2]}}' data-index='{{2}}' onTap='onAgeTap'>
+    成年
+  </view>
+  <view style='width:8px; '>
+  </view>
+  <view class='tags {{ageEnable[3]}}' data-index='{{3}}' onTap='onAgeTap'>
+    老年
+  </view>
+  <view style='width:8px; '>
+  </view>
+</view><view class='lp16'>
+  性别
+</view><view style='padding:16px; display:flex; flex=direction:row; '>
+  <view class='tags {{genderEnable[0]}}' data-index='{{0}}' onTap='onGenderTap'>
+    全部
+  </view>
+  <view style='width:8px; '>
+  </view>
+  <view class='tags {{genderEnable[1]}}' data-index='{{1}}' onTap='onGenderTap'>
+    <image src='/images/male.svg' style='height:14px; width:14px;'>
+    </image>
+    男孩
+  </view>
+  <view style='width:8px; '>
+  </view>
+  <view class='tags {{genderEnable[2]}}' data-index='{{2}}' onTap='onGenderTap'>
+    <image src='/images/female.svg' style='height:14px; width:14px;'>
+    </image>
+    女孩
+  </view>
+  <view style='width:8px; '>
+  </view>
+</view><view class='lp16'>
+  状况
+</view><view style='padding:16px; display:flex; flex=direction:row; '>
+  <view class='tags {{statusAll}}' data-index='{{0}}' onTap='onAllTap'>
+    全部
+  </view>
+  <view style='width:8px; '>
+  </view>
+  <block a:for='{{tagsArray}}' a:key='name' ref-numbers='{{tagsArray}}'>
+    <view class='tags {{statusEnable[index]}}' data-index='{{index}}' onTap='onStatusTap'>
+      已{{item.desc}}
+    </view>
+    <view style='width:8px; '>
+    </view>
+  </block>
+</view><view style='padding:16px; display:flex; flex-direction:row; '>
+  <button style='width:260rpx; border-radius:60rpx; background-color:#FF5998; color:#FFF;' onTap='onResetTap'>
+    重置
+  </button>
+  <view style='width:50rpx; '>
+  </view>
+  <button style='width:360rpx; border-radius:60rpx; background-color:#9057FF; color:#FFF;' onTap='onConfirmTap'>
+    确定
+  </button>
+</view>
+            </view>

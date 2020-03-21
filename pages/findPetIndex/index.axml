@@ -1,0 +1,28 @@
+<view class='page-container-classname'>
+                <titlebar title='寻宠启事' onChildRef='saveChildRef1' _parent_ref="{{isMounted}}">
+</titlebar><view style='margin: {{customHeadHeight}}px 15rpx 15rpx 15rpx;'>
+  <view class='top_image'>
+  </view>
+  <view class='flex flex-row spacebetween' style='font-size: 15rpx; margin-bottom: 15rpx; '>
+    <view class='flex flex-row'>
+      <view class='{{tab_selection1}}' onTap='onTabSelection1Tap'>
+        最新发布
+      </view>
+      <view class='{{tab_selection2}}' style='margin-left: 42rpx; ' onTap='onTabSelection2Tap'>
+        附近
+      </view>
+    </view>
+    <view onTap='onFindAdoption'>
+      宠寻人
+    </view>
+  </view>
+  <view>
+    <block a:for='{{pet_items}}' ref-numbers='{{pet_items}}'>
+      <view class='flex flex-row'>
+        <image class=" " src='{{item.url}}'>
+        </image>
+      </view>
+    </block>
+  </view>
+</view>
+            </view>

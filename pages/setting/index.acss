@@ -1,0 +1,28 @@
+/* miniprogram/pages/setting/index.wxss */
+.setting_item {
+    border-bottom: 1px solid #dddcdf;
+    padding: 16rpx 32rpx;
+    display: flex !important;
+    font-size: 32rpx;
+    flex-direction: row !important;
+}
+.setting_item_avatar {
+    height: 128rpx;
+    width: 128rpx;
+    border-radius: 12rpx;
+}
+.setting_item_text {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+.setting_item_value {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: gray;
+}
+.setting-region-picker {
+    width: 100%;
+}

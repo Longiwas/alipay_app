@@ -1,0 +1,100 @@
+<view class='page-container-classname'>
+                <view style='height:{{customHeadHeight}}px; display: flex; justify-content:center; align-items:center; background-color:#FD75B8; color:white' onChildRef='saveChildRef0'>
+  <view style='padding-top:24rpx;'>
+    我的
+  </view>
+</view><view class='flex flex-row hcenter title_area' onTap='onUserHomepageTap'>
+  <view class='flex flex-row hcenter'>
+    <image a:if='{{login}}' src='{{userInfo.avatarUrl}}' style='height:128rpx; width:128rpx; background-color:white; border-radius:64rpx; '>
+    </image>
+    <view style='height:128rpx; margin-left:16px;  display: flex; flex-direction:row; justify-content:center; align-items:center'>
+      <block a:if='{{login}}'>
+        <view style='display : flex; justify-content: space-between; color:white;'>
+          <view>
+            {{userInfo.nickName}}
+          </view>
+        </view>
+      </block>
+      <block a:else >
+        <button class='flex center' open-type='getAuthorize' style='color:white; border: 1px solid white; width:580rpx; height:100rpx; display:flex;  justify-content:center; border-radius: 50rpx; align-items:center' onGetAuthorize='onGetUserInfo' scope='userInfo'>
+          <text>
+            点击登陆
+          </text>
+        </button>
+      </block>
+    </view>
+  </view>
+  <view a:if='{{login}}' class='user_homepage'>
+    <van-icon name='arrow' _parent_ref="{{isMounted}}" onChildRef='saveChildRef1'>
+    </van-icon>
+  </view>
+</view><view style='margin:0 40rpx;'>
+  <view class='flex flex-row option_item' onTap='onPetPostTap'>
+    <view class='flex flex-row '>
+      <image src='/images/me_1.png' style='height:20px; width:20px; margin-top:2px; padding: 0 8px 0 0;'>
+      </image>
+      我发布的送养
+    </view>
+    <view class='flex center'>
+      <image class='right_icon' src='/images/right.png'>
+      </image>
+    </view>
+  </view>
+  <view class='flex flex-row option_item' onTap='onPetAdoptTap'>
+    <view class='flex flex-row '>
+      <image src='/images/me_2.png' style='height:20px; width:20px; margin-top:2px; padding: 0 8px 0 0;'>
+      </image>
+      我申请的领养
+    </view>
+    <view class='flex center'>
+      <image class='right_icon' src='/images/right.png'>
+      </image>
+    </view>
+  </view>
+  <view class='flex flex-row option_item' onTap='onPetFavTap'>
+    <view class='flex flex-row '>
+      <image src='/images/me_3.png' style='height:20px; width:20px; margin-top:2px; padding: 0 8px 0 0;'>
+      </image>
+      我的收藏
+    </view>
+    <view class='flex center'>
+      <image class='right_icon' src='/images/right.png'>
+      </image>
+    </view>
+  </view>
+  <view class='flex flex-row option_item' onTap='onFeedbackTap'>
+    <view class='flex flex-row '>
+      <image src='/images/me_4.png' style='height:20px; width:20px; margin-top:2px; padding: 0 8px 0 0;'>
+      </image>
+      意见反馈
+    </view>
+    <view class='flex center'>
+      <image class='right_icon' src='/images/right.png'>
+      </image>
+    </view>
+  </view>
+  <view class='flex flex-row option_item' onTap='onSettingTap'>
+    <view class='flex flex-row '>
+      <image src='/images/me_5.png' style='height:20px; width:20px; margin-top:2px; padding: 0 8px 0 0;'>
+      </image>
+      设置
+    </view>
+    <view class='flex center'>
+      <image class='right_icon' src='/images/right.png'>
+      </image>
+    </view>
+  </view>
+</view><button a:if='{{showSubBtn}}' class='home_subscribe_button' onTap='onShowSubscribe'>
+  <image src='/images/index.gif'>
+  </image>
+</button><van-popup custom-class='sub_info_window' show='{{subscribeInfoShow}}' _parent_ref="{{isMounted}}" onChildRef='saveChildRef2'>
+  <image class='sub_info_window_top' src='https://res.511cwpt.com/subscribe_background.png'>
+  </image>
+  <button class='flex center sub_info_window_button' open-type='contact'>
+    <image src='https://res.511cwpt.com/subscribe_button.png'>
+    </image>
+  </button>
+  <view style='position:absolute; top:0rpx; right:0rpx; width:60rpx; height:60rpx;' onTap='onSubscribeTap'>
+  </view>
+</van-popup>
+            </view>

@@ -1,0 +1,149 @@
+.main view {
+    position: absolute;
+}
+.title1 {
+    top: 166rpx;
+    left: 40rpx;
+    font-size: 32rpx;
+    color: #070707;
+    font-weight: 400;
+}
+.step {
+    color: #303030;
+    padding: 12rpx 20rpx;
+    background-color: white;
+    border: 1px dashed #c7c7c7;
+    border-radius: 30rpx;
+    font-size: 20rpx;
+    z-index: 5;
+}
+.step1 {
+    left: 67rpx;
+    top: 221rpx;
+}
+.step2 {
+    left: 170rpx;
+    top: 221rpx;
+}
+.step3 {
+    right: 67rpx;
+    top: 221rpx;
+    font-size: 16rpx !important;
+    padding: 0;
+    width: 364rpx;
+    height: 60rpx;
+}
+.step3 view {
+    position: static;
+}
+.step4 {
+    right: 67rpx;
+    top: 308rpx;
+}
+.step5 {
+    left: 259rpx;
+    top: 308rpx;
+}
+.step6 {
+    left: 111rpx;
+    top: 308rpx;
+    border: 1rpx dashed #fd5f99;
+}
+.stepline {
+    left: 145rpx;
+    top: 250rpx;
+    width: 563rpx;
+    height: 88rpx;
+    border-top: 1rpx dashed #c7c7c7;
+    border-right: 1rpx dashed #c7c7c7;
+    border-bottom: 1rpx dashed #c7c7c7;
+    border-top-right-radius: 44rpx;
+    border-bottom-right-radius: 44rpx;
+}
+.title2 {
+    left: 40rpx;
+    top: 394rpx;
+}
+.img1 {
+    position: absolute;
+    left: 40rpx;
+    top: 431rpx;
+    width: 672rpx;
+    height: 610rpx;
+    z-index: 4;
+}
+.subtitle1 {
+    z-index: 5;
+    left: 113rpx;
+    top: 504rpx;
+    font-size: 24rpx;
+    font-weight: 400;
+}
+.subcontent1 {
+    z-index: 5;
+    left: 158rpx;
+    top: 543rpx;
+    width: 486rpx;
+    font-size: 20rpx;
+    line-height: 30rpx;
+    letter-spacing: 26;
+}
+.subcontent1 view {
+    position: static;
+    display: flex;
+    flex-direction: row;
+}
+.subtitle2 {
+    z-index: 5;
+    left: 113rpx;
+    top: 766rpx;
+    font-size: 24rpx;
+    font-weight: 400;
+}
+.subcontent2 {
+    z-index: 5;
+    left: 158rpx;
+    top: 806rpx;
+    width: 475rpx;
+    font-size: 20rpx;
+    line-height: 30rpx;
+    letter-spacing: 26;
+}
+.subcontent2 view {
+    position: static;
+    display: flex;
+    flex-direction: row;
+}
+.information {
+    color: #303030;
+    font-size: 18rpx;
+    position: absolute;
+    height: 82rpx;
+    top: 1046rpx;
+    left: 165rpx;
+}
+.information view {
+    position: static;
+}
+.grape {
+    color: #9257fd;
+}
+
+.start {
+    position: absolute;
+    top: 1158rpx;
+    left: 127rpx;
+    width: 496rpx;
+    height: 84rpx;
+}
+.bottom {
+    position: absolute;
+    width: 100%;
+    top: 1276rpx;
+    color: #808080;
+    font-size: 18rpx;
+}
+.bottom view,
+text {
+    position: static;
+}

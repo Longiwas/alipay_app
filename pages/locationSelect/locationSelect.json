@@ -1,0 +1,6 @@
+{
+	"usingComponents": {
+		"titlebar": "../../components/titlebar/titlebar",
+		"van-icon": "../../dist/icon/index"
+	}
+}
