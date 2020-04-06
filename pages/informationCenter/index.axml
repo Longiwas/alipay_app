@@ -1,7 +1,5 @@
 <view class='page-container-classname'>
-                <view class='flex center' style='height:{{customHeadHeight}}px; padding-top:{{customHeadTopPadding}}px;' onChildRef='saveChildRef0'>
-  消息中心
-</view><view class='action_image_view'>
+<view class='action_image_view'>
   <image src="{{cover+'?thumbnail/500x'}}" onTap='onImageTap'>
   </image>
 </view><view a:if='{{false}}' class='flex action_more_view flex-row hcenter spacebetween'>

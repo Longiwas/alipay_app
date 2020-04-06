@@ -1,14 +1,13 @@
 <view class='page-container-classname'>
-                <navbar title='消息中心' showLocation='{{false}}' onChildRef='saveChildRef1' _parent_ref="{{isMounted}}">
-</navbar><view class='flex flex-column' style='margin-top:{{customHeadHeight}}px; border-top:1px solid #DDDCDF;'>
-  <view class='flex top_items'>
-    <van-icon name='orders-o' _parent_ref="{{isMounted}}" onChildRef='saveChildRef2'>
-    </van-icon>
+  <view class='flex flex-column' style='margin-top:{{customHeadHeight}}px; border-top:1px solid #DDDCDF;'>
+    <view class='flex top_items'>
+      <van-icon name='orders-o' _parent_ref="{{isMounted}}" onChildRef='saveChildRef2'>
+      </van-icon>
     系统消息
-  </view>
-  <view class='flex top_items'>
-    <van-icon name='orders-o' _parent_ref="{{isMounted}}" onChildRef='saveChildRef3'>
-    </van-icon>
+    </view>
+    <view class='flex top_items'>
+      <van-icon name='orders-o' _parent_ref="{{isMounted}}" onChildRef='saveChildRef3'>
+      </van-icon>
+    </view>
   </view>
 </view>
-            </view>

@@ -109,7 +109,7 @@ _Page({
     },
     onStartTap: function(evt) {
         let { login } = app.globalData;
-
+        console.log(login)
         if (login) {
             _my.navigateTo({
                 url: "../placeout/placeout"

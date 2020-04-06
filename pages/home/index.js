@@ -79,7 +79,7 @@ _Page({
   onReachBottom: function() {
     let that = this;
     let { petArrayLeft, petArrayRight, next } = this.data;
-
+    console.log('onReachBottom', _my.request, next)
     _my.showLoading({
       title: "寻找中"
     });
@@ -147,7 +147,7 @@ _Page({
             });
           }
 
-          let next = res.header.Next;
+          let next = res.header.next;
           this.setData({
             next
           });
@@ -394,7 +394,8 @@ _Page({
       },
       success: res => {
         if (res.statusCode == 200) {
-          let next = res.header.Next;
+          console.log(res);
+          let next = res.header.next;
           res.data.forEach(banner => {
             let gender = banner.gender;
 

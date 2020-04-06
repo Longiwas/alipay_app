@@ -80,9 +80,9 @@ function login() {
 function getSetting() {
     return new Promise((yes, no) => {
         _my.getAuthCode({
-            scopes: 'auth_base',
+            scopes: 'auth_user',
             success: res2 => {
-                console.log('auth_base', res2)
+                console.log('auth_user', res2)
                 if (res2.authCode) {
                     yes(true);
                 } else {

@@ -16,7 +16,7 @@
     margin-right: 16rpx;
 }
 .title_area {
-    padding: 16rpx 32rpx 64rpx 64rpx;
+    padding: 64rpx 32rpx 64rpx 64rpx;
     background-color: #fd75b8;
     justify-content: space-between;
 }

@@ -6,14 +6,16 @@
       </view>
     </block>
     <view style='text-align:center;' onTap='onFilterTap'>
-      筛选      <van-icon name='arrow-down' _parent_ref="{{isMounted}}" onChildRef='saveChildRef2'>
+      筛选
+      <van-icon name='arrow-down' _parent_ref="{{isMounted}}" onChildRef='saveChildRef2'>
       </van-icon>
     </view>
   </view>
   <block a:if='{{!subscribed}}'>
-    <view class='subscribe_city' style='top:{{customHeadHeight+30}}px; '>
+    <view class='subscribe_city' style='top:{{30}}px; '>
       <view style='display: flex; flex-direction: row; justify-content: center; align-items: center;'>
-        当前{{city}}有新宠物时提醒我        <button class='subscribe_btn' onTap='onLocationSubscribeTap'>
+        当前{{city}}有新宠物时提醒我
+        <button class='subscribe_btn' onTap='onLocationSubscribeTap'>
           好的
         </button>
         <button class='subscribe_cancel_btn' onTap='onSubscribeCancelTap'>
@@ -79,10 +81,12 @@
       </block>
     </view>
   </view>
-</view><button a:if='{{showSubBtn}}' class='home_subscribe_button' onTap='onShowSubscribe'>
+</view>
+<button a:if='{{showSubBtn}}' class='home_subscribe_button' onTap='onShowSubscribe'>
   <image src='/images/index.gif'>
   </image>
-</button><van-popup custom-class='sub_info_window' show='{{subscribeInfoShow}}' _parent_ref="{{isMounted}}" onChildRef='saveChildRef3'>
+</button>
+<van-popup custom-class='sub_info_window' show='{{subscribeInfoShow}}' _parent_ref="{{isMounted}}" onChildRef='saveChildRef3'>
   <image class='sub_info_window_top' src='https://res.511cwpt.com/subscribe_background.png'>
   </image>
   <button class='flex center sub_info_window_button' open-type='contact'>
@@ -91,7 +95,9 @@
   </button>
   <view style='position:absolute; top:0rpx; right:0rpx; width:60rpx; height:60rpx;' onTap='onSubscribeTap'>
   </view>
-</van-popup><login-window show='{{loginShow}}' _parent_ref="{{isMounted}}" onComplete='onAuthorizeComplete' onChildRef='saveChildRef4'>
-</login-window><template-window show='{{template_show}}' templateIds='{{templateIds}}' _parent_ref="{{isMounted}}" onAuthorizeComplete='commit' onChildRef='saveChildRef5'>
+</van-popup>
+<login-window show='{{loginShow}}' _parent_ref="{{isMounted}}" onComplete='onAuthorizeComplete' onChildRef='saveChildRef4'>
+</login-window>
+<template-window show='{{template_show}}' templateIds='{{templateIds}}' _parent_ref="{{isMounted}}" onAuthorizeComplete='commit' onChildRef='saveChildRef5'>
 </template-window>
-            </view>
+</view>

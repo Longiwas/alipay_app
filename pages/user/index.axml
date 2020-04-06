@@ -1,8 +1,4 @@
 <view class='page-container-classname'>
-                <view style='height:{{customHeadHeight}}px; display: flex; justify-content:center; align-items:center; background-color:#FD75B8; color:white' onChildRef='saveChildRef0'>
-  <view style='padding-top:24rpx;'>
-    我的
-  </view>
 </view><view class='flex flex-row hcenter title_area' onTap='onUserHomepageTap'>
   <view class='flex flex-row hcenter'>
     <image a:if='{{login}}' src='{{userInfo.avatarUrl}}' style='height:128rpx; width:128rpx; background-color:white; border-radius:64rpx; '>
