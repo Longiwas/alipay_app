@@ -50,39 +50,26 @@ function login() {
         _my.login({
             success: res => {
                 let { code } = res;
-                console.log(res)
+                console.log('login', res)
                 _my.request({
                     url: "https://api.woyuanyi.511cwpt.com/api/v1/auth",
                     method: "POST",
                     data: {
-                        type: "mini-program",
+                        type: "alipay",
                         data: {
+                            type: 'auth_base',
                             code
                         }
                     },
                     success: res => {
-                        console.log(res)
+                        console.log('seccess', res)
                         if (res.statusCode == 200) {
                             yes(res.data);
                         }
                     },
                     fail: err => {
-                        console.log(err)
-                        // 临时代码
-                        yes({
-                            "info": {
-                                "id": "id",
-                                "nickName": "name",
-                                "gender": 0,
-                                "location": "中国.上海.松江",
-                                "avatarUrl": "http://url",
-                                "mobile": "1238573847",
-                                "idc": "310227....."
-                            },
-                            "auth": {
-                                "token": "token"
-                            }
-                        })
+                        console.log('fail', err)
+                        no(err)
                     }
                 });
             }
@@ -92,16 +79,17 @@ function login() {
 
 function getSetting() {
     return new Promise((yes, no) => {
-        _my.getSetting({
+        _my.getAuthCode({
+            scopes: 'auth_base',
             success: res2 => {
-                if (res2.authSetting["scope.userInfo"]) {
+                console.log('auth_base', res2)
+                if (res2.authCode) {
                     yes(true);
                 } else {
                     yes(false);
                 }
             },
             fail: err => {
-                err.location = "wx.getSetting scope.userInfo";
                 no(err);
             }
         });
@@ -380,7 +368,7 @@ function onReady() {
                 }
             };
 
-            console.log(loginData)
+            console.log('loginResult', loginResult)
             if (loginResult) {
                 loginData = await login();
             }

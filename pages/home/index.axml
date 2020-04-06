@@ -2,12 +2,12 @@
 <view class='flex flex-column main'>
   <view class='page-swiper'>
     <swiper indicator-dots='{true}' autoplay='{true}' class='fullheight'>
-      <block a:for='{{bannerArray}}' a:key='id' ref-numbers='{{bannerArray}}'>
+      <block a:for='{{bannerArray}}' a:key='id' ref-numbers='{{bannerArray}}' style="height: 100%">
         <swiper-item>
-          <view>
+          <!-- <view> -->
             <image src="{{item.cover+'?imageMogr2/thumbnail/500x'}}" data-url='{{item.url}}' data-type='{{item.type}}' onTap='onBannerTap'>
             </image>
-          </view>
+          <!-- </view> -->
         </swiper-item>
       </block>
     </swiper>

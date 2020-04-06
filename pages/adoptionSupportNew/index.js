@@ -362,7 +362,7 @@ _Page({
                         url: "https://api.woyuanyi.511cwpt.com/api/v1/auth",
                         method: "post",
                         data: {
-                            type: "mini-program",
+                            type: "alipay",
                             data: {
                                 code,
                                 nickName,

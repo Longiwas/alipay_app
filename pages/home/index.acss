@@ -4,12 +4,10 @@
     display: flex;
 }
 .page-swiper {
-    width: 100%;
+    margin:0px auto;
+    width:98%;
     height: 300rpx;
     border-radius: 25px;
-}
-.page-swiper swiper {
-    margin: 0 25rpx;
 }
 .page-swiper swiper-item {
     border-radius: 10px;

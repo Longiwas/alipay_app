@@ -1,6 +1,4 @@
 <view class='page-container-classname'>
-                <navbar id='adoption_title' title='领养列表' location='{{location}}' onChildRef='saveChildRef1' _parent_ref="{{isMounted}}">
-</navbar><view style='padding-top:{{customHeadHeight}}px;'>
   <view class='flex' style='width: 100%; flex-direction:row; display: flex; font-size:32rpx; position:fixed; z-index:5; background-color:#FFF; justify-content: space-around; padding-bottom: 3px; border-bottom: 1px solid #DDDCDF;'>
     <block a:for='{{categories}}' a:key='id' ref-numbers='{{categories}}'>
       <view class='{{selected[index]}}' style='text-align:center;' data-index='{{index}}' data-id='{{item.id}}' onTap='onTabTap'>
