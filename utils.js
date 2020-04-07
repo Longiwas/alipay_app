@@ -62,7 +62,7 @@ function login() {
                         }
                     },
                     success: res => {
-                        console.log('seccess', res)
+                        console.log('success', res)
                         if (res.statusCode == 200) {
                             yes(res.data);
                         }
@@ -79,20 +79,11 @@ function login() {
 
 function getSetting() {
     return new Promise((yes, no) => {
-        _my.getAuthCode({
-            scopes: 'auth_user',
-            success: res2 => {
-                console.log('auth_user', res2)
-                if (res2.authCode) {
-                    yes(true);
-                } else {
-                    yes(false);
-                }
-            },
-            fail: err => {
-                no(err);
-            }
-        });
+       my.getSetting({
+           success: res=>{
+                yes((res.authSetting["userinfo"] || false));
+           }
+       });
     });
 }
 
@@ -100,7 +91,7 @@ function getLocationInfo() {
     return new Promise((yes, no) => {
         _my.getSetting({
             success(res) {
-                if (res.authSetting["scope.userLocation"]) {
+                if (res.authSetting["location"]) {
                     yes(true);
                 } else {
                     yes(false);
@@ -117,8 +108,7 @@ function getLocationInfo() {
 
 function authorizeLocation() {
     return new Promise((yes, no) => {
-        _my.authorize({
-            scope: "scope.userLocation",
+        my.getLocation({
 
             success() {
                 yes(true);
@@ -368,11 +358,9 @@ function onReady() {
                 }
             };
 
-            console.log('loginResult', loginResult)
             if (loginResult) {
                 loginData = await login();
             }
-            console.log(loginData)
             let cityList = await getCityList();
             let locationAuth = await getLocationInfo();
             let unread = await getUnread(loginData.auth.token); //let submsgStatus = await getSubscribeMessageStatus(loginData.auth.token);
@@ -430,7 +418,6 @@ function onReady() {
                     };
                 }
             }
-
             yes(promiseData);
         } catch (e) {
             console.log(e);
